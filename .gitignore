@@ -10,3 +10,22 @@ blob-report/
 .env.*
 # No worktrees here (D27); ignored so a stray one never gets committed.
 .claude/worktrees/
+
+# Lifted from singleplayer (P5).
+out/
+tmp/
+.cache/
+/src/shards/open-plots/discovery.open-plot-alien-plain.generated.ts
+/src/shards/open-plots/discovery.open-plot-clockwork-canyon.generated.ts
+/src/shards/open-plots/discovery.open-plot-coral-drift.generated.ts
+/src/shards/open-plots/discovery.open-plot-desert-ruin.generated.ts
+/src/shards/open-plots/discovery.open-plot-ember-forge.generated.ts
+/src/shards/open-plots/discovery.open-plot-frostline-peaks.generated.ts
+/src/shards/open-plots/discovery.open-plot-lantern-bayou.generated.ts
+/src/shards/open-plots/discovery.open-plot-mosslight-ruins.generated.ts
+/src/shards/open-plots/discovery.open-plot-night-market.generated.ts
+/src/shards/open-plots/discovery.open-plot-showcase-template.generated.ts
+/src/shards/open-plots/discovery.open-plot-sky-harbor.generated.ts
+/src/shards/open-plots/discovery.open-plot-sky-race.generated.ts
+/src/shards/open-plots/discovery.open-plot-starfall-observatory.generated.ts
+/src/shards/open-plots/discovery.open-plot-thin-ice.generated.ts
