@@ -15,6 +15,7 @@ blob-report/
 out/
 tmp/
 .cache/
+/public/assets/open-plot-*/map/top.webp
 /src/shards/open-plots/discovery.open-plot-alien-plain.generated.ts
 /src/shards/open-plots/discovery.open-plot-clockwork-canyon.generated.ts
 /src/shards/open-plots/discovery.open-plot-coral-drift.generated.ts
