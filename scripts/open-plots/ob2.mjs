@@ -9,6 +9,7 @@ import {parseArgs} from 'node:util';
 import sharp from 'sharp';
 import * as v from 'valibot';
 import {plotAudioRequest} from './audio-template.mjs';
+import {emptyShardfile} from '@wildshard/sharddev/author';
 
 const finite=v.pipe(v.number(),v.finite()),natural=v.pipe(finite,v.integer(),v.minValue(0));
 const positive=v.pipe(natural,v.minValue(1)),text=v.pipe(v.string(),v.minLength(1),v.maxLength(160));
@@ -60,7 +61,7 @@ export async function plotAudioRows(input,root=process.cwd()){
   const data=v.parse(audioInput,input);
   if(data.spots.some(row=>row.id==='score'||row.id==='ambience'))throw new Error('Spot ids must not shadow score or ambience');
   const {parseAudioData}=await import('@wildshard/format/audio');
-  const template=parseAudioData(JSON.parse(readFileSync(resolve(root,'src/shards/_template/data/audio.json'),'utf8')));
+  const template=emptyShardfile({slug:'audio-template',name:'Audio template',author:'Wildshard',revision:1,seed:1}).audio;
   const music=`public/assets/music/${data.idea}/`,sfx=`public/assets/sfx/${data.idea}/`;
   const assets=[{id:'score',file:`${music}score.m4a`,kind:'score',generator:'MiniMax Music 3'},
     {id:'ambience',file:`${sfx}ambience.m4a`,kind:'bed',generator:'MOSS-SoundEffect v2 + Stable Audio 3 Medium: select better take'},

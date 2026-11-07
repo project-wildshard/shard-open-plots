@@ -1,0 +1,85 @@
+[
+  {
+    "file": "test/grid-five-by-five.test.ts",
+    "disposition": "engine",
+    "reason": "Engine grid assembly, continuation pool, readiness and road admission; original shared catalogue belongs in its port.",
+    "evidence": [
+      "test('refuses holes, duplicate placements and cells beyond the declared square', () => {",
+      "test('retains every cell continuation within the unchanged byte pool', () => {",
+      "test('builds every road collider and four turn-ins per cell out to the outer plots', () => {"
+    ]
+  },
+  {
+    "file": "test/night-market-kit-budget.test.ts",
+    "disposition": "engine",
+    "reason": "Uses engine built-product, output-format and tile-bake census helpers that are present but not exported in v0.1.0; preserve for engine tool port.",
+    "evidence": [
+      "test('report all 80 tile declarations and shared wire bytes once without inventing live memory', () => {",
+      "test('RM8 target overruns remain visible report rows without changing the existing admission caps', () => {",
+      "test('missing tiles, wrong identity and corrupt receipts/sections refuse rather than supply zeros', () => {"
+    ]
+  },
+  {
+    "file": "test/night-market-kit-light.test.ts",
+    "disposition": "deleted",
+    "reason": "J186: private geometry/vertex/palette identity or canonical serializer implementation parity, including long synthetic builds.",
+    "evidence": [
+      "test('lantern vertex bake preserves neutral words, sums compact linear light and refuses atomically over the kit models', () => {"
+    ]
+  },
+  {
+    "file": "test/night-market-model-kit.test.ts",
+    "disposition": "deleted",
+    "reason": "J186: private geometry/vertex/palette identity or canonical serializer implementation parity, including long synthetic builds.",
+    "evidence": [
+      "test('kit models retint by palette slot, turn and stretch in place, and refuse what they cannot place', () => {"
+    ]
+  },
+  {
+    "file": "test/open-plots-audio.test.ts",
+    "disposition": "engine",
+    "reason": "Full world bake and native recording/product admission exercise engine/sharddev integration; bakeAuthoredWorld is not exported in v0.1.0 and original shared AAC controls are absent here.",
+    "evidence": [
+      "test('every plot has its separate bounded probes and preserves deferred own audio', () => {",
+      "test('real AAC controls survive native recording admission and stay outside first control', async () => {",
+      "test('missing recordings, path escape, duplicate anchors and precharged declarations refuse', async () => {"
+    ]
+  },
+  {
+    "file": "test/open-plots-ob2.test.ts",
+    "disposition": "ran",
+    "reason": "Actual audio authoring request and malformed-input boundaries run against released defaults; remove synthetic pixel/layout/timer pins.",
+    "evidence": [
+      "test('all five template audio requests use planned spots and remain unplaced',async()=>{",
+      "test('audio template emits silent native rows and explicit unfulfilled per-plot asset/position requests',async()=>{",
+      "test('audio refuses a short/duplicate spot catalogue, escaping slug and out-of-cell position',async()=>{"
+    ]
+  },
+  {
+    "file": "test/open-plots-style-row.test.ts",
+    "disposition": "deleted",
+    "reason": "J186: private geometry/vertex/palette identity or canonical serializer implementation parity, including long synthetic builds.",
+    "evidence": [
+      "test('a second style row retints the shared kit by palette slot with its own tile letters', () => {"
+    ]
+  },
+  {
+    "file": "test/open-plots-template.test.mjs",
+    "disposition": "engine",
+    "reason": "Cross-repo grid catalogue publication, shared dome-camera parser and output activation depend on engine/coordinator tools absent from this shard; retained for engine port. Original config also omitted .test.mjs entirely.",
+    "evidence": [
+      "test('creates deterministic building data and all8x9 admitted cameras without activating an existing product',()=>{",
+      "test('an explicit activation selects only the requested declared output',()=>{",
+      "test('a build-out template emits unplaced audio requests without activating playback',()=>{"
+    ]
+  },
+  {
+    "file": "test/validation-source-bytes.test.ts",
+    "disposition": "deleted",
+    "reason": "J186: private geometry/vertex/palette identity or canonical serializer implementation parity, including long synthetic builds.",
+    "evidence": [
+      "test('the directly written receipt source matches the sorted copy on real authored JSON', () => {",
+      "test('index keys, odd keys, holes and non-JSON values serialize as the sorted copy did', () => {"
+    ]
+  }
+]

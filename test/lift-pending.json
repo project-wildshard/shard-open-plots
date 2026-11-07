@@ -1,11 +1,6 @@
 [
   "test/grid-five-by-five.test.ts",
   "test/night-market-kit-budget.test.ts",
-  "test/night-market-kit-light.test.ts",
-  "test/night-market-model-kit.test.ts",
   "test/open-plots-audio.test.ts",
-  "test/open-plots-ob2.test.ts",
-  "test/open-plots-style-row.test.ts",
-  "test/open-plots-template.test.mjs",
-  "test/validation-source-bytes.test.ts"
+  "test/open-plots-template.test.mjs"
 ]
