@@ -26,6 +26,9 @@ importers:
       meshoptimizer:
         specifier: 1.2.0
         version: 1.2.0
+      sharp:
+        specifier: 0.34.5
+        version: 0.34.5
       three:
         specifier: 0.186.0
         version: 0.186.0
