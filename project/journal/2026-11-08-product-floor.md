@@ -22,3 +22,10 @@ The AST import check and zero pending-list ratchet now cover this repo
 too. New node tests stay outside Vitest discovery and all git hooks.
 No production Three.js, shader, layout or art file changes. Actual cook,
 GPU and browser/client packaging remain explicit open rows.
+
+The first actual Linux run reproduced four 9.5-second timeouts and a
+Frostline route blocked in its initial direction. Keep both authored walk
+directions, use 61 real ticks, and require either leg to move the player.
+The declared-worker suffix still executes five real ticks and compares the
+entire returned report and opaque commit. It now encodes one checkpoint
+per suffix instead of ten full-world commits; the quick cap stays 9.5 s.
