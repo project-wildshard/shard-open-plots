@@ -29,3 +29,10 @@ directions, use 61 real ticks, and require either leg to move the player.
 The declared-worker suffix still executes five real ticks and compares the
 entire returned report and opaque commit. It now encodes one checkpoint
 per suffix instead of ten full-world commits; the quick cap stays 9.5 s.
+
+The next pinned Linux run still exhausted 9.5 seconds on six complete
+boot/restore cases. They are Ring 2 with this measured reason, not flaky
+quick tests. Every one of the eighteen worlds still runs. The exact
+candidate graph's full preparation already passed all 36 package/play
+cases. The five-minute candidate retains every source test and all eighteen
+quick package cases; normal pinned CI builds every product as before.

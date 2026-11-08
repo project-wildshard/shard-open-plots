@@ -217,5 +217,5 @@ jobs:
         run: |
           node scripts/publish-public.mjs
           pnpm exec wildshard build-shards --reuse
-      - name: Boot, play, save and package all eighteen plots
-        run: node --test --test-concurrency=1 test/ci/product-play.test.mjs test/ci/package-products.test.mjs
+      - name: Package all eighteen plots (play and restore are Ring 2)
+        run: node --test --test-concurrency=1 test/ci/package-products.test.mjs

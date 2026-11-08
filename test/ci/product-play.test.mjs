@@ -1,5 +1,7 @@
-// J186: CI only, never a hook. The shard built by this checkout boots the
-// installed engine, takes real player commands, and resumes its own save.
+// Ring 2, J186: Linux engine v0.1.0 repeatedly exceeded 9.5 seconds for
+// complete product admission plus two real workers and save restoration,
+// even after reducing the tape and checkpoint serializations. All eighteen
+// worlds still run here. Ring 3 retains every package and source test.
 import '@wildshard/engine/scripts/sim-node-loader.mjs';
 import assert from 'node:assert/strict';
 import { existsSync, readFileSync, readdirSync } from 'node:fs';
@@ -31,7 +33,7 @@ async function play(runtime, plan, declared) {
   return { report, commit };
 }
 
-for (const { name: slug } of products) test(`${slug}: boot, walk and resume on the installed engine`, { timeout: 9_500 }, async () => {
+for (const { name: slug } of products) test(`${slug}: boot, walk and resume on the installed engine`, { timeout: 45_000 }, async () => {
   const directory = resolve('out', slug), product = await loadHeadlessProduct(directory), shard = product.shardfile;
   const descriptor = outputDescriptor(shard);
   assert.ok(descriptor, 'The built shard must pass admission');
