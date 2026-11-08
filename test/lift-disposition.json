@@ -1,23 +1,27 @@
 [
   {
     "file": "test/grid-five-by-five.test.ts",
-    "disposition": "engine",
-    "reason": "Engine grid assembly, continuation pool, readiness and road admission; original shared catalogue belongs in its port.",
+    "disposition": "deleted",
+    "reason": "J186: Pins the private continuation byte pool, placement square and exact generated collider/turn-in inventory. Real cross-room travel and continued ticking are exercised in net-fuzz.",
     "evidence": [
       "test('refuses holes, duplicate placements and cells beyond the declared square', () => {",
       "test('retains every cell continuation within the unchanged byte pool', () => {",
       "test('builds every road collider and four turn-ins per cell out to the outer plots', () => {"
-    ]
+    ],
+    "engineOutcome": "deleted-j186"
   },
   {
     "file": "test/night-market-kit-budget.test.ts",
-    "disposition": "engine",
-    "reason": "Uses engine built-product, output-format and tile-bake census helpers that are present but not exported in v0.1.0; preserve for engine tool port.",
+    "disposition": "moved-engine",
+    "reason": "Moved the read-only report tool; replaced private synthetic product writing with the real sealed Night Market pin and owned damaged copies.",
     "evidence": [
       "test('report all 80 tile declarations and shared wire bytes once without inventing live memory', () => {",
       "test('RM8 target overruns remain visible report rows without changing the existing admission caps', () => {",
       "test('missing tiles, wrong identity and corrupt receipts/sections refuse rather than supply zeros', () => {"
-    ]
+    ],
+    "engineOutcome": "migrated",
+    "engineTarget": "project-wildshard/engine/test/night-market-kit-budget.test.ts",
+    "ring": 2
   },
   {
     "file": "test/night-market-kit-light.test.ts",
@@ -37,13 +41,14 @@
   },
   {
     "file": "test/open-plots-audio.test.ts",
-    "disposition": "engine",
-    "reason": "Full world bake and native recording/product admission exercise engine/sharddev integration; bakeAuthoredWorld is not exported in v0.1.0 and original shared AAC controls are absent here.",
+    "disposition": "deleted",
+    "reason": "J186: Calls the private generatePlotAudioProject producer and bundles its author module, pinning file counts, loop order, deferred cohorts and compiler metadata. It does not exercise a playback or player boundary.",
     "evidence": [
       "test('every plot has its separate bounded probes and preserves deferred own audio', () => {",
       "test('real AAC controls survive native recording admission and stay outside first control', async () => {",
       "test('missing recordings, path escape, duplicate anchors and precharged declarations refuse', async () => {"
-    ]
+    ],
+    "engineOutcome": "deleted-j186"
   },
   {
     "file": "test/open-plots-ob2.test.ts",
@@ -65,13 +70,14 @@
   },
   {
     "file": "test/open-plots-template.test.mjs",
-    "disposition": "engine",
-    "reason": "Cross-repo grid catalogue publication, shared dome-camera parser and output activation depend on engine/coordinator tools absent from this shard; retained for engine port. Original config also omitted .test.mjs entirely.",
+    "disposition": "deleted",
+    "reason": "J186: Calls private plotTemplate/writeTemplate helpers over a copied repository shape and pins generated layout paths, eight camera inventories and nine views per camera. It does not invoke a public CLI or play a built product.",
     "evidence": [
       "test('creates deterministic building data and all8x9 admitted cameras without activating an existing product',()=>{",
       "test('an explicit activation selects only the requested declared output',()=>{",
       "test('a build-out template emits unplaced audio requests without activating playback',()=>{"
-    ]
+    ],
+    "engineOutcome": "deleted-j186"
   },
   {
     "file": "test/validation-source-bytes.test.ts",
