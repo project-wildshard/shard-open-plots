@@ -22,40 +22,39 @@ test('every plot product has no beam graph or beam-height rows', () => {
   }
 });
 
-test('all baked plot worlds omit corner beacons and near/far beam geometry', async () => {
+// Each real product bake has its own J186 budget; no case rebuilds the catalogue.
+test.each(declared.outputs)('$slug omits corner beacons and near/far beam geometry', async row => {
   const io = new NodeIO(), read = (path: string): Uint8Array => new Uint8Array(readFileSync(path));
-  for (const row of declared.outputs) {
-    expect(row, row.slug).toHaveProperty('layout');
-    const bytes = await ideaWorld(row, read, { readImagePixels, writeImagePixels, normalizeWorldGlb });
-    const doc = await io.readBinary(bytes), nodes = doc.getRoot().listNodes(), names = nodes.map(node => node.getName());
-    // G641: a tiled plot (a row with a layout) stands its landmark and its tiles in the far proxy instead of a hologram
-    for (const name of ['far_landmark', 'far_tiles']) expect(names, row.slug).toContain(name);
-    expect(names, row.slug).not.toContain('far_hologram');
-    expect(names, row.slug).toContain('ws_terrain_floor');
-    expect(names, row.slug).toContain('collide_plot');
-    expect(names.some(name => /beam|beacon/iu.test(name)), row.slug).toBe(false);
-    expect(doc.getRoot().listMaterials().some(material => /beam/iu.test(material.getName())), row.slug).toBe(false);
-    let cornerVerticesAboveFloor = 0;
-    for (const node of nodes) {
-      const mesh = node.getMesh();
-      if (mesh === null) continue;
-      for (const primitive of mesh.listPrimitives()) {
-        const positions = primitive.getAttribute('POSITION');
-        if (positions === null) throw new Error('Missing plot positions');
-        const point: number[] = [];
-        for (let index = 0; index < positions.getCount(); index++) {
-          positions.getElement(index, point);
-          const [x, y, z] = point;
-          if (x === undefined || y === undefined || z === undefined) throw new Error('Missing plot vertex');
-          if (Math.abs(x) > 242 && Math.abs(z) > 242 && y > 1) cornerVerticesAboveFloor++;
-        }
+  expect(row, row.slug).toHaveProperty('layout');
+  const bytes = await ideaWorld(row, read, { readImagePixels, writeImagePixels, normalizeWorldGlb });
+  const doc = await io.readBinary(bytes), nodes = doc.getRoot().listNodes(), names = nodes.map(node => node.getName());
+  // G641: a tiled plot (a row with a layout) stands its landmark and its tiles in the far proxy instead of a hologram
+  for (const name of ['far_landmark', 'far_tiles']) expect(names, row.slug).toContain(name);
+  expect(names, row.slug).not.toContain('far_hologram');
+  expect(names, row.slug).toContain('ws_terrain_floor');
+  expect(names, row.slug).toContain('collide_plot');
+  expect(names.some(name => /beam|beacon/iu.test(name)), row.slug).toBe(false);
+  expect(doc.getRoot().listMaterials().some(material => /beam/iu.test(material.getName())), row.slug).toBe(false);
+  let cornerVerticesAboveFloor = 0;
+  for (const node of nodes) {
+    const mesh = node.getMesh();
+    if (mesh === null) continue;
+    for (const primitive of mesh.listPrimitives()) {
+      const positions = primitive.getAttribute('POSITION');
+      if (positions === null) throw new Error('Missing plot positions');
+      const point: number[] = [];
+      for (let index = 0; index < positions.getCount(); index++) {
+        positions.getElement(index, point);
+        const [x, y, z] = point;
+        if (x === undefined || y === undefined || z === undefined) throw new Error('Missing plot vertex');
+        if (Math.abs(x) > 242 && Math.abs(z) > 242 && y > 1) cornerVerticesAboveFloor++;
       }
     }
-    // a tiled plot (a row with a layout, NM9) builds its house courts out to its corner tiles' corners; it has no beacons
-    const slug = row.slug;
-    if (!('layout' in row)) expect(cornerVerticesAboveFloor, slug).toBe(0);
   }
-}, 300_000);
+  // a tiled plot (a row with a layout, NM9) builds its house courts out to its corner tiles' corners; it has no beacons
+  const slug = row.slug;
+  if (!('layout' in row)) expect(cornerVerticesAboveFloor, slug).toBe(0);
+}, 10_000);
 
 
 test('a plot without a tiled layout refuses before reading retired art', async () => {
