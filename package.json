@@ -48,7 +48,8 @@
     "oxlint-tsgolint": "7.0.2004",
     "typescript": "7.0.2",
     "vite": "8.3.0",
-    "vitest": "5.0.1"
+    "vitest": "5.0.1",
+    "@typescript/typescript6": "6.0.2"
   },
   "pnpm": {
     "ignoredOptionalDependencies": [

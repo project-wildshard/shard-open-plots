@@ -42,6 +42,9 @@ importers:
       '@types/node':
         specifier: 24.3.1
         version: 24.3.1
+      '@typescript/typescript6':
+        specifier: 6.0.2
+        version: 6.0.2
       oxfmt:
         specifier: 0.74.0
         version: 0.74.0
@@ -706,13 +709,13 @@ packages:
     resolution: {integrity: sha512-rbto/mF/SGERxEgYOek7Xm6B9b+y+mVoo+f4b2LymYO8zM1b7uB5nHuhVMTP2hxdzgxvGiZYGxGIaMvL5y180Q==}
 
   '@wildshard/engine@https://codeload.github.com/project-wildshard/engine/tar.gz/23b21c86896bde7449c4206ee8cf022be433e984':
-    resolution: {gitHosted: true, tarball: https://codeload.github.com/project-wildshard/engine/tar.gz/23b21c86896bde7449c4206ee8cf022be433e984}
+    resolution: {gitHosted: true, integrity: sha512-NxPka7BEQHMir6gzIMjrE8olQSTugddCn+8qphslLcCU8HSCQFCcMs/qf0AydkzNp3+pY060YtDf+W4YwmK3mw==, tarball: https://codeload.github.com/project-wildshard/engine/tar.gz/23b21c86896bde7449c4206ee8cf022be433e984}
     version: 0.1.0
     engines: {node: '>=24.18.0'}
     hasBin: true
 
   '@wildshard/format@https://codeload.github.com/project-wildshard/shardfile/tar.gz/c0227f48f5dfaf43c8e71aca9968725ca942ec50':
-    resolution: {gitHosted: true, tarball: https://codeload.github.com/project-wildshard/shardfile/tar.gz/c0227f48f5dfaf43c8e71aca9968725ca942ec50}
+    resolution: {gitHosted: true, integrity: sha512-8Y4e4XeEqJgWxL+yj7a2R+EDZaR96nGEdlKoezKj7I6TWorA3ZBmWdr3PleCN8pVwa0SSwDsOsl5nTdv2G60ng==, tarball: https://codeload.github.com/project-wildshard/shardfile/tar.gz/c0227f48f5dfaf43c8e71aca9968725ca942ec50}
     version: 0.4.2
     engines: {node: '>=24.18.0'}
     hasBin: true
