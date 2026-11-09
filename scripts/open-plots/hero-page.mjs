@@ -1,3 +1,4 @@
+import { KEYCHAIN_ARGS } from '../chromium-keychain.mjs';
 // Shared live phone capture owner. Invoked only under scripts/browser-lane.sh.
 import {chromium,devices} from 'playwright';
 import {existsSync} from 'node:fs';
@@ -16,7 +17,7 @@ export async function withPlotPage({base,pin,slug},run){
   if(existsSync('.git/quiet'))throw new Error('Official Simulator quiet is active');
   const version=await(await fetch(new URL('/version.json',base))).json();
   if(typeof version.build!=='string'||!version.build.startsWith(pin.slice(0,7)))throw new Error('Served SHA differs');
-  const browser=await chromium.launch({headless:true,args:['--mute-audio','--use-angle=metal','--ignore-gpu-blocklist']});
+  const browser=await chromium.launch({headless:true,args:[...KEYCHAIN_ARGS, '--mute-audio','--use-angle=metal','--ignore-gpu-blocklist']});
   try{
     const context=await browser.newContext({...devices['iPhone 16 Pro'],viewport:{width:402,height:874}});
     await developerSettings(context,{tier:'phone',volume:0});

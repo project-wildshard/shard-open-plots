@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+import { KEYCHAIN_ARGS } from '../chromium-keychain.mjs';
 // Run under scripts/browser-lane.sh. Checks playback; never reports performance.
 import { readFileSync, existsSync } from 'node:fs';
 import { parseArgs } from 'node:util';
@@ -13,7 +14,7 @@ if (!Array.isArray(anchors) || anchors.length < 4 || anchors.length > 8) throw n
 const version = await (await fetch(new URL('/version.json', values.base))).json();
 if (!version.build?.startsWith(values.pin.slice(0, 7))) throw new Error('Served source differs');
 if (existsSync('.git/quiet')) throw new Error('Official Simulator quiet is active');
-const browser = await chromium.launch({ headless: true, args: ['--mute-audio', '--use-angle=metal', '--ignore-gpu-blocklist'] });
+const browser = await chromium.launch({ headless: true, args: [...KEYCHAIN_ARGS, '--mute-audio', '--use-angle=metal', '--ignore-gpu-blocklist'] });
 try {
   const context = await browser.newContext({ ...devices['iPhone 16 Pro'], viewport: { width: 402, height: 874 } });
   await developerSettings(context, { tier: 'phone', volume: 0 });
