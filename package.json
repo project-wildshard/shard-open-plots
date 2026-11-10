@@ -34,7 +34,7 @@
     "@gltf-transform/extensions": "4.5.0",
     "@wildshard/engine": "github:project-wildshard/engine#80d5cc0d8d5faa1336708eeee10359f30a715204",
     "@wildshard/format": "github:project-wildshard/shardfile#4f8280c58ab6e527aa9735eaa80fccf1f34ab6d3",
-    "@wildshard/sharddev": "github:project-wildshard/sharddev#864726310fa6818abe2858a8fc53f335f7bec93f",
+    "@wildshard/sharddev": "github:project-wildshard/sharddev#b9f870038e7d5b1ba13675d751326424b1ebd92b",
     "meshoptimizer": "1.2.0",
     "sharp": "0.35.5",
     "three": "0.186.0",
@@ -135,7 +135,9 @@
       "@typescript/typescript-win32-x64"
     ],
     "overrides": {
-      "@wildshard/format": "github:project-wildshard/shardfile#4f8280c58ab6e527aa9735eaa80fccf1f34ab6d3"
+      "@wildshard/format": "github:project-wildshard/shardfile#4f8280c58ab6e527aa9735eaa80fccf1f34ab6d3",
+      "binaryen": "npm:@pre-bundled/binaryen@132.0.0-patch-1",
+      "assemblyscript>binaryen": "npm:@pre-bundled/binaryen@131.0.0-nightly.20260721-patch-1"
     }
   }
 }
