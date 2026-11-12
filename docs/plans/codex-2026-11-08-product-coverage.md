@@ -13,6 +13,7 @@ Status: in progress 2026-11-08: all eighteen real products, installed pins.
 | Waiting debt and imports | Zero pending ratchet and AST checks against installed engine exports; no sibling source linked |
 | Cook and client boot | Still open; package validation and server movement do not prove a cooked client or rendered page |
 | Graphical cases | Existing source cases remain; additional views and golden ownership stay with the graphical lane |
+| Bake file budget (J193) | Open, found 2026-11-12 (opus-nonengine33): `open-plots-no-beams.test.ts` re-bakes all eighteen worlds, 89 s on the hosted runner against J193's 60 s file budget, and its per-plot cap is a J186 exception at 20 s. Fix: read the `products` job's built worlds in Ring 2, or split the file, so no world is baked twice a push |
 
 New proofs run only in CI. Hooks retain their existing checks. Every
 temporary package root is removed and every worker is closed by the test.

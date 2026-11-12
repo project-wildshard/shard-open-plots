@@ -8,6 +8,8 @@ import { readImagePixels, writeImagePixels } from '@wildshard/sharddev/bake/imag
 import { normalizeWorldGlb } from '@wildshard/sharddev/bake/world';
 import { ideaWorld } from './plotBake.mjs';
 
+const BAKE_BUDGET_MS = 20_000;
+
 test('every plot product has no beam graph or beam-height rows', () => {
   expect(Object.keys(outputs)).toEqual(declared.outputs.map(row => row.slug));
   for (const output of Object.values(outputs)) {
@@ -22,7 +24,10 @@ test('every plot product has no beam graph or beam-height rows', () => {
   }
 });
 
-// Each real product bake has its own J186 budget; no case rebuilds the catalogue.
+// Each real product bake has its own J186 budget; no case rebuilds the catalogue. A deliberate J186 exception: the
+// biggest bakes (showcase-template, night-market) run about 3 s on a Mac and an estimated 7 s on the hosted runner,
+// which runs this file about 2x slower, and went past 10 s there once. 20 s keeps a per-plot bound with room for a
+// slow runner, tighter than vitest.config.ts's 30 s default, so keep the override.
 test.each(declared.outputs)('$slug omits corner beacons and near/far beam geometry', async row => {
   const io = new NodeIO(), read = (path: string): Uint8Array => new Uint8Array(readFileSync(path));
   expect(row, row.slug).toHaveProperty('layout');
@@ -54,7 +59,7 @@ test.each(declared.outputs)('$slug omits corner beacons and near/far beam geomet
   // a tiled plot (a row with a layout, NM9) builds its house courts out to its corner tiles' corners; it has no beacons
   const slug = row.slug;
   if (!('layout' in row)) expect(cornerVerticesAboveFloor, slug).toBe(0);
-}, 10_000);
+}, BAKE_BUDGET_MS);
 
 
 test('a plot without a tiled layout refuses before reading retired art', async () => {
