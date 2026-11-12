@@ -2,7 +2,7 @@ name: ci
 
 on:
   push:
-    branches: [main]
+    branches: [main, 'plan/**']
   pull_request:
   workflow_dispatch:
     inputs:
@@ -23,7 +23,9 @@ permissions:
 
 concurrency:
   group: ci-${{ github.ref }}-${{ github.event_name }}-${{ inputs.engine || github.event.client_payload.engine }}-${{ inputs.sharddev || github.event.client_payload.sharddev }}
-  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+  # A newer push to a plan branch cancels its older run; land reads a
+  # cancelled run as red and stops, so push a plan branch only via land.
+  cancel-in-progress: ${{ github.event_name == 'pull_request' || startsWith(github.ref, 'refs/heads/plan/') }}
 
 jobs:
   check:
@@ -360,8 +362,10 @@ jobs:
             cat "$RUNNER_TEMP/play-$part.log"
           done
           exit "$status"
+      # Plan branches restore main's preparation but never save their own: a
+      # branch's cache is unreadable from main and only crowds the 10 GB limit.
       - name: Save verified author preparation
-        if: needs.products.outputs.preparation-hit != 'true'
+        if: needs.products.outputs.preparation-hit != 'true' && github.ref == 'refs/heads/main'
         uses: actions/cache/save@0057852bfaa89a56745cba8c7296529d2fc39830 # v4.3.0
         with:
           path: |
