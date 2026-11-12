@@ -2,25 +2,10 @@ name: ring-2-prepare
 
 # Cold native tool compilation is Ring 2. A subsequent Ring 3 run restores
 # only this exact dependency graph and shard source, then builds and plays.
+# On a push, ci.yml's ring-2-play plays the products job's build instead,
+# so a push SHA runs build:shards once (TEST-SPEED TS16d); this workflow
+# keeps the nightly cold build and candidate dispatches.
 on:
-  push:
-    branches: [main]
-    paths:
-      - '.github/workflows/ring-2-prepare.yml'
-      - '.github/actions/**'
-      - 'src/**'
-      - 'test/**'
-      - 'scripts/**'
-      - 'public/**'
-      - 'lint/**'
-      - 'package.json'
-      - 'pnpm-lock.yaml'
-      - 'pnpm-workspace.yaml'
-      - 'tsconfig*.json'
-      - 'vitest.config.*'
-      - '.npmrc'
-      - '.gitattributes'
-      - '.oxlintrc.author.json'
   schedule:
     - cron: '25 3 * * *'
   workflow_dispatch:

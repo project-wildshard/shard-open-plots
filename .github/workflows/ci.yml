@@ -172,11 +172,16 @@ jobs:
           fi
       - run: pnpm test:shards
 
+  # One build:shards a push SHA (TEST-SPEED TS16d): products builds and
+  # packages the plots, then ring-2-play downloads that same build to play it.
   products:
     runs-on: ubuntu-latest
     timeout-minutes: ${{ (github.event_name == 'workflow_dispatch' || github.event_name == 'repository_dispatch') && 5 || 15 }}
     env:
       APP_CLIENT_ID: ${{ secrets.APP_CLIENT_ID }}
+    outputs:
+      preparation-key: ${{ steps.preparation-key.outputs.key }}
+      preparation-hit: ${{ steps.author-preparation.outputs.cache-hit }}
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
@@ -228,6 +233,11 @@ jobs:
           else
             pnpm install --frozen-lockfile --config.ci=false
           fi
+      - name: Bind preparation to the untouched source tree
+        id: preparation-key
+        env:
+          AUTHOR_KEY: author-preparation-v1-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('pnpm-lock.yaml', 'src/shards/**', 'public/**') }}
+        run: printf 'key=%s\n' "$AUTHOR_KEY" >> "$GITHUB_OUTPUT"
       - name: Restore verified Ring 2 author preparation
         id: author-preparation
         uses: actions/cache/restore@0057852bfaa89a56745cba8c7296529d2fc39830 # v4.3.0
@@ -236,7 +246,7 @@ jobs:
             ~/.cache/wildshard/basis
             ~/.cache/wildshard/gen
             ~/.cache/wildshard/shardfiles
-          key: author-preparation-v1-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('pnpm-lock.yaml', 'src/shards/**', 'public/**') }}
+          key: ${{ steps.preparation-key.outputs.key }}
       - name: Require matching preparation for a candidate
         if: (github.event_name == 'workflow_dispatch' || github.event_name == 'repository_dispatch') && steps.author-preparation.outputs.cache-hit != 'true'
         run: |
@@ -250,5 +260,112 @@ jobs:
         run: |
           node scripts/publish-public.mjs
           pnpm exec wildshard build-shards --reuse
+      - name: Share the built plots with Ring 2 play
+        if: github.event_name == 'push'
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: open-plots-out
+          path: out/
+          if-no-files-found: error
+          include-hidden-files: true
+          compression-level: 1
+          retention-days: 1
+      - name: Share the fresh author preparation with Ring 2 play
+        if: github.event_name == 'push' && steps.author-preparation.outputs.cache-hit != 'true'
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: open-plots-preparation
+          path: |
+            ~/.cache/wildshard/basis
+            ~/.cache/wildshard/gen
+            ~/.cache/wildshard/shardfiles
+          if-no-files-found: error
+          include-hidden-files: true
+          compression-level: 1
+          retention-days: 1
       - name: Package all eighteen plots (play and restore are Ring 2)
         run: node --test --test-concurrency=1 test/ci/package-products.test.mjs
+
+  # Ring 2 on a push: real admission, play and resume of the products job's
+  # build (no second build:shards), then save the verified preparation that
+  # candidate runs restore. ring-2-prepare keeps its own cold build for the
+  # nightly schedule and candidate dispatches.
+  ring-2-play:
+    needs: products
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      APP_CLIENT_ID: ${{ secrets.APP_CLIENT_ID }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: pnpm/action-setup@ea17c68df8912ef543352723c149a84f56e3d413 # v6.1.0
+        with:
+          package_json_file: package.json
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version-file: package.json
+          cache: pnpm
+          cache-dependency-path: |
+            pnpm-lock.yaml
+            pnpm-workspace.yaml
+      - uses: actions/create-github-app-token@64ab729a6294000f5aa4a4bc0b73d1f32bc45510 # v3.3.0
+        id: app-token
+        if: env.APP_CLIENT_ID != ''
+        with:
+          client-id: ${{ env.APP_CLIENT_ID }}
+          private-key: ${{ secrets.APP_PRIVATE_KEY }}
+          owner: project-wildshard
+          permission-contents: read
+      - name: Read private org repos with the app token
+        if: steps.app-token.outputs.token != ''
+        env:
+          TOKEN: ${{ steps.app-token.outputs.token }}
+        run: |
+          base="https://x-access-token:${TOKEN}@github.com/"
+          git config --global url."$base".insteadOf "https://github.com/"
+          git config --global --add url."$base".insteadOf "git@github.com:"
+          git config --global --add url."$base".insteadOf "ssh://git@github.com/"
+      - name: Install the pinned dependency graph
+        run: pnpm install --frozen-lockfile --config.ci=false
+      - name: Prove the installed global store
+        run: node scripts/assert-store-layout.mjs
+      - name: Download the products job's built plots
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        with:
+          name: open-plots-out
+          path: out
+      - name: Download the products job's fresh author preparation
+        if: needs.products.outputs.preparation-hit != 'true'
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        with:
+          name: open-plots-preparation
+          path: ~/.cache/wildshard
+      # All eighteen worlds play, in three parallel parts; each part also
+      # checks that every declared product was built.
+      - name: Real product admission, play and resume
+        run: |
+          set +e
+          pids=()
+          for part in 1 2 3; do
+            WS_PLAY_PART="$part/3" node --test --test-concurrency=1 test/ci/product-play.test.mjs > "$RUNNER_TEMP/play-$part.log" 2>&1 &
+            pids+=("$!")
+          done
+          status=0
+          for part in 1 2 3; do
+            wait "${pids[$((part - 1))]}" || status=1
+            echo "--- play part $part of 3"
+            cat "$RUNNER_TEMP/play-$part.log"
+          done
+          exit "$status"
+      - name: Save verified author preparation
+        if: needs.products.outputs.preparation-hit != 'true'
+        uses: actions/cache/save@0057852bfaa89a56745cba8c7296529d2fc39830 # v4.3.0
+        with:
+          path: |
+            ~/.cache/wildshard/basis
+            ~/.cache/wildshard/gen
+            ~/.cache/wildshard/shardfiles
+          key: ${{ needs.products.outputs.preparation-key }}

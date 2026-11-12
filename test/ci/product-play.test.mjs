@@ -20,6 +20,11 @@ const engineRequire = createRequire(import.meta.resolve('@wildshard/engine/packa
 const products = readdirSync('out', { withFileTypes: true }).filter(row => row.isDirectory() && !row.name.startsWith('.') && row.name !== 'tars');
 assert.ok(products.length, 'Build this shard before running its product proof');
 assert.deepEqual(products.map(row => row.name).sort(), shardProducts(process.cwd(), manifestFolders(process.cwd())).map(row => row.slug).sort(), 'Every declared product must be built');
+// CI plays the eighteen products in parallel parts (WS_PLAY_PART=1/3 and so on);
+// every part checks the full built set above, and the parts cover every product.
+const [playPart, playParts] = (process.env.WS_PLAY_PART ?? '1/1').split('/').map(Number);
+assert.ok(Number.isInteger(playPart) && Number.isInteger(playParts) && playPart >= 1 && playPart <= playParts, `Bad WS_PLAY_PART ${process.env.WS_PLAY_PART}`);
+const partProducts = products.filter((_, index) => index % playParts === playPart - 1);
 const tapes = existsSync('test/ci/content-tapes.json') ? JSON.parse(readFileSync('test/ci/content-tapes.json', 'utf8')) : {};
 
 async function play(runtime, plan, declared) {
@@ -33,7 +38,7 @@ async function play(runtime, plan, declared) {
   return { report, commit };
 }
 
-for (const { name: slug } of products) test(`${slug}: boot, walk and resume on the installed engine`, { timeout: 45_000 }, async () => {
+for (const { name: slug } of partProducts) test(`${slug}: boot, walk and resume on the installed engine`, { timeout: 45_000 }, async () => {
   const directory = resolve('out', slug), product = await loadHeadlessProduct(directory), shard = product.shardfile;
   const descriptor = outputDescriptor(shard);
   assert.ok(descriptor, 'The built shard must pass admission');
