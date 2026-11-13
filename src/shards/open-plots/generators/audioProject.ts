@@ -2,7 +2,7 @@ import { emitNamedBlobs, nameBlob } from '@wildshard/sharddev/blobs';
 import { emitPlatformSections } from '@wildshard/sharddev/platformSections';
 import type { ProjectGenerationContext } from '@wildshard/sharddev/projectGeneration';
 import type { ProjectOutput } from '@wildshard/sharddev/projectOutput';
-import type { Shardfile } from '@wildshard/engine/host/shardfile';
+import type { Shardfile } from '@wildshard/format/shardSchema';
 import type { AudioData } from '@wildshard/sharddev/audio';
 import { plotAudioClientPlan, plotAudioData, type PlotAudioSpot } from './audio';
 
