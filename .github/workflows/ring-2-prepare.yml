@@ -85,10 +85,13 @@ jobs:
           fi
       - name: Prove the installed global store
         run: node scripts/assert-store-layout.mjs
+      # Tests are left out so a test-only push hits the cache; sound while no
+      # generator imports a *.test.ts. Keep this key identical in ci.yml and
+      # ring-2-prepare.yml.
       - name: Bind preparation to the untouched source tree
         id: preparation-key
         env:
-          AUTHOR_KEY: author-preparation-v1-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('pnpm-lock.yaml', 'src/shards/**', 'public/**') }}
+          AUTHOR_KEY: author-preparation-v1-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('pnpm-lock.yaml', 'src/shards/**', '!src/shards/**/*.test.ts', 'public/**') }}
         run: printf 'key=%s\n' "$AUTHOR_KEY" >> "$GITHUB_OUTPUT"
       - name: Cold complete build of all eighteen plots
         run: pnpm build:shards

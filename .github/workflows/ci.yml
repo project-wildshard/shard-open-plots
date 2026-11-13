@@ -235,10 +235,13 @@ jobs:
           else
             pnpm install --frozen-lockfile --config.ci=false
           fi
+      # Tests are left out so a test-only push hits the cache; sound while no
+      # generator imports a *.test.ts. Keep this key identical in ci.yml and
+      # ring-2-prepare.yml.
       - name: Bind preparation to the untouched source tree
         id: preparation-key
         env:
-          AUTHOR_KEY: author-preparation-v1-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('pnpm-lock.yaml', 'src/shards/**', 'public/**') }}
+          AUTHOR_KEY: author-preparation-v1-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('pnpm-lock.yaml', 'src/shards/**', '!src/shards/**/*.test.ts', 'public/**') }}
         run: printf 'key=%s\n' "$AUTHOR_KEY" >> "$GITHUB_OUTPUT"
       - name: Restore verified Ring 2 author preparation
         id: author-preparation
