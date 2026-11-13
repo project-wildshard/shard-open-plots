@@ -27,7 +27,9 @@ test('every plot product has no beam graph or beam-height rows', () => {
 // Each real product bake has its own J186 budget; no case rebuilds the catalogue. A deliberate J186 exception: the
 // biggest bakes (showcase-template, night-market) run about 3 s on a Mac and an estimated 7 s on the hosted runner,
 // which runs this file about 2x slower, and went past 10 s there once. 20 s keeps a per-plot bound with room for a
-// slow runner, tighter than vitest.config.ts's 30 s default, so keep the override.
+// slow runner, tighter than vitest.config.ts's 30 s default, so keep the override. The whole file re-bakes all
+// eighteen worlds (89 s hosted, over J193's 60 s file budget): the "Bake file budget" row in
+// docs/plans/codex-2026-11-08-product-coverage.md owns that.
 test.each(declared.outputs)('$slug omits corner beacons and near/far beam geometry', async row => {
   const io = new NodeIO(), read = (path: string): Uint8Array => new Uint8Array(readFileSync(path));
   expect(row, row.slug).toHaveProperty('layout');
