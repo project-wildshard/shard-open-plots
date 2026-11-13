@@ -10,3 +10,8 @@
   preparation. Same checks, one build.
 - `ring-2-prepare` no longer runs on push; it keeps the nightly cold
   build and the candidate dispatches.
+- The preparation key now leaves `src/shards/**/*.test.ts` out, so a
+  test-only push restores the preparation instead of cold-building
+  (a miss cost 560 s against 404 s on a hit; meta TS16d).
+  `test/tooling/preparation-key.test.mjs` pins the two workflow keys
+  identical and that no build input is a test file.
