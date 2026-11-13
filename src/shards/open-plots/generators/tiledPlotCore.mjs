@@ -21,10 +21,7 @@ const KERB = { from: 247, to: 248.6, height: 0.5, gap: 7.5 };
 
 /** A generated model's triangles in metres (its node transforms applied), with normals, uvs and its colour texture. */
 async function readModel(bytes, codec) {
-  const { WebIO, ALL_EXTENSIONS, MeshoptDecoder } = codec;
-  await MeshoptDecoder.ready;
-  const io = new WebIO().registerExtensions(ALL_EXTENSIONS).registerDependencies({ 'meshopt.decoder': MeshoptDecoder });
-  const doc = await io.readBinary(bytes), corners = [];
+  const doc = await codec.readGlb(bytes), corners = [];
   let image = null;
   for (const node of doc.getRoot().listNodes()) {
     const mesh = node.getMesh(); if (mesh === null) continue;
@@ -233,10 +230,9 @@ function standIns(parts, farLandmark, ring, litCoarse) {
 
 /** GR9: a tiled idea's world GLB bytes, from inputs read through `read(path)`; nothing is written. */
 export async function tiledPlotWorldBytes(read, tools, idea, plot, codec) {
-  const { Document, WebIO } = codec;
   const litCoarse = idea.coarseLandmark === 'lit', streaks = idea.pool === 'streaks';
   const { parts, landmark, farLandmark, nearImage, poster: posterBytes, ring } = await tiledPlot(read, tools, idea.layout, plot, codec, litCoarse, streaks);
-  const doc = new Document(), buffer = doc.createBuffer(), scene = doc.createScene('plot');
+  const doc = codec.newGlbDocument(), buffer = doc.createBuffer(), scene = doc.createScene('plot');
   const texture = async (name, pixels) => doc.createTexture(name).setImage(await tools.writeImagePixels(pixels)).setMimeType('image/png');
   const materials = {
     Paving: doc.createMaterial('Paving').setBaseColorFactor([...linear(ring), 1]).setRoughnessFactor(1).setMetallicFactor(0),
@@ -298,7 +294,7 @@ export async function tiledPlotWorldBytes(read, tools, idea, plot, codec) {
   node('far_tiles', parts.far.part('far'), materials.Kit, { normals: false });
   node('far_landmark', { ...farLandmark, normals: [], uvs: [] }, materials.Kit, { normals: false });
   node('collide_plot', { ...parts.solid.part('Solid'), colours: parts.solid.part('Solid').positions.map(() => 1) }, materials.Kit, { normals: false });
-  const bytes = await new WebIO().writeBinary(doc);
+  const bytes = await codec.writeGlb(doc);
   const count = (soup, name) => soup.part(name).positions.length / 9;
   console.info(`open-plots: ${idea.slug} world.glb ${bytes.length} bytes, tiled ${idea.layout}: kit ${count(parts.Kit, 'Kit')} glow ${count(parts.Glow, 'Glow')} pool ${count(parts.Pool, 'Pool')} landmark ${landmark.positions.length / 9} far ${count(parts.far, 'far') + farLandmark.positions.length / 9} triangles`);
   return bytes;

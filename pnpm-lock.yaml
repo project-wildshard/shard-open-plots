@@ -28,8 +28,8 @@ importers:
         specifier: github:project-wildshard/shard-format#0786a04b8f824578d4346e735ccc2a6c56c2a094
         version: https://codeload.github.com/project-wildshard/shard-format/tar.gz/0786a04b8f824578d4346e735ccc2a6c56c2a094(typescript@7.0.2)
       '@wildshard/sharddev':
-        specifier: github:project-wildshard/sharddev#d14580c10413562b136f1aef8cd652dc8f319b10
-        version: https://codeload.github.com/project-wildshard/sharddev/tar.gz/d14580c10413562b136f1aef8cd652dc8f319b10(@types/node@24.3.1)(typescript@7.0.2)
+        specifier: github:project-wildshard/sharddev#62f937c7b4eca0245bfbdfcef1870e2617881c91
+        version: '@wildshard/sdk@https://codeload.github.com/project-wildshard/sharddev/tar.gz/62f937c7b4eca0245bfbdfcef1870e2617881c91(@types/node@24.3.1)(typescript@7.0.2)'
       meshoptimizer:
         specifier: 1.2.0
         version: 1.2.0
@@ -574,8 +574,8 @@ packages:
     engines: {node: '>=24.18.0'}
     hasBin: true
 
-  '@wildshard/sharddev@https://codeload.github.com/project-wildshard/sharddev/tar.gz/d14580c10413562b136f1aef8cd652dc8f319b10':
-    resolution: {gitHosted: true, tarball: https://codeload.github.com/project-wildshard/sharddev/tar.gz/d14580c10413562b136f1aef8cd652dc8f319b10}
+  '@wildshard/sdk@https://codeload.github.com/project-wildshard/sharddev/tar.gz/62f937c7b4eca0245bfbdfcef1870e2617881c91':
+    resolution: {gitHosted: true, integrity: sha512-Mk+kc0VzW1Xm8B/1KJWq5gvneDgPkngQI8+zPrdXqZP5ubg8pV17lYXIVu25WVmHCmNc+06Arcm+7oBtV8THLw==, tarball: https://codeload.github.com/project-wildshard/sharddev/tar.gz/62f937c7b4eca0245bfbdfcef1870e2617881c91}
     version: 0.2.2
     engines: {node: '>=24.18.0'}
     hasBin: true
@@ -1657,7 +1657,7 @@ snapshots:
     transitivePeerDependencies:
       - typescript
 
-  '@wildshard/sharddev@https://codeload.github.com/project-wildshard/sharddev/tar.gz/d14580c10413562b136f1aef8cd652dc8f319b10(@types/node@24.3.1)(typescript@7.0.2)':
+  '@wildshard/sdk@https://codeload.github.com/project-wildshard/sharddev/tar.gz/62f937c7b4eca0245bfbdfcef1870e2617881c91(@types/node@24.3.1)(typescript@7.0.2)':
     dependencies:
       '@dimforge/rapier3d-simd': 0.21.0
       '@gltf-transform/core': 4.5.0

@@ -1,7 +1,5 @@
 // The pilot composition: new plots supply their own builder set and construction hooks.
-import { Document, WebIO } from '@gltf-transform/core';
-import { ALL_EXTENSIONS } from '@gltf-transform/extensions';
-import { MeshoptDecoder } from 'meshoptimizer';
+import { newGlbDocument, readGlb, writeGlb } from '@wildshard/sharddev/bake/generatorGlb';
 import { tiledPlotWorldBytes } from './tiledPlotCore.mjs';
 import { nightMarketPlot } from './nightMarket.mjs';
 import { lanternBayouPlot } from './bayou.mjs';
@@ -44,5 +42,5 @@ export function plotForLayout(layout, scaffold = false) {
 export function tiledWorldBytes(read, tools, idea) {
   const layout = JSON.parse(new TextDecoder('utf-8', { fatal: true }).decode(read(`src/shards/open-plots/data/layouts/${idea.layout}.json`)));
   const plot = plotForLayout(layout, idea.scaffold === true);
-  return tiledPlotWorldBytes(read, tools, idea, plot, { Document, WebIO, ALL_EXTENSIONS, MeshoptDecoder });
+  return tiledPlotWorldBytes(read, tools, idea, plot, { newGlbDocument, readGlb, writeGlb });
 }

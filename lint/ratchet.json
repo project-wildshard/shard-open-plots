@@ -1,6 +1,3 @@
 {
-  "budgets": {},
-  "wildshard/generator-imports": {
-    "src/shards/open-plots/generators/tiledPlot.mjs": 3
-  }
+  "budgets": {}
 }
