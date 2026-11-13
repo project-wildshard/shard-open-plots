@@ -5,6 +5,14 @@ packages:
 enableGlobalVirtualStore: true
 confirmModulesPurge: false
 
+# Engine 0.1.17 and 0.1.18 import assemblyscript from scripts/shard-platform.mjs
+# but list it only in devDependencies, so an npm install lacks it (NP8). Drop
+# this once an engine release lists it in dependencies.
+packageExtensions:
+  '@wildshard/engine':
+    dependencies:
+      assemblyscript: 0.28.20
+
 # Install scripts (SA39, J319): a dependency runs its preinstall, install or
 # postinstall script only when it is listed `true` here. pnpm skips the rest and
 # names them after `pnpm install`. Nothing this shard installs needs one today.

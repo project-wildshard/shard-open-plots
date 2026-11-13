@@ -10,6 +10,8 @@ overrides:
   binaryen: npm:@pre-bundled/binaryen@132.0.0-patch-1
   assemblyscript>binaryen: npm:@pre-bundled/binaryen@131.0.0-nightly.20260721-patch-1
 
+packageExtensionsChecksum: sha256-BK/jFcJ7uRpr8VG4TR1GvZHVBJeW1wcsDERpV3DM9lA=
+
 importers:
 
   .:
@@ -1617,6 +1619,7 @@ snapshots:
       '@wildshard/format': '@wildshard/shard-format@0.4.9(typescript@7.0.2)'
       '@wildshard/wire': 0.1.0(typescript@7.0.2)
       ajv: 6.15.0
+      assemblyscript: 0.28.20
       fflate: 0.8.3
       hono: 4.13.13
       n8ao: 2.0.1(postprocessing@6.39.5(three@0.186.0))(three@0.186.0)
