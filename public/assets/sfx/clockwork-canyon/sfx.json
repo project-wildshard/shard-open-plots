@@ -4,7 +4,7 @@
   "licence": "MOSS: Apache-2.0; Stable Audio 3 Medium: Stability AI Community License and Gemma terms",
   "beds": {
     "clockwork-canyon.ambience": {
-      "file": "ambience-24d7c730b7d6.m4a",
+      "file": "ambience-e6e95c41ab46.m4a",
       "loopStart": 12.0,
       "loopEnd": 24.0,
       "duration": 25.0,
@@ -14,7 +14,7 @@
   },
   "hums": {
     "clockwork-canyon.clock-tick": {
-      "file": "clock-tick-1a1c07574d21.m4a",
+      "file": "clock-tick-5e6737aa5fd3.m4a",
       "loopStart": 2.75,
       "loopEnd": 4.75,
       "duration": 5.75,
@@ -22,7 +22,7 @@
       "seamScore": 0.533
     },
     "clockwork-canyon.waterwheel": {
-      "file": "waterwheel-96705d3c2043.m4a",
+      "file": "waterwheel-f694d923fe91.m4a",
       "loopStart": 2.0,
       "loopEnd": 9.0,
       "duration": 10.0,
@@ -30,7 +30,7 @@
       "seamScore": 0.555
     },
     "clockwork-canyon.boiler": {
-      "file": "boiler-6032e2ff6897.m4a",
+      "file": "boiler-5aa42685bfdc.m4a",
       "loopStart": 2.75,
       "loopEnd": 7.75,
       "duration": 8.75,
@@ -38,7 +38,7 @@
       "seamScore": 0.503
     },
     "clockwork-canyon.gear-ratchet": {
-      "file": "gear-ratchet-a038e6831283.m4a",
+      "file": "gear-ratchet-11d9ecf2a586.m4a",
       "loopStart": 2.25,
       "loopEnd": 9.25,
       "duration": 10.25,
@@ -46,7 +46,7 @@
       "seamScore": 0.562
     },
     "clockwork-canyon.garden-birds": {
-      "file": "garden-birds-05a9c59c152a.m4a",
+      "file": "garden-birds-8d8055d7f5d5.m4a",
       "loopStart": 2.75,
       "loopEnd": 9.75,
       "duration": 10.75,
@@ -54,7 +54,7 @@
       "seamScore": 0.395
     },
     "clockwork-canyon.kiosk-murmur": {
-      "file": "kiosk-murmur-0160591b0750.m4a",
+      "file": "kiosk-murmur-4e1be0d5f352.m4a",
       "loopStart": 2.5,
       "loopEnd": 7.5,
       "duration": 8.5,
@@ -65,7 +65,7 @@
   "oneshots": {},
   "provenance": [
     {
-      "file": "ambience-24d7c730b7d6.m4a",
+      "file": "ambience-e6e95c41ab46.m4a",
       "winner": "moss",
       "comparison": {
         "moss": {
@@ -117,7 +117,7 @@
       }
     },
     {
-      "file": "clock-tick-1a1c07574d21.m4a",
+      "file": "clock-tick-5e6737aa5fd3.m4a",
       "winner": "medium",
       "comparison": {
         "moss": {
@@ -158,7 +158,7 @@
       }
     },
     {
-      "file": "waterwheel-96705d3c2043.m4a",
+      "file": "waterwheel-f694d923fe91.m4a",
       "winner": "moss",
       "comparison": {
         "moss": {
@@ -199,7 +199,7 @@
       }
     },
     {
-      "file": "boiler-6032e2ff6897.m4a",
+      "file": "boiler-5aa42685bfdc.m4a",
       "winner": "moss",
       "comparison": {
         "moss": {
@@ -240,7 +240,7 @@
       }
     },
     {
-      "file": "gear-ratchet-a038e6831283.m4a",
+      "file": "gear-ratchet-11d9ecf2a586.m4a",
       "winner": "moss",
       "comparison": {
         "moss": {
@@ -281,7 +281,7 @@
       }
     },
     {
-      "file": "garden-birds-05a9c59c152a.m4a",
+      "file": "garden-birds-8d8055d7f5d5.m4a",
       "winner": "moss",
       "comparison": {
         "moss": {
@@ -322,7 +322,7 @@
       }
     },
     {
-      "file": "kiosk-murmur-0160591b0750.m4a",
+      "file": "kiosk-murmur-4e1be0d5f352.m4a",
       "winner": "medium",
       "comparison": {
         "moss": {

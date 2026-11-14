@@ -4,7 +4,7 @@
   "licence": "MOSS: Apache-2.0; Stable Audio 3 Medium: Stability AI Community License and Gemma terms",
   "beds": {
     "showcase-template.ambience": {
-      "file": "ambience-f45d3258415f.m4a",
+      "file": "ambience-6fcdd4079170.m4a",
       "loopStart": 2.25,
       "loopEnd": 27.25,
       "duration": 28.25,
@@ -14,7 +14,7 @@
   },
   "hums": {
     "showcase-template.obelisk": {
-      "file": "obelisk-5c25113eba12.m4a",
+      "file": "obelisk-5021982a5972.m4a",
       "loopStart": 4.0,
       "loopEnd": 6.0,
       "duration": 7.0,
@@ -22,7 +22,7 @@
       "seamScore": 0.444
     },
     "showcase-template.canal-ring": {
-      "file": "canal-ring-5e28a62c686f.m4a",
+      "file": "canal-ring-ed2634704e7f.m4a",
       "loopStart": 2.0,
       "loopEnd": 9.0,
       "duration": 10.0,
@@ -30,7 +30,7 @@
       "seamScore": 0.572
     },
     "showcase-template.stalls": {
-      "file": "stalls-b1a466b81973.m4a",
+      "file": "stalls-888d225df8a3.m4a",
       "loopStart": 4.0,
       "loopEnd": 6.0,
       "duration": 7.0,
@@ -38,7 +38,7 @@
       "seamScore": 0.521
     },
     "showcase-template.gardens": {
-      "file": "gardens-77fb4ba39523.m4a",
+      "file": "gardens-55add1b3b625.m4a",
       "loopStart": 3.75,
       "loopEnd": 9.75,
       "duration": 10.75,
@@ -46,7 +46,7 @@
       "seamScore": 0.582
     },
     "showcase-template.houses": {
-      "file": "houses-9ca4abaa256f.m4a",
+      "file": "houses-2a583925139e.m4a",
       "loopStart": 3.25,
       "loopEnd": 5.25,
       "duration": 6.25,
@@ -54,7 +54,7 @@
       "seamScore": 0.303
     },
     "showcase-template.road-entry": {
-      "file": "road-entry-204f957bd718.m4a",
+      "file": "road-entry-4eab88827f5b.m4a",
       "loopStart": 4.25,
       "loopEnd": 6.25,
       "duration": 7.25,
@@ -65,7 +65,7 @@
   "oneshots": {},
   "provenance": [
     {
-      "file": "ambience-f45d3258415f.m4a",
+      "file": "ambience-6fcdd4079170.m4a",
       "winner": "medium",
       "comparison": {
         "moss": {
@@ -106,7 +106,7 @@
       }
     },
     {
-      "file": "obelisk-5c25113eba12.m4a",
+      "file": "obelisk-5021982a5972.m4a",
       "winner": "moss",
       "comparison": {
         "moss": {
@@ -147,7 +147,7 @@
       }
     },
     {
-      "file": "canal-ring-5e28a62c686f.m4a",
+      "file": "canal-ring-ed2634704e7f.m4a",
       "winner": "moss",
       "comparison": {
         "moss": {
@@ -188,7 +188,7 @@
       }
     },
     {
-      "file": "stalls-b1a466b81973.m4a",
+      "file": "stalls-888d225df8a3.m4a",
       "winner": "moss",
       "comparison": {
         "moss": {
@@ -229,7 +229,7 @@
       }
     },
     {
-      "file": "gardens-77fb4ba39523.m4a",
+      "file": "gardens-55add1b3b625.m4a",
       "winner": "moss",
       "comparison": {
         "moss": {
@@ -270,7 +270,7 @@
       }
     },
     {
-      "file": "houses-9ca4abaa256f.m4a",
+      "file": "houses-2a583925139e.m4a",
       "winner": "medium",
       "comparison": {
         "moss": {
@@ -311,7 +311,7 @@
       }
     },
     {
-      "file": "road-entry-204f957bd718.m4a",
+      "file": "road-entry-4eab88827f5b.m4a",
       "winner": "medium",
       "comparison": {
         "moss": {

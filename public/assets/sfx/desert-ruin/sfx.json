@@ -4,7 +4,7 @@
   "licence": "MOSS: Apache-2.0; Stable Audio 3 Medium: Stability AI Community License and Gemma terms",
   "beds": {
     "desert-ruin.ambience": {
-      "file": "ambience-9e8220262258.m4a",
+      "file": "ambience-7f897a705796.m4a",
       "loopStart": 7.25,
       "loopEnd": 15.25,
       "duration": 16.25,
@@ -14,7 +14,7 @@
   },
   "hums": {
     "desert-ruin.gateway-wind": {
-      "file": "gateway-wind-7dfd0c8b22a9.m4a",
+      "file": "gateway-wind-c2701b1c0ad2.m4a",
       "loopStart": 2.0,
       "loopEnd": 8.0,
       "duration": 9.0,
@@ -22,7 +22,7 @@
       "seamScore": 0.568
     },
     "desert-ruin.oasis-ne": {
-      "file": "oasis-ne-2c294b87f1da.m4a",
+      "file": "oasis-ne-97058514d8d3.m4a",
       "loopStart": 2.5,
       "loopEnd": 7.5,
       "duration": 8.5,
@@ -30,7 +30,7 @@
       "seamScore": 0.587
     },
     "desert-ruin.tents-south": {
-      "file": "tents-south-66cdbaee8b50.m4a",
+      "file": "tents-south-e7ba8232cff4.m4a",
       "loopStart": 2.75,
       "loopEnd": 9.75,
       "duration": 10.75,
@@ -38,7 +38,7 @@
       "seamScore": 0.579
     },
     "desert-ruin.ruins-west": {
-      "file": "ruins-west-f765ff652fd4.m4a",
+      "file": "ruins-west-c2d9ebea0108.m4a",
       "loopStart": 2.5,
       "loopEnd": 8.5,
       "duration": 9.5,
@@ -46,7 +46,7 @@
       "seamScore": 0.544
     },
     "desert-ruin.palms-south": {
-      "file": "palms-south-56714d4c116f.m4a",
+      "file": "palms-south-9a046b4c0df1.m4a",
       "loopStart": 2.25,
       "loopEnd": 8.25,
       "duration": 9.25,
@@ -54,7 +54,7 @@
       "seamScore": 0.464
     },
     "desert-ruin.entry": {
-      "file": "entry-73e4ec1ad002.m4a",
+      "file": "entry-fd0a85900711.m4a",
       "loopStart": 2.25,
       "loopEnd": 8.25,
       "duration": 9.25,
@@ -65,7 +65,7 @@
   "oneshots": {},
   "provenance": [
     {
-      "file": "ambience-9e8220262258.m4a",
+      "file": "ambience-7f897a705796.m4a",
       "winner": "medium",
       "comparison": {
         "moss": {
@@ -117,7 +117,7 @@
       }
     },
     {
-      "file": "gateway-wind-7dfd0c8b22a9.m4a",
+      "file": "gateway-wind-c2701b1c0ad2.m4a",
       "winner": "medium",
       "comparison": {
         "moss": {
@@ -169,7 +169,7 @@
       }
     },
     {
-      "file": "oasis-ne-2c294b87f1da.m4a",
+      "file": "oasis-ne-97058514d8d3.m4a",
       "winner": "medium",
       "comparison": {
         "moss": {
@@ -210,7 +210,7 @@
       }
     },
     {
-      "file": "tents-south-66cdbaee8b50.m4a",
+      "file": "tents-south-e7ba8232cff4.m4a",
       "winner": "medium",
       "comparison": {
         "moss": {
@@ -251,7 +251,7 @@
       }
     },
     {
-      "file": "ruins-west-f765ff652fd4.m4a",
+      "file": "ruins-west-c2d9ebea0108.m4a",
       "winner": "moss",
       "comparison": {
         "moss": {
@@ -303,7 +303,7 @@
       }
     },
     {
-      "file": "palms-south-56714d4c116f.m4a",
+      "file": "palms-south-9a046b4c0df1.m4a",
       "winner": "moss",
       "comparison": {
         "moss": {
@@ -344,7 +344,7 @@
       }
     },
     {
-      "file": "entry-73e4ec1ad002.m4a",
+      "file": "entry-fd0a85900711.m4a",
       "winner": "moss",
       "comparison": {
         "moss": {

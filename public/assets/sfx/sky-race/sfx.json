@@ -4,7 +4,7 @@
   "licence": "MOSS: Apache-2.0; Stable Audio 3 Medium: Stability AI Community License and Gemma terms",
   "beds": {
     "sky-race.ambience": {
-      "file": "ambience-100efa4b31d8.m4a",
+      "file": "ambience-4dd84610b4fb.m4a",
       "loopStart": 11.75,
       "loopEnd": 21.75,
       "duration": 22.75,
@@ -14,7 +14,7 @@
   },
   "hums": {
     "sky-race.race-tower": {
-      "file": "race-tower-4cc9447c8990.m4a",
+      "file": "race-tower-904c67a767c7.m4a",
       "loopStart": 4.0,
       "loopEnd": 6.0,
       "duration": 7.0,
@@ -22,7 +22,7 @@
       "seamScore": 0.51
     },
     "sky-race.circuit": {
-      "file": "circuit-a479967c09c1.m4a",
+      "file": "circuit-ebfedf022b54.m4a",
       "loopStart": 3.5,
       "loopEnd": 5.5,
       "duration": 6.5,
@@ -30,7 +30,7 @@
       "seamScore": 0.265
     },
     "sky-race.grandstand": {
-      "file": "grandstand-41bdc020c42c.m4a",
+      "file": "grandstand-fc20f3471e0f.m4a",
       "loopStart": 3.25,
       "loopEnd": 5.25,
       "duration": 6.25,
@@ -38,7 +38,7 @@
       "seamScore": 0.67
     },
     "sky-race.paddock": {
-      "file": "paddock-e5e36c26264d.m4a",
+      "file": "paddock-562cd6d0d411.m4a",
       "loopStart": 3.5,
       "loopEnd": 5.5,
       "duration": 6.5,
@@ -46,7 +46,7 @@
       "seamScore": 0.548
     },
     "sky-race.pit-garages": {
-      "file": "pit-garages-3ce78fc1914f.m4a",
+      "file": "pit-garages-7f1cf69a121c.m4a",
       "loopStart": 2.75,
       "loopEnd": 9.75,
       "duration": 10.75,
@@ -54,7 +54,7 @@
       "seamScore": 0.375
     },
     "sky-race.road-entry": {
-      "file": "road-entry-addeca4f6cc1.m4a",
+      "file": "road-entry-0f33a726246f.m4a",
       "loopStart": 2.75,
       "loopEnd": 9.75,
       "duration": 10.75,
@@ -65,7 +65,7 @@
   "oneshots": {},
   "provenance": [
     {
-      "file": "ambience-100efa4b31d8.m4a",
+      "file": "ambience-4dd84610b4fb.m4a",
       "winner": "moss",
       "comparison": {
         "moss": {
@@ -106,7 +106,7 @@
       }
     },
     {
-      "file": "race-tower-4cc9447c8990.m4a",
+      "file": "race-tower-904c67a767c7.m4a",
       "winner": "moss",
       "comparison": {
         "moss": {
@@ -147,7 +147,7 @@
       }
     },
     {
-      "file": "circuit-a479967c09c1.m4a",
+      "file": "circuit-ebfedf022b54.m4a",
       "winner": "moss",
       "comparison": {
         "moss": {
@@ -188,7 +188,7 @@
       }
     },
     {
-      "file": "grandstand-41bdc020c42c.m4a",
+      "file": "grandstand-fc20f3471e0f.m4a",
       "winner": "medium",
       "comparison": {
         "moss": {
@@ -229,7 +229,7 @@
       }
     },
     {
-      "file": "paddock-e5e36c26264d.m4a",
+      "file": "paddock-562cd6d0d411.m4a",
       "winner": "moss",
       "comparison": {
         "moss": {
@@ -270,7 +270,7 @@
       }
     },
     {
-      "file": "pit-garages-3ce78fc1914f.m4a",
+      "file": "pit-garages-7f1cf69a121c.m4a",
       "winner": "medium",
       "comparison": {
         "moss": {
@@ -311,7 +311,7 @@
       }
     },
     {
-      "file": "road-entry-addeca4f6cc1.m4a",
+      "file": "road-entry-0f33a726246f.m4a",
       "winner": "moss",
       "comparison": {
         "moss": {

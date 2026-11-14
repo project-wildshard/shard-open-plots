@@ -224,7 +224,7 @@
           "public/assets/open-plots/**",
           "public/assets/music/thin-ice/**",
           "public/assets/sfx/thin-ice/**",
-          "public/assets/sfx/mosslight-ruins/ambience-f54e832bc4cf.m4a"
+          "public/assets/sfx/mosslight-ruins/ambience-9f3d73f4df4b.m4a"
         ],
         "audio": {
           "catalogue": true,
@@ -684,7 +684,7 @@
           "public/assets/open-plots/**",
           "public/assets/music/sky-harbor/**",
           "public/assets/sfx/sky-harbor/**",
-          "public/assets/sfx/coral-drift/ambience-6243d1442260.m4a"
+          "public/assets/sfx/coral-drift/ambience-86a1a1de8737.m4a"
         ],
         "audio": {
           "catalogue": true,
@@ -1070,7 +1070,7 @@
           "public/assets/open-plots/**",
           "public/assets/music/starfall-observatory/**",
           "public/assets/sfx/starfall-observatory/**",
-          "public/assets/sfx/lantern-bayou/ambience-99496e6be1b8.m4a"
+          "public/assets/sfx/lantern-bayou/ambience-799970aa04d0.m4a"
         ],
         "audio": {
           "catalogue": true,
@@ -1308,7 +1308,7 @@
           "public/assets/open-plots/**",
           "public/assets/music/alien-plain/**",
           "public/assets/sfx/alien-plain/**",
-          "public/assets/sfx/frostline-peaks/ambience-b9f79739ab4a.m4a"
+          "public/assets/sfx/frostline-peaks/ambience-23fc4ad528b0.m4a"
         ],
         "audio": {
           "catalogue": true,
@@ -1782,7 +1782,7 @@
           "public/assets/open-plots/**",
           "public/assets/music/fossil-badlands/**",
           "public/assets/sfx/fossil-badlands/**",
-          "public/assets/sfx/night-market/ambience-fc4acd723b85.m4a"
+          "public/assets/sfx/night-market/ambience-1c3c9230fa9b.m4a"
         ],
         "audio": {
           "catalogue": true,
@@ -2015,7 +2015,7 @@
           "public/assets/open-plots/**",
           "public/assets/music/saltwind-lighthouse/**",
           "public/assets/sfx/saltwind-lighthouse/**",
-          "public/assets/sfx/coral-drift/ambience-6243d1442260.m4a"
+          "public/assets/sfx/coral-drift/ambience-86a1a1de8737.m4a"
         ],
         "audio": {
           "catalogue": true,

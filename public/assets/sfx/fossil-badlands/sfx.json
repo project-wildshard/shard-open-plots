@@ -6,7 +6,7 @@
     "fossil-badlands.ambience": {
       "file": {
         "set": "night-market",
-        "file": "ambience-fc4acd723b85.m4a"
+        "file": "ambience-1c3c9230fa9b.m4a"
       },
       "loopStart": 9.5,
       "loopEnd": 25.5,
@@ -17,7 +17,7 @@
   },
   "hums": {
     "fossil-badlands.skeleton-rib-wind": {
-      "file": "skeleton-rib-wind-8e0fc004fac3.m4a",
+      "file": "skeleton-rib-wind-da09d7bda8d1.m4a",
       "loopStart": 4.0,
       "loopEnd": 6.0,
       "duration": 7.0,
@@ -25,7 +25,7 @@
       "seamScore": 0.432
     },
     "fossil-badlands.sump-water-drips": {
-      "file": "sump-water-drips-d3fafbb84f5e.m4a",
+      "file": "sump-water-drips-787bf7a09c73.m4a",
       "loopStart": 2.0,
       "loopEnd": 7.0,
       "duration": 8.0,
@@ -33,7 +33,7 @@
       "seamScore": 0.557
     },
     "fossil-badlands.tent-canvas-lantern": {
-      "file": "tent-canvas-lantern-5fd405522b4c.m4a",
+      "file": "tent-canvas-lantern-173105a0a669.m4a",
       "loopStart": 3.25,
       "loopEnd": 5.25,
       "duration": 6.25,
@@ -41,7 +41,7 @@
       "seamScore": 0.617
     },
     "fossil-badlands.mesa-wind": {
-      "file": "mesa-wind-a77bd3e8aa69.m4a",
+      "file": "mesa-wind-a35c4eb29114.m4a",
       "loopStart": 2.5,
       "loopEnd": 8.5,
       "duration": 9.5,
@@ -49,7 +49,7 @@
       "seamScore": 0.543
     },
     "fossil-badlands.sorting-brush-chisel": {
-      "file": "sorting-brush-chisel-a561293e1f72.m4a",
+      "file": "sorting-brush-chisel-718cc5f72ea3.m4a",
       "loopStart": 3.0,
       "loopEnd": 5.0,
       "duration": 6.0,
@@ -57,7 +57,7 @@
       "seamScore": 0.458
     },
     "fossil-badlands.cart-rails-gravel": {
-      "file": "cart-rails-gravel-e39b813a30ec.m4a",
+      "file": "cart-rails-gravel-2a3d58a658c2.m4a",
       "loopStart": 4.0,
       "loopEnd": 6.0,
       "duration": 7.0,
@@ -70,7 +70,7 @@
     {
       "file": {
         "set": "night-market",
-        "file": "ambience-fc4acd723b85.m4a"
+        "file": "ambience-1c3c9230fa9b.m4a"
       },
       "winner": "moss",
       "comparison": {
@@ -116,7 +116,7 @@
       }
     },
     {
-      "file": "skeleton-rib-wind-8e0fc004fac3.m4a",
+      "file": "skeleton-rib-wind-da09d7bda8d1.m4a",
       "winner": "medium",
       "comparison": {
         "moss": {
@@ -157,7 +157,7 @@
       }
     },
     {
-      "file": "sump-water-drips-d3fafbb84f5e.m4a",
+      "file": "sump-water-drips-787bf7a09c73.m4a",
       "winner": "medium",
       "comparison": {
         "moss": {
@@ -198,7 +198,7 @@
       }
     },
     {
-      "file": "tent-canvas-lantern-5fd405522b4c.m4a",
+      "file": "tent-canvas-lantern-173105a0a669.m4a",
       "winner": "medium",
       "comparison": {
         "moss": {
@@ -239,7 +239,7 @@
       }
     },
     {
-      "file": "mesa-wind-a77bd3e8aa69.m4a",
+      "file": "mesa-wind-a35c4eb29114.m4a",
       "winner": "moss",
       "comparison": {
         "moss": {
@@ -280,7 +280,7 @@
       }
     },
     {
-      "file": "sorting-brush-chisel-a561293e1f72.m4a",
+      "file": "sorting-brush-chisel-718cc5f72ea3.m4a",
       "winner": "moss",
       "comparison": {
         "moss": {
@@ -321,7 +321,7 @@
       }
     },
     {
-      "file": "cart-rails-gravel-e39b813a30ec.m4a",
+      "file": "cart-rails-gravel-2a3d58a658c2.m4a",
       "winner": "medium",
       "comparison": {
         "moss": {

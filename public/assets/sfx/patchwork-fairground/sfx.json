@@ -4,7 +4,7 @@
   "licence": "MOSS: Apache-2.0; Stable Audio 3 Medium: Stability AI Community License and Gemma terms",
   "beds": {
     "patchwork-fairground.ambience": {
-      "file": "ambience-0e6ee442383f.m4a",
+      "file": "ambience-63f7454949bb.m4a",
       "loopStart": 11.5,
       "loopEnd": 22.5,
       "duration": 23.5,
@@ -14,7 +14,7 @@
   },
   "hums": {
     "patchwork-fairground.carousel-bells": {
-      "file": "carousel-bells-b67cf7c6bdab.m4a",
+      "file": "carousel-bells-cacef6afaaa6.m4a",
       "loopStart": 3.25,
       "loopEnd": 7.25,
       "duration": 8.25,
@@ -22,7 +22,7 @@
       "seamScore": 0.288
     },
     "patchwork-fairground.band-organ": {
-      "file": "band-organ-22f79a450dc1.m4a",
+      "file": "band-organ-1bb8d6fb362f.m4a",
       "loopStart": 2.0,
       "loopEnd": 5.0,
       "duration": 6.0,
@@ -30,7 +30,7 @@
       "seamScore": 0.232
     },
     "patchwork-fairground.wheel-creak": {
-      "file": "wheel-creak-f120165f01a9.m4a",
+      "file": "wheel-creak-3b36fc0f8b6b.m4a",
       "loopStart": 3.0,
       "loopEnd": 5.0,
       "duration": 6.0,
@@ -38,7 +38,7 @@
       "seamScore": 0.507
     },
     "patchwork-fairground.crowd-murmur": {
-      "file": "crowd-murmur-38a483e9e64c.m4a",
+      "file": "crowd-murmur-31fa5bdca673.m4a",
       "loopStart": 4.0,
       "loopEnd": 7.0,
       "duration": 8.0,
@@ -46,7 +46,7 @@
       "seamScore": 0.505
     },
     "patchwork-fairground.big-top-drum": {
-      "file": "big-top-drum-c03e0bf7299d.m4a",
+      "file": "big-top-drum-42df96674bc3.m4a",
       "loopStart": 3.5,
       "loopEnd": 6.5,
       "duration": 7.5,
@@ -57,7 +57,7 @@
   "oneshots": {},
   "provenance": [
     {
-      "file": "ambience-0e6ee442383f.m4a",
+      "file": "ambience-63f7454949bb.m4a",
       "winner": "medium",
       "comparison": {
         "moss": {
@@ -98,7 +98,7 @@
       }
     },
     {
-      "file": "carousel-bells-b67cf7c6bdab.m4a",
+      "file": "carousel-bells-cacef6afaaa6.m4a",
       "winner": "moss",
       "comparison": {
         "moss": {
@@ -139,7 +139,7 @@
       }
     },
     {
-      "file": "band-organ-22f79a450dc1.m4a",
+      "file": "band-organ-1bb8d6fb362f.m4a",
       "winner": "medium",
       "comparison": {
         "moss": {
@@ -180,7 +180,7 @@
       }
     },
     {
-      "file": "wheel-creak-f120165f01a9.m4a",
+      "file": "wheel-creak-3b36fc0f8b6b.m4a",
       "winner": "medium",
       "comparison": {
         "moss": {
@@ -221,7 +221,7 @@
       }
     },
     {
-      "file": "crowd-murmur-38a483e9e64c.m4a",
+      "file": "crowd-murmur-31fa5bdca673.m4a",
       "winner": "medium",
       "comparison": {
         "moss": {
@@ -262,7 +262,7 @@
       }
     },
     {
-      "file": "big-top-drum-c03e0bf7299d.m4a",
+      "file": "big-top-drum-42df96674bc3.m4a",
       "winner": "medium",
       "comparison": {
         "moss": {

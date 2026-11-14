@@ -4,7 +4,7 @@
   "licence": "MOSS: Apache-2.0; Stable Audio 3 Medium: Stability AI Community License and Gemma terms",
   "beds": {
     "mosslight-ruins.ambience": {
-      "file": "ambience-f54e832bc4cf.m4a",
+      "file": "ambience-9f3d73f4df4b.m4a",
       "loopStart": 3.5,
       "loopEnd": 22.5,
       "duration": 23.5,
@@ -14,7 +14,7 @@
   },
   "hums": {
     "mosslight-ruins.pool-hum": {
-      "file": "pool-hum-d7a67bb4f16c.m4a",
+      "file": "pool-hum-c8612f8e369b.m4a",
       "loopStart": 4.0,
       "loopEnd": 6.0,
       "duration": 7.0,
@@ -22,7 +22,7 @@
       "seamScore": 0.438
     },
     "mosslight-ruins.ivy-birds": {
-      "file": "ivy-birds-6320dcb8c3d0.m4a",
+      "file": "ivy-birds-7bdd8ef2992a.m4a",
       "loopStart": 3.75,
       "loopEnd": 5.75,
       "duration": 6.75,
@@ -30,7 +30,7 @@
       "seamScore": 0.528
     },
     "mosslight-ruins.arch-wind": {
-      "file": "arch-wind-125671ebe3fd.m4a",
+      "file": "arch-wind-545deb65d7fc.m4a",
       "loopStart": 4.0,
       "loopEnd": 6.0,
       "duration": 7.0,
@@ -38,7 +38,7 @@
       "seamScore": 0.48
     },
     "mosslight-ruins.falling-grit": {
-      "file": "falling-grit-6591ea862ee1.m4a",
+      "file": "falling-grit-7a09f8b3a286.m4a",
       "loopStart": 2.0,
       "loopEnd": 4.0,
       "duration": 5.0,
@@ -46,7 +46,7 @@
       "seamScore": 0.555
     },
     "mosslight-ruins.pool-drip": {
-      "file": "pool-drip-ada2f22d12a9.m4a",
+      "file": "pool-drip-16219cf2b2c7.m4a",
       "loopStart": 3.75,
       "loopEnd": 7.75,
       "duration": 8.75,
@@ -57,7 +57,7 @@
   "oneshots": {},
   "provenance": [
     {
-      "file": "ambience-f54e832bc4cf.m4a",
+      "file": "ambience-9f3d73f4df4b.m4a",
       "winner": "medium",
       "comparison": {
         "moss": {
@@ -92,7 +92,7 @@
       }
     },
     {
-      "file": "pool-hum-d7a67bb4f16c.m4a",
+      "file": "pool-hum-c8612f8e369b.m4a",
       "winner": "medium",
       "comparison": {
         "moss": {
@@ -127,7 +127,7 @@
       }
     },
     {
-      "file": "ivy-birds-6320dcb8c3d0.m4a",
+      "file": "ivy-birds-7bdd8ef2992a.m4a",
       "winner": "moss",
       "comparison": {
         "moss": {
@@ -162,7 +162,7 @@
       }
     },
     {
-      "file": "arch-wind-125671ebe3fd.m4a",
+      "file": "arch-wind-545deb65d7fc.m4a",
       "winner": "moss",
       "comparison": {
         "moss": {
@@ -197,7 +197,7 @@
       }
     },
     {
-      "file": "falling-grit-6591ea862ee1.m4a",
+      "file": "falling-grit-7a09f8b3a286.m4a",
       "winner": "medium",
       "comparison": {
         "moss": {
@@ -232,7 +232,7 @@
       }
     },
     {
-      "file": "pool-drip-ada2f22d12a9.m4a",
+      "file": "pool-drip-16219cf2b2c7.m4a",
       "winner": "moss",
       "comparison": {
         "moss": {

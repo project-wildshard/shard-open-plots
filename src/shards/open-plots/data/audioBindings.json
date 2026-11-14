@@ -8,12 +8,12 @@
     "sfxDir": "/assets/sfx/lantern-bayou/",
     "files": {
       "score": "take-a-823cce36205b.m4a",
-      "ambience": "ambience-99496e6be1b8.m4a",
-      "boardwalk-creak": "boardwalk-creak-643528b1842b.m4a",
-      "house-wind-chimes": "house-wind-chimes-dbc4e9fe1523.m4a",
-      "distant-owl": "distant-owl-25a3cbfe9be7.m4a",
-      "lantern-boat-bump": "lantern-boat-bump-7208440d90bb.m4a",
-      "cypress-rustle": "cypress-rustle-3f8c7a341fce.m4a"
+      "ambience": "ambience-799970aa04d0.m4a",
+      "boardwalk-creak": "boardwalk-creak-396a57dc896b.m4a",
+      "house-wind-chimes": "house-wind-chimes-085e1deb02b6.m4a",
+      "distant-owl": "distant-owl-d13c6ce80a9d.m4a",
+      "lantern-boat-bump": "lantern-boat-bump-3f3bb08b74bf.m4a",
+      "cypress-rustle": "cypress-rustle-c3d8eca5dc73.m4a"
     },
     "spots": [
       {
@@ -57,12 +57,12 @@
     "sfxDir": "/assets/sfx/frostline-peaks/",
     "files": {
       "score": "take-b-ab47fa6f0820.m4a",
-      "ambience": "ambience-b9f79739ab4a.m4a",
-      "lift-wheel-creak": "lift-wheel-creak-5b84c80057bd.m4a",
-      "hearth-crackle": "hearth-crackle-3a1839049eba.m4a",
-      "ice-creak": "ice-creak-33fda83c960a.m4a",
-      "gate-wind-chimes": "gate-wind-chimes-e7a515826dfb.m4a",
-      "pine-rustle": "pine-rustle-7ff7e897e215.m4a"
+      "ambience": "ambience-23fc4ad528b0.m4a",
+      "lift-wheel-creak": "lift-wheel-creak-1bc44228634d.m4a",
+      "hearth-crackle": "hearth-crackle-ad4802041b15.m4a",
+      "ice-creak": "ice-creak-0bfbbde7124e.m4a",
+      "gate-wind-chimes": "gate-wind-chimes-92f13d5c6926.m4a",
+      "pine-rustle": "pine-rustle-f00f55ada0e4.m4a"
     },
     "spots": [
       {
@@ -106,12 +106,12 @@
     "sfxDir": "/assets/sfx/ember-forge/",
     "files": {
       "score": "take-a-5eb521de9407.m4a",
-      "ambience": "ambience-04688340a792.m4a",
-      "anvil-strikes": "anvil-strikes-e3381c76f4ab.m4a",
-      "bellows": "bellows-feccf2e42cf7.m4a",
-      "crane-chain": "crane-chain-5cdb56dc4f34.m4a",
-      "steam-hiss": "steam-hiss-4fe9fd27c023.m4a",
-      "ember-crackle": "ember-crackle-7db68d592ed4.m4a"
+      "ambience": "ambience-d9fbd0b63583.m4a",
+      "anvil-strikes": "anvil-strikes-e669bf1e8a5c.m4a",
+      "bellows": "bellows-bd2f396db696.m4a",
+      "crane-chain": "crane-chain-798048f5bc9c.m4a",
+      "steam-hiss": "steam-hiss-f41743c1d5c6.m4a",
+      "ember-crackle": "ember-crackle-e7d66e1f8fc4.m4a"
     },
     "spots": [
       {
@@ -155,12 +155,12 @@
     "sfxDir": "/assets/sfx/mosslight-ruins/",
     "files": {
       "score": "take-a-f27305fc5237.m4a",
-      "ambience": "ambience-f54e832bc4cf.m4a",
-      "pool-hum": "pool-hum-d7a67bb4f16c.m4a",
-      "ivy-birds": "ivy-birds-6320dcb8c3d0.m4a",
-      "arch-wind": "arch-wind-125671ebe3fd.m4a",
-      "falling-grit": "falling-grit-6591ea862ee1.m4a",
-      "pool-drip": "pool-drip-ada2f22d12a9.m4a"
+      "ambience": "ambience-9f3d73f4df4b.m4a",
+      "pool-hum": "pool-hum-c8612f8e369b.m4a",
+      "ivy-birds": "ivy-birds-7bdd8ef2992a.m4a",
+      "arch-wind": "arch-wind-545deb65d7fc.m4a",
+      "falling-grit": "falling-grit-7a09f8b3a286.m4a",
+      "pool-drip": "pool-drip-16219cf2b2c7.m4a"
     },
     "spots": [
       {
@@ -204,12 +204,12 @@
     "sfxDir": "/assets/sfx/coral-drift/",
     "files": {
       "score": "take-b-4ea0a09e19a7.m4a",
-      "ambience": "ambience-6243d1442260.m4a",
-      "gulls": "gulls-882890bfca57.m4a",
-      "palm-rustle": "palm-rustle-f727c00c7d89.m4a",
-      "pier-creak": "pier-creak-33784300ce1c.m4a",
-      "hut-wind-chimes": "hut-wind-chimes-df2bf5741939.m4a",
-      "lagoon-lap": "lagoon-lap-fb17a048d85b.m4a"
+      "ambience": "ambience-86a1a1de8737.m4a",
+      "gulls": "gulls-1e5bac0a2a15.m4a",
+      "palm-rustle": "palm-rustle-b50cc69ee536.m4a",
+      "pier-creak": "pier-creak-f0f02958baee.m4a",
+      "hut-wind-chimes": "hut-wind-chimes-25bbe0ed189b.m4a",
+      "lagoon-lap": "lagoon-lap-521404641afc.m4a"
     },
     "spots": [
       {
@@ -253,13 +253,13 @@
     "sfxDir": "/assets/sfx/night-market/",
     "files": {
       "score": "take-a-cf750c3f44ac.m4a",
-      "ambience": "ambience-fc4acd723b85.m4a",
-      "gate-wind-chimes": "gate-wind-chimes-4d46fe12f13f.m4a",
-      "canal-lap": "canal-lap-99b97ffab725.m4a",
-      "food-sizzle": "food-sizzle-e95a5399c9c9.m4a",
-      "teacup-clink": "teacup-clink-0ea9d5e3623c.m4a",
-      "awning-flutter": "awning-flutter-5a760678625f.m4a",
-      "garden-crickets": "garden-crickets-501383239921.m4a"
+      "ambience": "ambience-1c3c9230fa9b.m4a",
+      "gate-wind-chimes": "gate-wind-chimes-0afb2773cbc2.m4a",
+      "canal-lap": "canal-lap-425dbd928dec.m4a",
+      "food-sizzle": "food-sizzle-77b5eb992fb4.m4a",
+      "teacup-clink": "teacup-clink-8e656257948f.m4a",
+      "awning-flutter": "awning-flutter-f8d658b09f27.m4a",
+      "garden-crickets": "garden-crickets-4b4d1dc95ed5.m4a"
     },
     "spots": [
       {
@@ -309,12 +309,12 @@
     "sfxDir": "/assets/sfx/patchwork-fairground/",
     "files": {
       "score": "take-b-0e7f6f396f9d.m4a",
-      "ambience": "ambience-0e6ee442383f.m4a",
-      "carousel-bells": "carousel-bells-b67cf7c6bdab.m4a",
-      "band-organ": "band-organ-22f79a450dc1.m4a",
-      "wheel-creak": "wheel-creak-f120165f01a9.m4a",
-      "crowd-murmur": "crowd-murmur-38a483e9e64c.m4a",
-      "big-top-drum": "big-top-drum-c03e0bf7299d.m4a"
+      "ambience": "ambience-63f7454949bb.m4a",
+      "carousel-bells": "carousel-bells-cacef6afaaa6.m4a",
+      "band-organ": "band-organ-1bb8d6fb362f.m4a",
+      "wheel-creak": "wheel-creak-3b36fc0f8b6b.m4a",
+      "crowd-murmur": "crowd-murmur-31fa5bdca673.m4a",
+      "big-top-drum": "big-top-drum-42df96674bc3.m4a"
     },
     "spots": [
       {
@@ -358,13 +358,13 @@
     "sfxDir": "/assets/sfx/jungle-ziggurat/",
     "files": {
       "score": "take-b-e7702c963b37.m4a",
-      "ambience": "ambience-9493f2753465.m4a",
-      "waterfall-cascade": "waterfall-cascade-6209defcc456.m4a",
-      "pool-lap": "pool-lap-9a4327b0753e.m4a",
-      "wooden-wind-chimes": "wooden-wind-chimes-6bf8e35d1bc9.m4a",
-      "canopy-birds": "canopy-birds-b95d191b80ba.m4a",
-      "thatch-drip": "thatch-drip-41814333cc6c.m4a",
-      "temple-drum": "temple-drum-f8ec4de3a891.m4a"
+      "ambience": "ambience-e659c6af2d34.m4a",
+      "waterfall-cascade": "waterfall-cascade-c2b9046a47f7.m4a",
+      "pool-lap": "pool-lap-9a15bb51dd19.m4a",
+      "wooden-wind-chimes": "wooden-wind-chimes-1feab49c7633.m4a",
+      "canopy-birds": "canopy-birds-91e94b2df764.m4a",
+      "thatch-drip": "thatch-drip-20570f5c89c9.m4a",
+      "temple-drum": "temple-drum-68671de65021.m4a"
     },
     "spots": [
       {
@@ -416,14 +416,14 @@
       "score": "take-b-6533451204d4.m4a",
       "ambience": {
         "set": "coral-drift",
-        "file": "ambience-6243d1442260.m4a",
+        "file": "ambience-86a1a1de8737.m4a",
         "dir": "/assets/sfx/coral-drift/"
       },
-      "lighthouse-foghorn": "lighthouse-foghorn-195fbaedb647.m4a",
-      "se-boat-rigging": "se-boat-rigging-a9b8ad0d1613.m4a",
-      "basin-gulls": "basin-gulls-33a2c0cccece.m4a",
-      "slate-roof-rain": "slate-roof-rain-e992201c4301.m4a",
-      "quay-net-rope": "quay-net-rope-6f857686854b.m4a"
+      "lighthouse-foghorn": "lighthouse-foghorn-4ecf868eb543.m4a",
+      "se-boat-rigging": "se-boat-rigging-885810360462.m4a",
+      "basin-gulls": "basin-gulls-464b4345096e.m4a",
+      "slate-roof-rain": "slate-roof-rain-a76902ff08d1.m4a",
+      "quay-net-rope": "quay-net-rope-e6760fe7ce1e.m4a"
     },
     "spots": [
       {
@@ -469,14 +469,14 @@
       "score": "take-a-0f10cfca8bab.m4a",
       "ambience": {
         "set": "coral-drift",
-        "file": "ambience-6243d1442260.m4a",
+        "file": "ambience-86a1a1de8737.m4a",
         "dir": "/assets/sfx/coral-drift/"
       },
-      "basin-water": "basin-water-f02c555ed561.m4a",
-      "dock-crane": "dock-crane-6afae223008b.m4a",
-      "wharf-gulls": "wharf-gulls-cc38849616fe.m4a",
-      "corner-cottages": "corner-cottages-604677496f75.m4a",
-      "road-entry": "road-entry-d8754561c5d7.m4a"
+      "basin-water": "basin-water-d77cc5a125b9.m4a",
+      "dock-crane": "dock-crane-2085fb3c33cb.m4a",
+      "wharf-gulls": "wharf-gulls-28a6f05f14c6.m4a",
+      "corner-cottages": "corner-cottages-1412a9c97053.m4a",
+      "road-entry": "road-entry-4b862dd21ba0.m4a"
     },
     "spots": [
       {
@@ -522,15 +522,15 @@
       "score": "take-b-14c36abd5346.m4a",
       "ambience": {
         "set": "lantern-bayou",
-        "file": "ambience-99496e6be1b8.m4a",
+        "file": "ambience-799970aa04d0.m4a",
         "dir": "/assets/sfx/lantern-bayou/"
       },
-      "dome-motor": "dome-motor-c40a8a4133b7.m4a",
-      "canal-lap": "canal-lap-b50de9cf4079.m4a",
-      "pavilion-chimes": "pavilion-chimes-995b4a756734.m4a",
-      "garden-frogs": "garden-frogs-b84c5197a74d.m4a",
-      "window-lute": "window-lute-27fa05e57684.m4a",
-      "kiosk-murmur": "kiosk-murmur-0b464681052b.m4a"
+      "dome-motor": "dome-motor-3c7929ed2e27.m4a",
+      "canal-lap": "canal-lap-60a192522890.m4a",
+      "pavilion-chimes": "pavilion-chimes-8583a12163b7.m4a",
+      "garden-frogs": "garden-frogs-a4a2bd2236e9.m4a",
+      "window-lute": "window-lute-3f880b81b05f.m4a",
+      "kiosk-murmur": "kiosk-murmur-6b403dd70618.m4a"
     },
     "spots": [
       {
@@ -582,15 +582,15 @@
       "score": "take-a-23d54ac1a617.m4a",
       "ambience": {
         "set": "mosslight-ruins",
-        "file": "ambience-f54e832bc4cf.m4a",
+        "file": "ambience-9f3d73f4df4b.m4a",
         "dir": "/assets/sfx/mosslight-ruins/"
       },
-      "ice-crystal": "ice-crystal-d6e759423e2a.m4a",
-      "open-ice": "open-ice-12624660f3f7.m4a",
-      "fishing-hole": "fishing-hole-4b8df53470f4.m4a",
-      "pine-bank": "pine-bank-9171fe200280.m4a",
-      "igloos": "igloos-46dd7cdb9711.m4a",
-      "road-entry": "road-entry-ec379f04bc47.m4a"
+      "ice-crystal": "ice-crystal-bba587f01736.m4a",
+      "open-ice": "open-ice-32936b414cf9.m4a",
+      "fishing-hole": "fishing-hole-fc6f8240c4d2.m4a",
+      "pine-bank": "pine-bank-a936e81b70b4.m4a",
+      "igloos": "igloos-c832c6dbb453.m4a",
+      "road-entry": "road-entry-10f63576a22f.m4a"
     },
     "spots": [
       {
@@ -642,15 +642,15 @@
       "score": "take-a-2cd52113f593.m4a",
       "ambience": {
         "set": "night-market",
-        "file": "ambience-fc4acd723b85.m4a",
+        "file": "ambience-1c3c9230fa9b.m4a",
         "dir": "/assets/sfx/night-market/"
       },
-      "skeleton-rib-wind": "skeleton-rib-wind-8e0fc004fac3.m4a",
-      "sump-water-drips": "sump-water-drips-d3fafbb84f5e.m4a",
-      "tent-canvas-lantern": "tent-canvas-lantern-5fd405522b4c.m4a",
-      "mesa-wind": "mesa-wind-a77bd3e8aa69.m4a",
-      "sorting-brush-chisel": "sorting-brush-chisel-a561293e1f72.m4a",
-      "cart-rails-gravel": "cart-rails-gravel-e39b813a30ec.m4a"
+      "skeleton-rib-wind": "skeleton-rib-wind-da09d7bda8d1.m4a",
+      "sump-water-drips": "sump-water-drips-787bf7a09c73.m4a",
+      "tent-canvas-lantern": "tent-canvas-lantern-173105a0a669.m4a",
+      "mesa-wind": "mesa-wind-a35c4eb29114.m4a",
+      "sorting-brush-chisel": "sorting-brush-chisel-718cc5f72ea3.m4a",
+      "cart-rails-gravel": "cart-rails-gravel-2a3d58a658c2.m4a"
     },
     "spots": [
       {
@@ -702,15 +702,15 @@
       "score": "take-a-5d5f5f1de41f.m4a",
       "ambience": {
         "set": "frostline-peaks",
-        "file": "ambience-b9f79739ab4a.m4a",
+        "file": "ambience-23fc4ad528b0.m4a",
         "dir": "/assets/sfx/frostline-peaks/"
       },
-      "monolith": "monolith-5f8937babd37.m4a",
-      "dome-habitat": "dome-habitat-e8edbb7bf6b0.m4a",
-      "crystal-bed": "crystal-bed-718e9c834ea2.m4a",
-      "rock-outcrop": "rock-outcrop-26127eb4de91.m4a",
-      "avenue-lamp": "avenue-lamp-b851981d958c.m4a",
-      "entry-forecourt": "entry-forecourt-ca5ca0d04e55.m4a"
+      "monolith": "monolith-947567243c8e.m4a",
+      "dome-habitat": "dome-habitat-505781f9f9c1.m4a",
+      "crystal-bed": "crystal-bed-3bf21bdbb7b3.m4a",
+      "rock-outcrop": "rock-outcrop-ac74798684d5.m4a",
+      "avenue-lamp": "avenue-lamp-3e6045679f79.m4a",
+      "entry-forecourt": "entry-forecourt-998693436b6a.m4a"
     },
     "spots": [
       {
@@ -760,13 +760,13 @@
     "sfxDir": "/assets/sfx/clockwork-canyon/",
     "files": {
       "score": "take-b-14d4ec11ef6d.m4a",
-      "ambience": "ambience-24d7c730b7d6.m4a",
-      "clock-tick": "clock-tick-1a1c07574d21.m4a",
-      "waterwheel": "waterwheel-96705d3c2043.m4a",
-      "boiler": "boiler-6032e2ff6897.m4a",
-      "gear-ratchet": "gear-ratchet-a038e6831283.m4a",
-      "garden-birds": "garden-birds-05a9c59c152a.m4a",
-      "kiosk-murmur": "kiosk-murmur-0160591b0750.m4a"
+      "ambience": "ambience-e6e95c41ab46.m4a",
+      "clock-tick": "clock-tick-5e6737aa5fd3.m4a",
+      "waterwheel": "waterwheel-f694d923fe91.m4a",
+      "boiler": "boiler-5aa42685bfdc.m4a",
+      "gear-ratchet": "gear-ratchet-11d9ecf2a586.m4a",
+      "garden-birds": "garden-birds-8d8055d7f5d5.m4a",
+      "kiosk-murmur": "kiosk-murmur-4e1be0d5f352.m4a"
     },
     "spots": [
       {
@@ -816,13 +816,13 @@
     "sfxDir": "/assets/sfx/desert-ruin/",
     "files": {
       "score": "take-a-6eab0c86e126.m4a",
-      "ambience": "ambience-9e8220262258.m4a",
-      "gateway-wind": "gateway-wind-7dfd0c8b22a9.m4a",
-      "oasis-ne": "oasis-ne-2c294b87f1da.m4a",
-      "tents-south": "tents-south-66cdbaee8b50.m4a",
-      "ruins-west": "ruins-west-f765ff652fd4.m4a",
-      "palms-south": "palms-south-56714d4c116f.m4a",
-      "entry": "entry-73e4ec1ad002.m4a"
+      "ambience": "ambience-7f897a705796.m4a",
+      "gateway-wind": "gateway-wind-c2701b1c0ad2.m4a",
+      "oasis-ne": "oasis-ne-97058514d8d3.m4a",
+      "tents-south": "tents-south-e7ba8232cff4.m4a",
+      "ruins-west": "ruins-west-c2d9ebea0108.m4a",
+      "palms-south": "palms-south-9a046b4c0df1.m4a",
+      "entry": "entry-fd0a85900711.m4a"
     },
     "spots": [
       {
@@ -872,13 +872,13 @@
     "sfxDir": "/assets/sfx/sky-race/",
     "files": {
       "score": "take-a-f26cd25c3720.m4a",
-      "ambience": "ambience-100efa4b31d8.m4a",
-      "race-tower": "race-tower-4cc9447c8990.m4a",
-      "circuit": "circuit-a479967c09c1.m4a",
-      "grandstand": "grandstand-41bdc020c42c.m4a",
-      "paddock": "paddock-e5e36c26264d.m4a",
-      "pit-garages": "pit-garages-3ce78fc1914f.m4a",
-      "road-entry": "road-entry-addeca4f6cc1.m4a"
+      "ambience": "ambience-4dd84610b4fb.m4a",
+      "race-tower": "race-tower-904c67a767c7.m4a",
+      "circuit": "circuit-ebfedf022b54.m4a",
+      "grandstand": "grandstand-fc20f3471e0f.m4a",
+      "paddock": "paddock-562cd6d0d411.m4a",
+      "pit-garages": "pit-garages-7f1cf69a121c.m4a",
+      "road-entry": "road-entry-0f33a726246f.m4a"
     },
     "spots": [
       {
@@ -928,13 +928,13 @@
     "sfxDir": "/assets/sfx/showcase-template/",
     "files": {
       "score": "take-a-f0c28e903f89.m4a",
-      "ambience": "ambience-f45d3258415f.m4a",
-      "obelisk": "obelisk-5c25113eba12.m4a",
-      "canal-ring": "canal-ring-5e28a62c686f.m4a",
-      "stalls": "stalls-b1a466b81973.m4a",
-      "gardens": "gardens-77fb4ba39523.m4a",
-      "houses": "houses-9ca4abaa256f.m4a",
-      "road-entry": "road-entry-204f957bd718.m4a"
+      "ambience": "ambience-6fcdd4079170.m4a",
+      "obelisk": "obelisk-5021982a5972.m4a",
+      "canal-ring": "canal-ring-ed2634704e7f.m4a",
+      "stalls": "stalls-888d225df8a3.m4a",
+      "gardens": "gardens-55add1b3b625.m4a",
+      "houses": "houses-2a583925139e.m4a",
+      "road-entry": "road-entry-4eab88827f5b.m4a"
     },
     "spots": [
       {

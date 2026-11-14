@@ -6,7 +6,7 @@
     "starfall-observatory.ambience": {
       "file": {
         "set": "lantern-bayou",
-        "file": "ambience-99496e6be1b8.m4a"
+        "file": "ambience-799970aa04d0.m4a"
       },
       "loopStart": 8.25,
       "loopEnd": 26.25,
@@ -17,7 +17,7 @@
   },
   "hums": {
     "starfall-observatory.dome-motor": {
-      "file": "dome-motor-c40a8a4133b7.m4a",
+      "file": "dome-motor-3c7929ed2e27.m4a",
       "loopStart": 3.5,
       "loopEnd": 8.5,
       "duration": 9.5,
@@ -25,7 +25,7 @@
       "seamScore": 0.234
     },
     "starfall-observatory.canal-lap": {
-      "file": "canal-lap-b50de9cf4079.m4a",
+      "file": "canal-lap-60a192522890.m4a",
       "loopStart": 4.5,
       "loopEnd": 6.5,
       "duration": 7.5,
@@ -33,7 +33,7 @@
       "seamScore": 0.581
     },
     "starfall-observatory.pavilion-chimes": {
-      "file": "pavilion-chimes-995b4a756734.m4a",
+      "file": "pavilion-chimes-8583a12163b7.m4a",
       "loopStart": 4.25,
       "loopEnd": 6.25,
       "duration": 7.25,
@@ -41,7 +41,7 @@
       "seamScore": 0.578
     },
     "starfall-observatory.garden-frogs": {
-      "file": "garden-frogs-b84c5197a74d.m4a",
+      "file": "garden-frogs-a4a2bd2236e9.m4a",
       "loopStart": 2.25,
       "loopEnd": 4.25,
       "duration": 5.25,
@@ -49,7 +49,7 @@
       "seamScore": 0.466
     },
     "starfall-observatory.window-lute": {
-      "file": "window-lute-27fa05e57684.m4a",
+      "file": "window-lute-3f880b81b05f.m4a",
       "loopStart": 3.75,
       "loopEnd": 5.75,
       "duration": 6.75,
@@ -57,7 +57,7 @@
       "seamScore": 0.215
     },
     "starfall-observatory.kiosk-murmur": {
-      "file": "kiosk-murmur-0b464681052b.m4a",
+      "file": "kiosk-murmur-6b403dd70618.m4a",
       "loopStart": 3.0,
       "loopEnd": 9.0,
       "duration": 10.0,
@@ -70,7 +70,7 @@
     {
       "file": {
         "set": "lantern-bayou",
-        "file": "ambience-99496e6be1b8.m4a"
+        "file": "ambience-799970aa04d0.m4a"
       },
       "winner": "moss",
       "comparison": {
@@ -116,7 +116,7 @@
       }
     },
     {
-      "file": "dome-motor-c40a8a4133b7.m4a",
+      "file": "dome-motor-3c7929ed2e27.m4a",
       "winner": "medium",
       "comparison": {
         "moss": {
@@ -157,7 +157,7 @@
       }
     },
     {
-      "file": "canal-lap-b50de9cf4079.m4a",
+      "file": "canal-lap-60a192522890.m4a",
       "winner": "medium",
       "comparison": {
         "moss": {
@@ -198,7 +198,7 @@
       }
     },
     {
-      "file": "pavilion-chimes-995b4a756734.m4a",
+      "file": "pavilion-chimes-8583a12163b7.m4a",
       "winner": "moss",
       "comparison": {
         "moss": {
@@ -239,7 +239,7 @@
       }
     },
     {
-      "file": "garden-frogs-b84c5197a74d.m4a",
+      "file": "garden-frogs-a4a2bd2236e9.m4a",
       "winner": "medium",
       "comparison": {
         "moss": {
@@ -280,7 +280,7 @@
       }
     },
     {
-      "file": "window-lute-27fa05e57684.m4a",
+      "file": "window-lute-3f880b81b05f.m4a",
       "winner": "moss",
       "comparison": {
         "moss": {
@@ -321,7 +321,7 @@
       }
     },
     {
-      "file": "kiosk-murmur-0b464681052b.m4a",
+      "file": "kiosk-murmur-6b403dd70618.m4a",
       "winner": "moss",
       "comparison": {
         "moss": {

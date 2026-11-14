@@ -4,7 +4,7 @@
   "licence": "MOSS: Apache-2.0; Stable Audio 3 Medium: Stability AI Community License and Gemma terms",
   "beds": {
     "coral-drift.ambience": {
-      "file": "ambience-6243d1442260.m4a",
+      "file": "ambience-86a1a1de8737.m4a",
       "loopStart": 7.0,
       "loopEnd": 27.0,
       "duration": 28.0,
@@ -14,7 +14,7 @@
   },
   "hums": {
     "coral-drift.gulls": {
-      "file": "gulls-882890bfca57.m4a",
+      "file": "gulls-1e5bac0a2a15.m4a",
       "loopStart": 4.0,
       "loopEnd": 6.0,
       "duration": 7.0,
@@ -22,7 +22,7 @@
       "seamScore": 0.537
     },
     "coral-drift.palm-rustle": {
-      "file": "palm-rustle-f727c00c7d89.m4a",
+      "file": "palm-rustle-b50cc69ee536.m4a",
       "loopStart": 2.0,
       "loopEnd": 4.0,
       "duration": 5.0,
@@ -30,7 +30,7 @@
       "seamScore": 0.565
     },
     "coral-drift.pier-creak": {
-      "file": "pier-creak-33784300ce1c.m4a",
+      "file": "pier-creak-f0f02958baee.m4a",
       "loopStart": 2.0,
       "loopEnd": 4.0,
       "duration": 5.0,
@@ -38,7 +38,7 @@
       "seamScore": 0.443
     },
     "coral-drift.hut-wind-chimes": {
-      "file": "hut-wind-chimes-df2bf5741939.m4a",
+      "file": "hut-wind-chimes-25bbe0ed189b.m4a",
       "loopStart": 4.0,
       "loopEnd": 6.0,
       "duration": 7.0,
@@ -46,7 +46,7 @@
       "seamScore": 0.532
     },
     "coral-drift.lagoon-lap": {
-      "file": "lagoon-lap-fb17a048d85b.m4a",
+      "file": "lagoon-lap-521404641afc.m4a",
       "loopStart": 3.5,
       "loopEnd": 6.5,
       "duration": 7.5,
@@ -57,7 +57,7 @@
   "oneshots": {},
   "provenance": [
     {
-      "file": "ambience-6243d1442260.m4a",
+      "file": "ambience-86a1a1de8737.m4a",
       "winner": "moss",
       "comparison": {
         "moss": {
@@ -92,7 +92,7 @@
       }
     },
     {
-      "file": "gulls-882890bfca57.m4a",
+      "file": "gulls-1e5bac0a2a15.m4a",
       "winner": "moss",
       "comparison": {
         "moss": {
@@ -127,7 +127,7 @@
       }
     },
     {
-      "file": "palm-rustle-f727c00c7d89.m4a",
+      "file": "palm-rustle-b50cc69ee536.m4a",
       "winner": "medium",
       "comparison": {
         "moss": {
@@ -162,7 +162,7 @@
       }
     },
     {
-      "file": "pier-creak-33784300ce1c.m4a",
+      "file": "pier-creak-f0f02958baee.m4a",
       "winner": "medium",
       "comparison": {
         "moss": {
@@ -197,7 +197,7 @@
       }
     },
     {
-      "file": "hut-wind-chimes-df2bf5741939.m4a",
+      "file": "hut-wind-chimes-25bbe0ed189b.m4a",
       "winner": "moss",
       "comparison": {
         "moss": {
@@ -232,7 +232,7 @@
       }
     },
     {
-      "file": "lagoon-lap-fb17a048d85b.m4a",
+      "file": "lagoon-lap-521404641afc.m4a",
       "winner": "medium",
       "comparison": {
         "moss": {
