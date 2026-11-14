@@ -6,14 +6,14 @@ import layout from '../src/shards/open-plots/data/layouts/night-market.json' wit
 import {
   audioOutputs,
   outputs as worldDeclarations,
-} from '../src/shards/open-plots/generators/product'
+} from '../src/shards/open-plots/generators/shardfile'
 import declared from '../src/shards/open-plots/outputs.json' with { type: 'json' }
 import project, { outputs } from '../src/shards/open-plots/shard.config'
 import configSource from '../src/shards/open-plots/shard.config.ts?raw'
 
-// G604: the open-plots entry is a thin declaration (its products assemble in generators/product.ts at build time), one
-// product per idea row
-test('the open-plots entry is declaration-only and declares one product per idea', () => {
+// G604: the open-plots entry is a thin declaration (its outputs assemble in generators/shardfile.ts at build time), one
+// output per idea row
+test('the open-plots entry is declaration-only and declares one output per idea', () => {
   expect(declarationOnlyConfig(configSource)).toBe(true)
   expect(Object.keys(outputs)).toEqual(declared.outputs.map(row => row.slug))
   for (const row of declared.outputs)

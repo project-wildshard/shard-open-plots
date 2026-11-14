@@ -1,5 +1,5 @@
 {
-  "why": "SF88g (G538/G539/G541/G542): the open-plots source shard emits one product per idea row (scripts/shard-outputs.mjs). The generator and shard.config.ts read idea, name and accent; manifest overrides merge into manifest.json. Each idea's inputs live in public/assets/open-plots/<idea>/. A row's `lookKeys` replaces the shared look key (data/source.json look.keys) for that idea alone (D111: Night Market's violet dusk, its fill 1.4).",
+  "why": "SF88g (G538/G539/G541/G542): the open-plots source shard emits one output per idea row (scripts/shard-outputs.mjs). The generator and shard.config.ts read idea, name and accent; manifest overrides merge into manifest.json. Each idea's inputs live in public/assets/open-plots/<idea>/. A row's `lookKeys` replaces the shared look key (data/source.json look.keys) for that idea alone (D111: Night Market's violet dusk, its fill 1.4).",
   "outputs": [
     {
       "slug": "open-plot-showcase-template",

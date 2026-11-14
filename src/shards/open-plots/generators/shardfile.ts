@@ -104,7 +104,7 @@ function project(row: { readonly slug: string; readonly idea: string; readonly n
 const [first] = declared.outputs;
 if (first === undefined) throw new Error('open-plots: outputs.json needs an idea row');
 
-/** Every output, keyed by its product slug (`wildshard build --output=<slug>`, scripts/shard-outputs.mjs). */
+/** Every output, keyed by its output slug (`wildshard build --output=<slug>`, scripts/shard-outputs.mjs). */
 export const outputs: Record<string, ReturnType<typeof project>> = Object.fromEntries(declared.outputs.map((row): [string, ReturnType<typeof project>] => [row.slug, project(row)]));
 
 const bindings: Readonly<Record<string, PlotAudioBinding>> = audioBindings;
@@ -119,7 +119,7 @@ export const audioOutputs: Record<string, ReturnType<typeof project> | ((ctx: Pr
 }));
 
 /** The first idea's output: the project's default build. */
-export const product: ReturnType<typeof project> = project(first);
+export const defaultShardfile: ReturnType<typeof project> = project(first);
 
 /** A repo-relative bake input as the build's declared input name: public files under `/assets/`, this folder's own files
  *  relative to it (`scripts/wildshard.mjs`'s input roots). */
@@ -170,6 +170,6 @@ async function plotProgram(ctx: ProjectGenerationContext, row: PlotIdea): Promis
   return { world, map: { pixels } };
 }
 
-/** GR9: each output's build program, keyed by its product slug (beside `outputs`, which stay the declarations). */
+/** GR9: each output's build program, keyed by its output slug (beside `outputs`, which stay the declarations). */
 export const programs: Record<string, (ctx: ProjectGenerationContext) => Promise<OutputProgramResult>> = Object.fromEntries(
   declared.outputs.map((row): [string, (ctx: ProjectGenerationContext) => Promise<OutputProgramResult>] => [row.slug, ctx => plotProgram(ctx, row)]));

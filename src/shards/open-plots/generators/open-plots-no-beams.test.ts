@@ -3,14 +3,14 @@ import { readFileSync } from 'node:fs';
 import { NodeIO } from '@gltf-transform/core';
 import { expect, test } from 'vitest';
 import declared from '../outputs.json' with { type: 'json' };
-import { outputs } from './product';
+import { outputs } from './shardfile';
 import { readImagePixels, writeImagePixels } from '@wildshard/sharddev/bake/image';
 import { normalizeWorldGlb } from '@wildshard/sharddev/bake/world';
 import { ideaWorld } from './plotBake.mjs';
 
 const BAKE_BUDGET_MS = 20_000;
 
-test('every plot product has no beam graph or beam-height rows', () => {
+test('every plot output has no beam graph or beam-height rows', () => {
   expect(Object.keys(outputs)).toEqual(declared.outputs.map(row => row.slug));
   for (const output of Object.values(outputs)) {
     for (const retired of ['beam', 'hologram', 'floor', 'kerb', 'plinth', 'frame', 'rim', 'sign'])
@@ -24,7 +24,7 @@ test('every plot product has no beam graph or beam-height rows', () => {
   }
 });
 
-// Each real product bake has its own J186 budget; no case rebuilds the catalogue. A deliberate J186 exception: the
+// Each real output bake has its own J186 budget; no case rebuilds the catalogue. A deliberate J186 exception: the
 // biggest bakes (showcase-template, night-market) run about 3 s on a Mac and an estimated 7 s on the hosted runner,
 // which runs this file about 2x slower, and went past 10 s there once. 20 s keeps a per-plot bound with room for a
 // slow runner, tighter than vitest.config.ts's 30 s default, so keep the override. The whole file re-bakes all

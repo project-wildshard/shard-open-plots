@@ -1,6 +1,6 @@
 # Open plots
 
-The grid's open plots are one data-only source shard with one product per
+The grid's open plots are one data-only source shard with one output per
 `outputs.json` row. Every current row declares a tiled layout. The platform
 reads those rows through `scripts/shard-outputs.mjs`; `shard.config.ts`
 exports their declarations and build programs.
