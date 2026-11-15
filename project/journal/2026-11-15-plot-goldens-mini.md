@@ -16,8 +16,8 @@
 - Views 3 and 4 (and Night Market 1) were low or RED only beyond the plot edge: J305 moved the neighbours (Nine Dragon's
   towers now stand behind Night Market). Re-baselining would go red again at the next layout change; hiding the other
   cells alone shows a plot floating over sky (the old grid floor belonged to a neighbour cell). So NOW stays the frame
-  as played, and each view also shoots other-cells-hidden and every-cell-hidden frames; engine's board.py (`ebae51fa`)
-  scores only where they differ. `--no-mask` keeps whole-frame scoring.
+  as played, and each view also shoots other-cells-hidden and every-cell-hidden frames; engine's board.py (`fcd8c7f7` on
+  `plan/mini-goldens`, landing) scores only where they differ. `--no-mask` keeps whole-frame scoring.
 - All 15 plots rerun on `a38e4f7-mwieo8k8` with the mask: 14 are 8/8 green and views 3 and 4 gate everywhere. The mask
   surfaced four stale road-entry goldens (pre-G992 relight, pre-OP26 entry board; refreshed, as 11-03 did for the other
   views) and Frostline's far peak, which now draws snow-capped (red until its owner rules). desert-ruin and thin-ice are

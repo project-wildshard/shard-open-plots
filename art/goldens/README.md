@@ -209,9 +209,9 @@ the plot mask.** Boards in `runs/2026-11-15-a38e4f7ca8-<plot>-board.jpg`, a SCOR
 above was low in views 3 and 4 only beyond the plot edge, where J305 had moved the neighbours (Nine Dragon's towers now
 stand behind Night Market). Re-baselining would go red at the next layout change, and hiding the other cells alone shows
 the plot over open sky (the old grid floor belonged to a neighbour). So NOW stays the frame as played and the capture
-also shoots each view with other cells hidden and with every cell hidden; engine's board.py (`ebae51fa`) scores SSIM and
-colour only where those differ. SSIM below is over the plot's pixels, so it reads lower than whole-frame SSIM where
-the sky used to pad it.
+also shoots each view with other cells hidden and with every cell hidden; engine's board.py (`fcd8c7f7` on
+`plan/mini-goldens`, landing) scores SSIM and colour only where those differ. SSIM below is over the plot's pixels, so
+it reads lower than whole-frame SSIM where the sky used to pad it.
 
 | Plot | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | Verdict |
 |---|---|---|---|---|---|---|---|---|---|

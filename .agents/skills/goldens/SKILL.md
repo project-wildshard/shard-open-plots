@@ -49,8 +49,8 @@ served cell, with old and new grid origins in `$RUN/capture.json`.
 The board scores the plot alone. NOW is the grid as played; each view also gets `-iso.png` (other cells hidden) and
 `-bare.png` (every cell hidden), and board.py scores SSIM and colour only where those two differ, shown in the SCORED
 column. Neighbours, sky and road are the grid's layout, not this plot (J305 moved them), so they never turn a view red.
-`--no-mask` scores whole frames. The mask needs engine `ebae51fa` or later; until engine's pin carries it, pass
-`--board=<engine checkout>/scripts/goldens/board.py`.
+`--no-mask` scores whole frames. The mask needs engine `fcd8c7f7` (on `plan/mini-goldens`, landing) or later; until
+engine's pin carries it, pass `--board=<engine checkout>/scripts/goldens/board.py`.
 
 ## 4. Read every row
 
