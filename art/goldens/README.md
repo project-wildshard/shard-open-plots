@@ -165,6 +165,11 @@ front of it).
 - 2026-11-03, Pastel Alien Plain: first set, from `baf4985b4a` (activation `c960ad91a8` plus violet beds `0cd922ffd2`;
   preview `baf4985-mw15080d`), cameras Patchwork's plot-local set moved to Alien Plain's cell (2, -2) (instance
   `open-plot-4-0`); final board `../alien-plain/round-3-final/board.jpg` (its README lists the known gaps).
+- 2026-11-15, Ember Forge, Lantern Bayou, Mosslight Ruins and Night Market 1: refreshed from mini-goldens' run on engine
+  `a38e4f7ca8` (build `a38e4f7-mwieo8k8`), boards `runs/2026-11-15-a38e4f7ca8-<plot>-board.jpg`. These four road-entry
+  frames predate the two changes the 11-03 lines above already promote for other views: G992's relight (no low sun disc,
+  so the plots read lit rather than as silhouettes) and OP26's entry board (stands further left and higher; Night
+  Market's poster art is new). The plot mask surfaced them; whole-frame SSIM had hidden them under the sky.
 
 ## Runs
 
@@ -198,3 +203,38 @@ no single cell for them) and `showcase-template` (its `shard.json` is not in thi
 From a worktree, pass `--board=../../../engine/scripts/goldens/board.py` (the default assumes the main checkout). Engine's
 published scripts import `playwright` but list it only as a devDependency, so from pnpm's global store it does not resolve;
 this run used a node `--import` resolve hook pointing `playwright` at this repo's copy until engine declares it.
+
+**2026-11-15, engine `a38e4f7ca8` build `a38e4f7-mwieo8k8`, Mac mini M5 Pro, Metal (mini-goldens, SH-ALL-11), scored on
+the plot mask.** Boards in `runs/2026-11-15-a38e4f7ca8-<plot>-board.jpg`, a SCORED column beside NOW. The 5e5b0b0 run
+above was low in views 3 and 4 only beyond the plot edge, where J305 had moved the neighbours (Nine Dragon's towers now
+stand behind Night Market). Re-baselining would go red at the next layout change, and hiding the other cells alone shows
+the plot over open sky (the old grid floor belonged to a neighbour). So NOW stays the frame as played and the capture
+also shoots each view with other cells hidden and with every cell hidden; engine's board.py (`ebae51fa`) scores SSIM and
+colour only where those differ. SSIM below is over the plot's pixels, so it reads lower than whole-frame SSIM where
+the sky used to pad it.
+
+| Plot | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | Verdict |
+|---|---|---|---|---|---|---|---|---|---|
+| alien-plain | 0.89 | 0.88 | 0.70 | 0.77 | 0.98 | 0.96 | 0.99 | 0.94 | 8/8 green |
+| clockwork-canyon | 0.92 | 0.92 | 0.85 | 0.86 | 0.99 | 0.99 | 0.99 | 0.95 | 8/8 green |
+| coral-drift | 0.90 | 0.79 | 0.70 | 0.73 | 0.89 | 0.97 | 0.91 | 0.81 | 8/8 green |
+| ember-forge | 0.98 | 0.88 | 0.74 | 0.79 | 0.98 | 0.98 | 0.99 | 0.96 | 8/8 green (1 refreshed) |
+| fossil-badlands | 0.90 | 0.91 | 0.79 | 0.84 | 0.99 | 0.99 | 0.98 | 0.95 | 8/8 green |
+| frostline-peaks | 0.55 | 0.83 | 0.68 | 0.69 | 0.96 | 0.98 | 0.93 | 0.90 | 4 red: 1, 2, 3, 8 |
+| jungle-ziggurat | 0.92 | 0.89 | 0.74 | 0.76 | 0.99 | 0.99 | 0.99 | 0.84 | 8/8 green |
+| lantern-bayou | 0.98 | 0.84 | 0.69 | 0.81 | 0.95 | 0.96 | 0.95 | 0.94 | 8/8 green (1 refreshed) |
+| mosslight-ruins | 0.98 | 0.87 | 0.74 | 0.71 | 0.98 | 0.87 | 0.99 | 0.95 | 8/8 green (1 refreshed) |
+| night-market | 0.98 | 0.87 | 0.73 | 0.81 | 0.91 | 0.96 | 0.92 | 0.93 | 8/8 green (1 refreshed) |
+| patchwork-fairground | 0.94 | 0.94 | 0.90 | 0.88 | 0.99 | 0.99 | 0.99 | 0.97 | 8/8 green |
+| saltwind-lighthouse | 0.94 | 0.94 | 0.88 | 0.89 | 0.99 | 0.99 | 0.99 | 0.97 | 8/8 green |
+| sky-harbor | 0.92 | 0.93 | 0.87 | 0.90 | 0.99 | 0.98 | 0.99 | 0.95 | 8/8 green |
+| sky-race | 0.91 | 0.92 | 0.85 | 0.90 | 0.99 | 0.99 | 0.99 | 0.95 | 8/8 green |
+| starfall-observatory | 0.92 | 0.91 | 0.80 | 0.80 | 0.99 | 0.99 | 0.99 | 0.95 | 8/8 green |
+
+- **frostline-peaks 1, 2, 3, 8, red pending a ruling:** from the road and the corners the peak now draws snow-capped
+  (as views 5 and 6 always did) where these goldens show bare grey rock, and they still carry the pre-G992 sun disc.
+  The plot's owner rules whether the far look is intended; then refresh them as above.
+- **Not captured, by decision, not a harness fault:** `desert-ruin` and `thin-ice` sit off the grid (J305, engine
+  `215b8b55`: 17 plots for 15 ring slots), so no build serves them as a cell; they wait on a grid slot, Jake's layout.
+  `showcase-template` is retired: Jake deleted the legacy grey template (J305, J310 Q6; SHARD-DELETE DEL3, engine
+  `8f613824` stops pinning it). Its frames stay as history; this repo still emits the product (`outputs.json`).
