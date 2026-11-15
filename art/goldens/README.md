@@ -165,3 +165,36 @@ front of it).
 - 2026-11-03, Pastel Alien Plain: first set, from `baf4985b4a` (activation `c960ad91a8` plus violet beds `0cd922ffd2`;
   preview `baf4985-mw15080d`), cameras Patchwork's plot-local set moved to Alien Plain's cell (2, -2) (instance
   `open-plot-4-0`); final board `../alien-plain/round-3-final/board.jpg` (its README lists the known gaps).
+
+## Runs
+
+**2026-11-15, engine `5e5b0b0` build `5e5b0b0-mwiamjy8`, Mac mini M5 Pro, Metal (mini-shardgfx, SH-ALL-11).** Boards in
+`runs/2026-11-15-5e5b0b0912-<plot>-board.jpg`. SSIM per view, 1 to 8. Verdict read off every row: each plot's
+own content matches its golden in all eight views. The low and RED views (3 neighbour-100m, 4 top-down, night-market 1)
+differ only beyond the plot edge: the goldens show bare grid floor or other neighbours where this build serves populated
+plots. Re-baseline 3 and 4 or mask neighbours before gating them.
+
+| Plot | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | Auto RED |
+|---|---|---|---|---|---|---|---|---|---|
+| night-market | 0.77 | 0.87 | 0.54 | 0.71 | 0.91 | 0.93 | 0.95 | 0.96 | 1 (neighbour skyline) |
+| alien-plain | 0.94 | 0.94 | 0.90 | 0.84 | 0.98 | 0.95 | 0.98 | 0.96 | none |
+| clockwork-canyon | 0.99 | 0.97 | 0.95 | 0.89 | 0.99 | 0.99 | 0.99 | 0.97 | none |
+| coral-drift | 0.98 | 0.88 | 0.60 | 0.64 | 0.94 | 0.98 | 0.94 | 0.89 | none |
+| ember-forge | 0.87 | 0.93 | 0.83 | 0.77 | 0.97 | 0.98 | 0.95 | 0.91 | none |
+| fossil-badlands | 0.93 | 0.94 | 0.90 | 0.81 | 0.99 | 0.99 | 0.99 | 0.97 | none |
+| frostline-peaks | 0.95 | 0.90 | 0.75 | 0.66 | 0.98 | 0.97 | 0.96 | 0.94 | none |
+| jungle-ziggurat | 0.99 | 0.95 | 0.93 | 0.81 | 0.99 | 0.99 | 0.99 | 0.89 | none |
+| lantern-bayou | 0.96 | 0.92 | 0.80 | 0.78 | 0.97 | 0.97 | 0.97 | 0.96 | none |
+| mosslight-ruins | 0.90 | 0.93 | 0.92 | 0.72 | 0.97 | 0.97 | 0.98 | 0.94 | none |
+| patchwork-fairground | 0.95 | 0.96 | 0.92 | 0.91 | 0.99 | 0.99 | 0.99 | 0.98 | none |
+| saltwind-lighthouse | 0.99 | 0.97 | 0.95 | 0.92 | 0.99 | 1.00 | 0.99 | 0.96 | none |
+| sky-harbor | 0.99 | 0.97 | 0.78 | 0.83 | 0.99 | 0.98 | 0.99 | 0.95 | 3 (neighbour) |
+| sky-race | 0.94 | 0.93 | 0.90 | 0.92 | 0.98 | 0.98 | 0.99 | 0.97 | none |
+| starfall-observatory | 0.99 | 0.96 | 0.80 | 0.79 | 0.99 | 0.99 | 0.99 | 0.96 | 3 (neighbour) |
+
+Not captured: `desert-ruin` and `thin-ice` ("Golden plot needs one served cell and explicit pitch": the build serves
+no single cell for them) and `showcase-template` (its `shard.json` is not in this build).
+
+From a worktree, pass `--board=../../../engine/scripts/goldens/board.py` (the default assumes the main checkout). Engine's
+published scripts import `playwright` but list it only as a devDependency, so from pnpm's global store it does not resolve;
+this run used a node `--import` resolve hook pointing `playwright` at this repo's copy until engine declares it.
