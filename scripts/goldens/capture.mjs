@@ -16,9 +16,10 @@ import {assertDomeAnchorReady} from '../dome-cameras.mjs';
 import {installDomeCamera,sampleDomeFrames,settledCaptureState} from '../capture-plot-domes.mjs';
 import {goldenPreviewIdentity} from './capture-inputs.mjs';
 import {parsePlotGoldens,plotGoldenPlacement,plotGoldenCamera} from './plot-inputs.mjs';
+import {installNeighbourMask} from './neighbour-mask.mjs';
 
 const arg=(name,fallback='')=>process.argv.find(value=>value.startsWith(`--${name}=`))?.slice(name.length+3)??fallback;
-const plot=arg('plot'),base=arg('base'),out=arg('out');
+const plot=arg('plot'),base=arg('base'),out=arg('out'),NO_MASK=process.argv.includes('--no-mask');
 if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/u.test(plot)||!base||!out) throw new Error('Requires --plot=<idea> --base=<preview URL> --out=<new run dir> [--sha=<full SHA>] [--python=python3]');
 const folder=resolve(out);
 if (folder===process.cwd() || !folder.startsWith(`${resolve('tmp')}/`) || existsSync(folder)) throw new Error('--out must be a new directory under ./tmp');
@@ -37,7 +38,7 @@ const python=arg('python','python3');execFileSync(python,['-c','from PIL import 
 function noQuiet() {if (existsSync('.git/quiet')) throw new Error('Official Simulator quiet is active; capture refuses');}
 noQuiet();mkdirSync(join(folder,'raw',plot),{recursive:true});
 const report={source,cameraFile:file,cameraSha256:createHash('sha256').update(bytes).digest('hex'),plan,
-  protocol:'iPhone 16 Pro 402x603, phone 2x, seed 357, midday/clear; normal grid route, plot-local golden camera onLate; shipping residency, lens and composer',
+  protocol:`iPhone 16 Pro 402x603, phone 2x, seed 357, midday/clear; normal grid route, plot-local golden camera onLate; shipping residency, lens and composer; ${NO_MASK?'whole frame scored':'NOW as played, scored on the plot mask (other cells hidden vs every cell hidden)'}`,
   complete:false,errors:[],views:[]};
 const save=()=>writeFileSync(join(folder,'capture.json'),JSON.stringify(report,null,2));save();
 const owner=await launchMemoryBrowser(['--mute-audio','--use-angle=metal','--ignore-gpu-blocklist']);
@@ -75,6 +76,10 @@ try {
       const failures=gridFloorWitnessFailures(witness);if (failures.length) throw new Error(failures.join('; '));
     }
     await page.evaluate(installDomeCamera);
+    // The plot mask (scored pixels): NOW is the frame as played, neighbours and all. Two more frames per view, other
+    // cells hidden (-iso) and every cell hidden (-bare), differ only where this plot draws; the board scores only
+    // there. Neighbours are a grid layout choice (J305 put Nine Dragon's towers behind Night Market), not this plot.
+    if (!NO_MASK) await page.evaluate(installNeighbourMask,placement.instance);
     await page.addStyleTag({content:'body *{visibility:hidden!important}canvas[data-dome-canvas]{visibility:visible!important}'});
     for (const view of plan.views) {
       noQuiet();
@@ -101,7 +106,17 @@ try {
       if (actual.build!==source.build) throw new Error('Preview changed during capture');
       const image=join(folder,'raw',plot,`${view.n}-${view.name}.png`);
       await page.screenshot({path:image,type:'png',scale:'device'});
-      report.views.push({n:view.n,name:view.name,anchor,camera,sample,state,wait,imageSha256:createHash('sha256').update(readFileSync(image)).digest('hex')});save();
+      let isolation=null;
+      if (!NO_MASK) {
+        isolation=[];
+        for (const [mode,suffix] of [['others','iso'],['all','bare'],['off',null]]) {
+          await page.evaluate(m=>{window.__plotNeighbourMask.set(m);},mode);
+          await page.evaluate(()=>new Promise(resolve=>{let n=0;const step=()=>{if(++n>=12)resolve();else requestAnimationFrame(step);};requestAnimationFrame(step);}));
+          isolation.push(await page.evaluate(()=>window.__plotNeighbourMask.last));
+          if (suffix!==null) await page.screenshot({path:join(folder,'raw',plot,`${view.n}-${view.name}-${suffix}.png`),type:'png',scale:'device'});
+        }
+      }
+      report.views.push({n:view.n,name:view.name,anchor,camera,sample,state,wait,isolation,imageSha256:createHash('sha256').update(readFileSync(image)).digest('hex')});save();
     }
     report.framesComplete=true;save();
   } catch(error) {

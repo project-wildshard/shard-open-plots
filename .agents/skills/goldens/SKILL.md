@@ -46,11 +46,17 @@ art/goldens --plot $PLOT` for the scored GOLDEN · NOW board in `$RUN/board/`. P
 (`--python=<interpreter>`); `--board=<path>` points at another board.py. Plot-local poses follow the plot's current
 served cell, with old and new grid origins in `$RUN/capture.json`.
 
+The board scores the plot alone. NOW is the grid as played; each view also gets `-iso.png` (other cells hidden) and
+`-bare.png` (every cell hidden), and board.py scores SSIM and colour only where those two differ, shown in the SCORED
+column. Neighbours, sky and road are the grid's layout, not this plot (J305 moved them), so they never turn a view red.
+`--no-mask` scores whole frames. The mask needs engine `ebae51fa` or later; until engine's pin carries it, pass
+`--board=<engine checkout>/scripts/goldens/board.py`.
+
 ## 4. Read every row
 
 **Open every `$RUN/board/<n>-<view>.jpg` with the Read tool, all 8.** Red = NOW lost or gained something the change
-didn't mean to: a landmark, building or prop missing, a hole, black or blank areas, seams, exposure or colour shift, LOD
-or texture pops. `UNREVIEWED` and SSIM never mean green. Burn the verdict in with
+didn't mean to inside the plot: a landmark, building or prop missing or moved, a hole, black or blank areas, seams,
+exposure or colour shift, LOD or texture pops. A change outside the SCORED mask (a neighbour, the road) is not red. `UNREVIEWED` and SSIM never mean green. Burn the verdict in with
 `python3 $ENGINE/scripts/goldens/board.py --goldens art/goldens --plot $PLOT --now $RUN/raw --out $RUN/board --red 3,4`.
 
 ## 5. Report, land, clean up

@@ -10,3 +10,11 @@
   eight views; views 3 and 4 (and night-market 1) score low because the goldens show bare grid floor or other
   neighbours where this build serves populated plots. Scores and boards: `art/goldens/README.md` Runs.
 - Not served by the build: desert-ruin and thin-ice (no single served cell) and showcase-template (no `shard.json`).
+
+## mini-goldens, later the same day
+
+- Views 3 and 4 (and Night Market 1) were low or RED only beyond the plot edge: J305 moved the neighbours (Nine Dragon's
+  towers now stand behind Night Market). Re-baselining would go red again at the next layout change; hiding the other
+  cells alone shows a plot floating over sky (the old grid floor belonged to a neighbour cell). So NOW stays the frame
+  as played, and each view also shoots other-cells-hidden and every-cell-hidden frames; engine's board.py (`ebae51fa`)
+  scores only where they differ. `--no-mask` keeps whole-frame scoring.
