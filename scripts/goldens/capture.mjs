@@ -8,7 +8,7 @@ import {existsSync,mkdirSync,readFileSync,writeFileSync} from 'node:fs';
 import {join,resolve} from 'node:path';
 import {devices} from 'playwright';
 import {launchMemoryBrowser} from '../../node_modules/@wildshard/engine/scripts/chromium-memory-browser.mjs';
-import {developerSettings,saveFixture,harnessPins} from '@wildshard/engine/scripts/debug-settings.mjs';
+import {developerSettings,saveFixture,harnessPins,NAME_ASKED} from '@wildshard/engine/scripts/debug-settings.mjs';
 import {frameFloorSettingsCode} from '@wildshard/engine/scripts/frame-floor-settings.mjs';
 import {FLOOR_GRID_ENTER,floorGridBenchmarkUrl} from '@wildshard/engine/scripts/frame-floor-navigation.mjs';
 import {gridFloorPlans,gridFloorDeclaredPlan,gridFloorDocumentIdentity,stageFloorGrid,driveFloorGrid,gridFloorWitnessFailures,floorGridEntryRoute} from '@wildshard/engine/scripts/frame-floor-grid.mjs';
@@ -47,7 +47,7 @@ try {
   try {
     await context.addInitScript({content:frameFloorSettingsCode({tier:'phone',fps:'auto',volume:0,time:'midday',weather:'clear'})});
     await developerSettings(context,{tier:'phone',volume:0,time:'midday',weather:'clear'});
-    await saveFixture(context,{scope:'global',key:'gfx',data:{dpr:'2',aa:'auto'}});
+    await saveFixture(context,{scope:'global',key:'gfx',data:{dpr:'2',aa:'auto'}});await saveFixture(context,NAME_ASKED);
     await harnessPins(context,{seed:357,browser:'Chromium / iPhone 16 Pro',lane:'open-plot-goldens'});
     page=await context.newPage();page.setDefaultTimeout(180000);
     page.on('pageerror',error=>{report.errors.push(error.message);});

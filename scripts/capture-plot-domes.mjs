@@ -7,13 +7,13 @@ import { createHash } from 'node:crypto';
 import { readCapturePlans, ringJunctionPlan, selectDomeViews } from './open-plots/capture-inputs.mjs';
 import { makeDomeBoards } from './open-plots/boards.mjs';
 import { settledDomeReadExpression } from './open-plots/settled-read.mjs';
-import { launchMemoryBrowser } from './chromium-memory-browser.mjs';
-import { saveFixture, harnessPins } from './debug-settings.mjs';
+import { launchMemoryBrowser } from '../node_modules/@wildshard/engine/scripts/chromium-memory-browser.mjs';
+import { saveFixture, harnessPins } from '@wildshard/engine/scripts/debug-settings.mjs';
 import { domeGroundAnchor, domeWorldCamera, assertDomeAnchorReady, domeResidencySettled } from './dome-cameras.mjs';
-import { frameFloorSettingsCode } from './frame-floor-settings.mjs';
-import { FLOOR_GRID_ENTER, floorGridBenchmarkUrl } from './frame-floor-navigation.mjs';
-import { gridFloorPlans, gridFloorDeclaredPlan, gridFloorDocumentIdentity, stageFloorGrid, driveFloorGrid, gridFloorWitnessFailures, floorGridEntryRoute } from './frame-floor-grid.mjs';
-import { chromiumProcessPeaks, ownedResidencyBytes } from './grid-ready-memory.mjs';
+import { frameFloorSettingsCode } from '@wildshard/engine/scripts/frame-floor-settings.mjs';
+import { FLOOR_GRID_ENTER, floorGridBenchmarkUrl } from '@wildshard/engine/scripts/frame-floor-navigation.mjs';
+import { gridFloorPlans, gridFloorDeclaredPlan, gridFloorDocumentIdentity, stageFloorGrid, driveFloorGrid, gridFloorWitnessFailures, floorGridEntryRoute } from '@wildshard/engine/scripts/frame-floor-grid.mjs';
+import { chromiumProcessPeaks, ownedResidencyBytes } from '../node_modules/@wildshard/engine/scripts/grid-ready-memory.mjs';
 
 /** One browser, any ordered list of plots. Every dome still earns its own normal grid entry.
  * @param {{base:string,pin:string,out:string,targets:readonly import('./open-plots/capture-inputs.mjs').CapturePlot[],milestone?:'RM2'|'RM3'|'END'|'OP4',domes?:readonly string[],viewSelection?:Readonly<Record<string,readonly number[]>>,clip?:number,flatOutput?:boolean,junction?:{x:number,z:number}} options */
