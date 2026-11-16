@@ -37,3 +37,7 @@ and that the production encoder populates that directory afterward.
 The source factory chooses the environment path at each cook call,
 so cases cannot silently reuse another product's disk cache. Retain
 the number of actual encoded files in every hosted receipt.
+
+Before world construction, each extracted product must refuse missing,
+truncated and same-size-corrupt actual server Wasm. Restore the exact
+original bytes between controls, then open and play that same product.
