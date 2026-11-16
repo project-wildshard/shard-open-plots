@@ -77,6 +77,8 @@ jobs:
         run: pnpm install --frozen-lockfile --config.ci=false
       - name: Prove the pinned producer before building
         run: node scripts/assert-candidate-engine.mjs --producer
+      - name: Check author imports on the frozen producer graph
+        run: node scripts/check-test-boundary.mjs
       - name: Build all eighteen authored products once
         run: pnpm build:shards
       - name: Carry the immutable producer output and provenance
@@ -148,8 +150,8 @@ jobs:
         run: pnpm install --no-frozen-lockfile --config.ci=false
       - name: Prove actual runtime provenance
         run: node scripts/assert-candidate-engine.mjs
-      - name: Check public engine exports
-        run: node scripts/check-test-boundary.mjs
+      - name: Check the explicit candidate proof source
+        run: node --check test/ci/cook-play.test.mjs
       - name: Cold cook and play this measured partition
         env:
           COOKED_PART: ${{ matrix.part }}/3

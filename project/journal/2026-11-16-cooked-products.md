@@ -49,3 +49,12 @@ J206 source/proof preparation review is CLEAR; candidate publication
 uses normal land with main held until prior Pine lands and actual
 consumer receipts. This workflow must produce fresh cold receipts
 before acceptance. No source pin or lockfile change is committed.
+
+The first hosted run stopped before cooking: its all-source import
+check tested an unexecuted legacy author case against the runtime
+candidate, which correctly removed engine/scripts/shard-platform.
+Check the complete author/test tree on its frozen producer graph.
+After candidate selection, syntax-check the explicit cook proof;
+Node resolves every public engine import when that proof executes,
+before any cook. Preserve the normal full boundary guard unchanged.
+The three cold partitions must still run and qualify actual receipts.
