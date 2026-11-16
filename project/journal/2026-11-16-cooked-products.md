@@ -58,3 +58,11 @@ After candidate selection, syntax-check the explicit cook proof;
 Node resolves every public engine import when that proof executes,
 before any cook. Preserve the normal full boundary guard unchanged.
 The three cold partitions must still run and qualify actual receipts.
+
+The next hosted partition cold-cooked all6of its actual products,
+then the added byte-refusal control failed because these native data
+plots ship no Wasm. Select a required asset from the same production
+serverReadsFile class the loader admits, preferring Wasm when present.
+Record its actual kind/path/hash. The missing, truncated and same-size
+corruption controls remain mandatory before world construction; all
+movement and exact-save assertions remain unchanged.
