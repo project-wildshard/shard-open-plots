@@ -45,8 +45,10 @@ permissions:
   contents: read
   actions: read
 
+# Ships of one slug run one at a time; each rehearsal has its own group,
+# so a rehearsal never displaces a waiting ship.
 concurrency:
-  group: publish-${{ inputs.slug || github.repository }}
+  group: publish-${{ inputs.slug || github.repository }}-${{ inputs.rehearse && format('rehearse-{0}-{1}-{2}', github.ref_name, inputs.runner, github.run_id) || 'ship' }}
   cancel-in-progress: false
 
 jobs:
