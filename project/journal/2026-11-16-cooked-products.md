@@ -31,3 +31,9 @@ candidate default currently names bc057171 only as a draft checkpoint;
 replace it with the published public-API engine candidate before this
 branch is published or offered to land. The proof refuses a missing API
 before cooking. No source pin or lockfile change is accepted.
+
+Each case now asserts its private part cache is absent before cooking
+and that the production encoder populates that directory afterward.
+The source factory chooses the environment path at each cook call,
+so cases cannot silently reuse another product's disk cache. Retain
+the number of actual encoded files in every hosted receipt.
