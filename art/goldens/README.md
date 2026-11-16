@@ -112,6 +112,14 @@ front of it).
 
 ## Updates
 
+- 2026-11-15, Frostline Peaks 1, 2, 3 and 8: Jake accepted the snow-capped far peak as the intended golden look
+  (QA-FEEDBACK-2026-11-15-mini row 19: *"First line golden, sure"*). The approved source is the NOW run on engine
+  `5e5b0b0912`, build `5e5b0b0-mwiamjy8`, shown in
+  [`runs/2026-11-15-5e5b0b0912-frostline-peaks-board.jpg`](runs/2026-11-15-5e5b0b0912-frostline-peaks-board.jpg).
+  **Promotion pending source:** the original raw capture was cleaned; only the board's 120 × 180 NOW panels remain.
+  Frames stay unchanged until the original raw path or an explicit choice to use those board panels is supplied.
+  Views 4, 5, 6 and 7 and the fixed cameras retain their existing goldens.
+
 - 2026-11-03, Night Market 2, 3 and 8: refreshed from sp-x9's first plot end-to-end run on `b687d09b21`
   (`../../golden-runs/open-plot-night-market/2026-11-03-b687d09b21-harness-board.jpg`). The plot matches in all three; only
   the sky and the neighbours changed, both intended: 2 and 3 lose the sun disc and its halo (G992, `0d7a022fbb`, after
@@ -231,9 +239,9 @@ sky used to pad it.
 | sky-race | 0.91 | 0.92 | 0.85 | 0.90 | 0.99 | 0.99 | 0.99 | 0.95 | 8/8 green |
 | starfall-observatory | 0.92 | 0.91 | 0.80 | 0.80 | 0.99 | 0.99 | 0.99 | 0.95 | 8/8 green |
 
-- **frostline-peaks 1, 2, 3, 8, red pending a ruling:** from the road and the corners the peak now draws snow-capped
+- **frostline-peaks 1, 2, 3, 8, historical red; Jake accepted the look 2026-11-15:** from the road and the corners the peak now draws snow-capped
   (as views 5 and 6 always did) where these goldens show bare grey rock, and they still carry the pre-G992 sun disc.
-  The plot's owner rules whether the far look is intended; then refresh them as above.
+  Jake accepted the far look in QA mini row 19; frame promotion is tracked in Updates above.
 - **Not captured, by decision, not a harness fault:** `desert-ruin` and `thin-ice` sit off the grid (J305, engine
   `215b8b55`: 17 plots for 15 ring slots), so no build serves them as a cell; they wait on a grid slot, Jake's layout.
   `showcase-template` is retired: Jake deleted the legacy grey template (J305, J310 Q6; SHARD-DELETE DEL3, engine
