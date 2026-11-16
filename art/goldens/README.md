@@ -116,9 +116,11 @@ front of it).
   (QA-FEEDBACK-2026-11-15-mini row 19: *"First line golden, sure"*). The approved source is the NOW run on engine
   `5e5b0b0912`, build `5e5b0b0-mwiamjy8`, shown in
   [`runs/2026-11-15-5e5b0b0912-frostline-peaks-board.jpg`](runs/2026-11-15-5e5b0b0912-frostline-peaks-board.jpg).
-  **Promotion pending source:** the original raw capture was cleaned; only the board's 120 × 180 NOW panels remain.
-  Frames stay unchanged until the original raw path or an explicit choice to use those board panels is supplied.
-  Views 4, 5, 6 and 7 and the fixed cameras retain their existing goldens.
+  That run's raw frames were cleaned, so the four frames were re-shot on engine `4e3c68c8ce`, build `4e3c68c-mwil62ys`
+  (the same snow-capped peak), and promoted from that run's raw PNGs at 402 × 603, JPEG quality 85 (mini-goldens2).
+  A second, fresh capture scores 8/8 green against them:
+  [`runs/2026-11-15-4e3c68c8ce-frostline-peaks-board.jpg`](runs/2026-11-15-4e3c68c8ce-frostline-peaks-board.jpg).
+  Views 4, 5, 6 and 7 and the fixed cameras keep their existing goldens.
 
 - 2026-11-03, Night Market 2, 3 and 8: refreshed from sp-x9's first plot end-to-end run on `b687d09b21`
   (`../../golden-runs/open-plot-night-market/2026-11-03-b687d09b21-harness-board.jpg`). The plot matches in all three; only
@@ -241,7 +243,12 @@ sky used to pad it.
 
 - **frostline-peaks 1, 2, 3, 8, historical red; Jake accepted the look 2026-11-15:** from the road and the corners the peak now draws snow-capped
   (as views 5 and 6 always did) where these goldens show bare grey rock, and they still carry the pre-G992 sun disc.
-  Jake accepted the far look in QA mini row 19; frame promotion is tracked in Updates above.
+  Jake accepted the far look in QA mini row 19; promoted 2026-11-15 (Updates above), now 8/8 green:
+
+| Plot | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | Verdict |
+|---|---|---|---|---|---|---|---|---|---|
+| frostline-peaks (`4e3c68c-mwil62ys`, after promotion) | 0.98 | 0.98 | 0.97 | 0.69 | 0.96 | 0.98 | 0.93 | 0.98 | 8/8 green |
+
 - **Not captured, by decision, not a harness fault:** `desert-ruin` and `thin-ice` sit off the grid (J305, engine
   `215b8b55`: 17 plots for 15 ring slots), so no build serves them as a cell; they wait on a grid slot, Jake's layout.
   `showcase-template` is retired: Jake deleted the legacy grey template (J305, J310 Q6; SHARD-DELETE DEL3, engine
