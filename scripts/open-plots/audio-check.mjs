@@ -3,7 +3,7 @@ import { KEYCHAIN_ARGS } from '../chromium-keychain.mjs';
 // Run under scripts/browser-lane.sh. Checks playback; never reports performance.
 import { readFileSync, existsSync } from 'node:fs';
 import { parseArgs } from 'node:util';
-import { chromium, devices } from 'playwright';
+import { chromium, devices } from "../browser-playwright.mjs";
 import { developerSettings, saveFixture, harnessPins } from '../debug-settings.mjs';
 import { observeAudioGraph, audioSnapshot } from './audio-observer.mjs';
 

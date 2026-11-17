@@ -6,7 +6,7 @@ import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
 import {existsSync,mkdirSync,readFileSync,writeFileSync} from 'node:fs';
 import {join,resolve} from 'node:path';
-import {devices} from 'playwright';
+import {devices} from "../browser-playwright.mjs";
 import {launchMemoryBrowser} from '../../node_modules/@wildshard/engine/scripts/chromium-memory-browser.mjs';
 import {developerSettings,saveFixture,harnessPins,NAME_ASKED} from '@wildshard/engine/scripts/debug-settings.mjs';
 import {frameFloorSettingsCode} from '@wildshard/engine/scripts/frame-floor-settings.mjs';

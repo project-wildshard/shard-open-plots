@@ -2,7 +2,7 @@
 // Existing free camera only: no forced tile residency, changed world visibility, lens defaults, fog or far plane.
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
-import { devices } from 'playwright';
+import { devices } from "./browser-playwright.mjs";
 import { createHash } from 'node:crypto';
 import { readCapturePlans, ringJunctionPlan, selectDomeViews } from './open-plots/capture-inputs.mjs';
 import { makeDomeBoards } from './open-plots/boards.mjs';
