@@ -290,6 +290,11 @@ jobs:
         run: |
           node scripts/publish-public.mjs
           pnpm exec wildshard build-shards --reuse
+      - name: Check the offline phone memory limits
+        run: |
+          for index in out/*/shard.json; do
+            pnpm exec shard-format validate "${index%/shard.json}"
+          done
       - name: Share the built plots with Ring 2 play
         if: github.event_name == 'push'
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
