@@ -25,8 +25,8 @@ importers:
         specifier: 0.4.1
         version: 0.4.1(@types/node@24.3.1)(three@0.186.0)(typescript@6.0.3)
       '@wildshard/format':
-        specifier: npm:@wildshard/shard-format@0.26.0
-        version: '@wildshard/shard-format@0.26.0(typescript@6.0.3)'
+        specifier: npm:@wildshard/shard-format@0.31.0
+        version: '@wildshard/shard-format@0.31.0(typescript@6.0.3)'
       '@wildshard/sharddev':
         specifier: npm:@wildshard/sdk@0.4.1
         version: '@wildshard/sdk@0.4.1(@types/node@24.3.1)(three@0.186.0)(typescript@6.0.3)'
@@ -600,8 +600,8 @@ packages:
     engines: {node: '>=24.18.0'}
     hasBin: true
 
-  '@wildshard/shard-format@0.26.0':
-    resolution: {integrity: sha512-8Ev5QmgmT8G6rP7SNMt/IBWjJL/uLhiu1W9/L5cA+imE6iID9vYeOiy0vcULp0bvbTMmv9OLLtMLJfRll9e2rg==}
+  '@wildshard/shard-format@0.31.0':
+    resolution: {integrity: sha512-jLrWQJRy+thfkgQ0z65FxBFHUt8f2bByURmz8GCHRA9JY7jMjxzOaUTi+ns7acOuZay6Ob3oxxl+09Dk+rTdvw==}
     engines: {node: '>=24.18.0'}
     hasBin: true
 
@@ -1794,7 +1794,7 @@ snapshots:
     transitivePeerDependencies:
       - typescript
 
-  '@wildshard/shard-format@0.26.0(typescript@6.0.3)':
+  '@wildshard/shard-format@0.31.0(typescript@6.0.3)':
     dependencies:
       meshoptimizer: 1.2.0
       valibot: 1.5.0(typescript@6.0.3)
