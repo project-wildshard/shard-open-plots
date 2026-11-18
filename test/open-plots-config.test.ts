@@ -1,5 +1,4 @@
 import { GridAssembly } from '@wildshard/engine/game/grid/assembly'
-import { declarationOnlyConfig } from '@wildshard/engine/scripts/shard-platform.mjs'
 import { expect, test } from 'vitest'
 
 import layout from '../src/shards/open-plots/data/layouts/night-market.json' with { type: 'json' }
@@ -9,12 +8,10 @@ import {
 } from '../src/shards/open-plots/generators/shardfile'
 import declared from '../src/shards/open-plots/outputs.json' with { type: 'json' }
 import project, { outputs } from '../src/shards/open-plots/shard.config'
-import configSource from '../src/shards/open-plots/shard.config.ts?raw'
 
-// G604: the open-plots entry is a thin declaration (its outputs assemble in generators/shardfile.ts at build time), one
-// output per idea row
-test('the open-plots entry is declaration-only and declares one output per idea', () => {
-  expect(declarationOnlyConfig(configSource)).toBe(true)
+// G604: the open-plots entry declares one output per idea row (its outputs assemble in generators/shardfile.ts at build
+// time). Engine HOST-RULER HR9 retired shard-platform.mjs and its declaration-only census, so only the outputs are checked.
+test('the open-plots entry declares one output per idea', () => {
   expect(Object.keys(outputs)).toEqual(declared.outputs.map(row => row.slug))
   for (const row of declared.outputs)
     expect(worldDeclarations[row.slug]).toMatchObject({
