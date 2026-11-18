@@ -10,8 +10,9 @@ import { test } from 'node:test';
 
 const { readTar } = await import('@wildshard/format/tar');
 const { manifestFolders, builtShardFolders } = await import('@wildshard/engine/scripts/shard-outputs.mjs');
-const sdk = dirname(createRequire(import.meta.url).resolve('@wildshard/sharddev/package.json'));
-const bin = resolve(sdk, 'bin/wildshard.mjs');
+// SDK-SPLIT SP13d: the `wildshard` command ships in @wildshard/cli; the sdk has no bin since 0.4.0.
+const cli = dirname(createRequire(import.meta.url).resolve('@wildshard/cli/package.json'));
+const bin = resolve(cli, 'bin/wildshard.mjs');
 const expected = builtShardFolders(process.cwd(), manifestFolders(process.cwd()));
 assert.ok(expected.length, 'This checkout must declare its products');
 assert.deepEqual(readdirSync('out', { withFileTypes: true }).filter(row => row.isDirectory() && !row.name.startsWith('.') && row.name !== 'tars').map(row => row.name).sort(), expected.map(row => row.slug).sort());
