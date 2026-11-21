@@ -10,3 +10,9 @@ Align format at 0.63.0 and engine at released 0.1.64 so both
 a local check and Actions use the current dependency graph.
 The ZS14 receipt already applied the 21-entry catalogue backfill.
 Verify it before deciding whether another API write is needed.
+
+The first conflict resolution retained the old workflow. Restore
+required preparation and the explicit cook job from main680e474,
+then add --no-new alongside --no-wait. Actionlint passes.
+The marked API read verifies all 21 targets already opted out;
+no local admin token exists and no write is necessary.
