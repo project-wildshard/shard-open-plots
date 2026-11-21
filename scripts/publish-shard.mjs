@@ -139,9 +139,12 @@ export function uploadLines(log) {
   const lines = log.split('\n').map((line) => line.trim());
   const at = lines.findIndex((line) => /^(committed|already stored): /u.test(line));
   if (at < 0) {
-    const queued = lines.find((line) => /^queued: /u.test(line));
+    const queuedAt = lines.findIndex((line) => /^queued: /u.test(line));
+    const queued = queuedAt < 0 ? undefined : lines[queuedAt];
     const id = queued && /\(upload (\S+)\)$/u.exec(queued)?.[1];
-    return { committed: undefined, after: [], ...(queued ? { queued, uploadId: id } : {}) };
+    // ZS4: the lines after it, such as "not listed in New (--no-new)", reach the run's summary too.
+    const after = queuedAt < 0 ? [] : lines.slice(queuedAt + 1).filter(Boolean);
+    return { committed: undefined, after, ...(queued ? { queued, uploadId: id } : {}) };
   }
   const committed = lines[at];
   const match = /^(?:committed|already stored): (\S+) (\S+) catalogue number (\d+) for (\S+) \(([0-9a-f]{64})\)/u.exec(committed);
@@ -225,7 +228,7 @@ function report(slug, channel, logFile, shardFile) {
   if (parsed.queued && parsed.uploadId && hash) {
     // A6: the API accepted the upload and the cook runs on (Pine's take 45 to 52 minutes); this job ends green here and
     // the cook job reports the verdict.
-    summary(`### ${slug} on ${channel}: accepted, cooking\n\n~~~text\n${parsed.queued}\n~~~\n\nThe cook job waits for the verdict; by hand: \`pnpm exec wildshard upload status ${parsed.uploadId}\``);
+    summary(`### ${slug} on ${channel}: accepted, cooking\n\n~~~text\n${[parsed.queued, ...parsed.after].join('\n')}\n~~~\n\nThe cook job waits for the verdict; by hand: \`pnpm exec wildshard upload status ${parsed.uploadId}\``);
     output('upload_id', parsed.uploadId);
     output('hash', hash);
     return;
