@@ -1,5 +1,5 @@
 // J186: actual publishable tarballs, not generator rows. CI only.
-import '@wildshard/engine/scripts/format-hook.mjs';
+import '@wildshard/sdk/headless/scripts/format-hook.mjs';
 import assert from 'node:assert/strict';
 import { spawnSync } from 'node:child_process';
 import { mkdirSync, mkdtempSync, readdirSync, readFileSync, rmSync } from 'node:fs';
@@ -9,7 +9,7 @@ import { dirname, join, resolve } from 'node:path';
 import { test } from 'node:test';
 
 const { readTar } = await import('@wildshard/format/tar');
-const { manifestFolders, builtShardFolders } = await import('@wildshard/engine/scripts/shard-outputs.mjs');
+const { manifestFolders, builtShardFolders } = await import('@wildshard/sdk/headless/scripts/shard-outputs.mjs');
 // SDK-SPLIT SP13d: the `wildshard` command ships in @wildshard/cli; the sdk has no bin since 0.4.0.
 const cli = dirname(createRequire(import.meta.url).resolve('@wildshard/cli/package.json'));
 const bin = resolve(cli, 'bin/wildshard.mjs');

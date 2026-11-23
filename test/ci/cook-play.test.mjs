@@ -1,6 +1,6 @@
 // Explicit Ring 2 only: real cold cooks use the same 600 s case and
 // 15 minute hosted-job limits as the native shard proofs. Never local.
-import '@wildshard/engine/scripts/sim-node-loader.mjs';
+import '@wildshard/sdk/headless/scripts/sim-node-loader.mjs';
 import assert from 'node:assert/strict';
 import {spawnSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
@@ -13,16 +13,16 @@ import {test} from 'node:test';
 assert.equal(process.env.GITHUB_ACTIONS,'true','Cold cooking runs only in hosted Actions');
 assert.equal(process.env.RUNNER_ENVIRONMENT,'github-hosted','No self-hosted cook');
 const engine=process.env.COOKED_ENGINE_CANDIDATE;assert.match(engine??'',/^[a-f0-9]{40}$/u);
-const {loadCookedFolder,loadHeadlessFolder}=await import('@wildshard/engine/host/headlessFolder');
+const {loadCookedFolder,loadHeadlessFolder}=await import('@wildshard/sdk/headless/host/headlessFolder');
 assert.equal(typeof loadCookedFolder,'function','The candidate must publish cooked-product admission before any cook');
-const {openWorld}=await import('@wildshard/engine/host/openWorld');
-const {outputDescriptor,serverReadsFile}=await import('@wildshard/engine/game/shardfile/outputDescriptor');
-const {loadRapier}=await import('@wildshard/engine/physics/rapier');
-const {cookShard,servedAsIs}=await import('@wildshard/engine/game/shardCook');
-const {readServerPack,serverPackFile}=await import('@wildshard/engine/game/shardfile/serverPack');
-const {snapshotSimHostBytes,serializeSimSnapshot}=await import('@wildshard/engine/sim/snapshot');
-const {manifestFolders,builtShardFolders}=await import('@wildshard/engine/scripts/shard-outputs.mjs');
-const {NET_BUTTONS}=await import('@wildshard/engine/input/netButtons');
+const {openWorld}=await import('@wildshard/sdk/internal/engine/host/openWorld');
+const {outputDescriptor,serverReadsFile}=await import('@wildshard/sdk/headless/game/shardfile/outputDescriptor');
+const {loadRapier}=await import('@wildshard/sdk/headless/physics/rapier');
+const {cookShard,servedAsIs}=await import('@wildshard/sdk/headless/game/shardCook');
+const {readServerPack,serverPackFile}=await import('@wildshard/sdk/headless/game/shardfile/serverPack');
+const {snapshotSimHostBytes,serializeSimSnapshot}=await import('@wildshard/sdk/headless/sim/snapshot');
+const {manifestFolders,builtShardFolders}=await import('@wildshard/sdk/headless/scripts/shard-outputs.mjs');
+const {NET_BUTTONS}=await import('@wildshard/sdk/internal/engine/input/netButtons');
 const expected=builtShardFolders(process.cwd(),manifestFolders(process.cwd())).map(row=>row.slug).sort();
 assert.equal(expected.length,18,'The complete authored eighteen-product set is required');
 assert.deepEqual(readdirSync('out',{withFileTypes:true}).filter(row=>row.isDirectory()&&!row.name.startsWith('.')&&row.name!=='tars').map(row=>row.name).sort(),expected);
@@ -36,7 +36,7 @@ const runtime=JSON.parse(readFileSync(join(reportRoot,'runtime.json'),'utf8'));
 assert.equal(runtime.complete,true);assert.equal(runtime.engine,engine);
 assert.equal(runtime.resolved,`https://codeload.github.com/project-wildshard/engine/tar.gz/${engine}`);
 const require=createRequire(import.meta.url),bin=join(dirname(require.resolve('@wildshard/cli/package.json')),'bin/wildshard.mjs'); // SP13d: the cli ships the bin
-const engineRequire=createRequire(import.meta.resolve('@wildshard/engine/package.json'));
+import { engineRequire } from '@wildshard/sdk/headless';
 const rapier=await loadRapier(readFileSync(engineRequire.resolve('@dimforge/rapier3d-simd/rapier_wasm3d_bg.wasm')));
 const digest=bytes=>createHash('sha256').update(bytes).digest('hex');
 const snapshot=world=>serializeSimSnapshot(snapshotSimHostBytes(world.host));

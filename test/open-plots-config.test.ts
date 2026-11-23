@@ -1,4 +1,4 @@
-import { GridAssembly } from '@wildshard/engine/game/grid/assembly'
+import { GridAssembly } from '@wildshard/sdk/internal/engine/game/grid/assembly'
 import { expect, test } from 'vitest'
 
 import layout from '../src/shards/open-plots/data/layouts/night-market.json' with { type: 'json' }
