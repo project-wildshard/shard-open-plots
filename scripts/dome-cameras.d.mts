@@ -1,4 +1,4 @@
-import type { FloorGridState } from '@wildshard/engine/scripts/frame-floor-grid.mjs'
+import type { FloorGridState } from '@wildshard/sdk/headless/scripts/frame-floor-grid.mjs'
 
 export interface DomeView {
   readonly n: number

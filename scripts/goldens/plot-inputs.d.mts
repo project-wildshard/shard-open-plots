@@ -1,4 +1,4 @@
-import type {FloorGridState} from '@wildshard/engine/scripts/frame-floor-grid.mjs';
+import type {FloorGridState} from '@wildshard/sdk/headless/scripts/frame-floor-grid.mjs';
 
 export interface PlotGoldenView {
   n:number;name:string;label:string;player:[number,number];eye:[number,number,number];look:[number,number,number];
