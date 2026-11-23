@@ -9,7 +9,7 @@ import {parseArgs} from 'node:util';
 import sharp from 'sharp';
 import * as v from 'valibot';
 import {plotAudioRequest} from './audio-template.mjs';
-import {emptyShardfile} from '@wildshard/sharddev/author';
+import {emptyShardfile} from '@wildshard/sdk/author';
 
 const finite=v.pipe(v.number(),v.finite()),natural=v.pipe(finite,v.integer(),v.minValue(0));
 const positive=v.pipe(natural,v.minValue(1)),text=v.pipe(v.string(),v.minLength(1),v.maxLength(160));

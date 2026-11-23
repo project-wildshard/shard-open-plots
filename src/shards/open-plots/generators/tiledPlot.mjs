@@ -1,5 +1,5 @@
 // The pilot composition: new plots supply their own builder set and construction hooks.
-import { newGlbDocument, readGlb, writeGlb } from '@wildshard/sharddev/bake/generatorGlb';
+import { newGlbDocument, readGlb, writeGlb } from '@wildshard/sdk/bake/generatorGlb';
 import { tiledPlotWorldBytes } from './tiledPlotCore.mjs';
 import { nightMarketPlot } from './nightMarket.mjs';
 import { lanternBayouPlot } from './bayou.mjs';
