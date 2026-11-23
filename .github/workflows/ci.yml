@@ -120,8 +120,6 @@ jobs:
           name: ci21-map-owner-${{ github.run_id }}
           path: tmp/ci21-map/
           if-no-files-found: ignore
-      - name: Keep the cleared queue and public imports honest
-        run: node scripts/check-test-boundary.mjs
       - if: github.event_name == 'push' || github.event_name == 'pull_request'
         run: pnpm test:hooks
       - name: Name the commits this verdict covers

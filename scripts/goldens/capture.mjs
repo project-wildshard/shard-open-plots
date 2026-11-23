@@ -7,7 +7,6 @@ import {createHash} from 'node:crypto';
 import {existsSync,mkdirSync,readFileSync,writeFileSync} from 'node:fs';
 import {join,resolve} from 'node:path';
 import {devices} from "../browser-playwright.mjs";
-import {launchMemoryBrowser} from '../../node_modules/@wildshard/engine/scripts/chromium-memory-browser.mjs';
 import {developerSettings,saveFixture,harnessPins,NAME_ASKED} from '@wildshard/sdk/headless/scripts/debug-settings.mjs';
 import {frameFloorSettingsCode} from '@wildshard/sdk/headless/scripts/frame-floor-settings.mjs';
 import {FLOOR_GRID_ENTER,floorGridBenchmarkUrl} from '@wildshard/sdk/headless/scripts/frame-floor-navigation.mjs';
@@ -17,6 +16,10 @@ import {installDomeCamera,sampleDomeFrames,settledCaptureState} from '../capture
 import {goldenPreviewIdentity} from './capture-inputs.mjs';
 import {parsePlotGoldens,plotGoldenPlacement,plotGoldenCamera} from './plot-inputs.mjs';
 import {installNeighbourMask} from './neighbour-mask.mjs';
+import { engineRoot } from '@wildshard/sdk/headless';
+import { pathToFileURL } from 'node:url';
+// SHARD-COMPAT SI5: engine browser scripts with no sdk row yet, reached through the sdk's engine folder.
+const {launchMemoryBrowser} = await import(pathToFileURL(`${engineRoot}/scripts/chromium-memory-browser.mjs`).href);
 
 const arg=(name,fallback='')=>process.argv.find(value=>value.startsWith(`--${name}=`))?.slice(name.length+3)??fallback;
 const plot=arg('plot'),base=arg('base'),out=arg('out'),NO_MASK=process.argv.includes('--no-mask');

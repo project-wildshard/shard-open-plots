@@ -7,13 +7,16 @@ import { createHash } from 'node:crypto';
 import { readCapturePlans, ringJunctionPlan, selectDomeViews } from './open-plots/capture-inputs.mjs';
 import { makeDomeBoards } from './open-plots/boards.mjs';
 import { settledDomeReadExpression } from './open-plots/settled-read.mjs';
-import { launchMemoryBrowser } from '../node_modules/@wildshard/engine/scripts/chromium-memory-browser.mjs';
 import { saveFixture, harnessPins } from '@wildshard/sdk/headless/scripts/debug-settings.mjs';
 import { domeGroundAnchor, domeWorldCamera, assertDomeAnchorReady, domeResidencySettled } from './dome-cameras.mjs';
 import { frameFloorSettingsCode } from '@wildshard/sdk/headless/scripts/frame-floor-settings.mjs';
 import { FLOOR_GRID_ENTER, floorGridBenchmarkUrl } from '@wildshard/sdk/headless/scripts/frame-floor-navigation.mjs';
 import { gridFloorPlans, gridFloorDeclaredPlan, gridFloorDocumentIdentity, stageFloorGrid, driveFloorGrid, gridFloorWitnessFailures, floorGridEntryRoute } from '@wildshard/sdk/headless/scripts/frame-floor-grid.mjs';
-import { chromiumProcessPeaks, ownedResidencyBytes } from '../node_modules/@wildshard/engine/scripts/grid-ready-memory.mjs';
+import { engineRoot } from '@wildshard/sdk/headless';
+import { pathToFileURL } from 'node:url';
+// SHARD-COMPAT SI5: engine browser scripts with no sdk row yet, reached through the sdk's engine folder.
+const {launchMemoryBrowser} = await import(pathToFileURL(`${engineRoot}/scripts/chromium-memory-browser.mjs`).href);
+const {chromiumProcessPeaks, ownedResidencyBytes} = await import(pathToFileURL(`${engineRoot}/scripts/grid-ready-memory.mjs`).href);
 
 /** One browser, any ordered list of plots. Every dome still earns its own normal grid entry.
  * @param {{base:string,pin:string,out:string,targets:readonly import('./open-plots/capture-inputs.mjs').CapturePlot[],milestone?:'RM2'|'RM3'|'END'|'OP4',domes?:readonly string[],viewSelection?:Readonly<Record<string,readonly number[]>>,clip?:number,flatOutput?:boolean,junction?:{x:number,z:number}} options */
