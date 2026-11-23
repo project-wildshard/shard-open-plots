@@ -35,7 +35,7 @@ export function plotGoldenCamera(row,origin) {
 
 /** Resolve by product identity, never the pre-G986 instance or world origin.
  * @param {ReturnType<typeof parsePlotGoldens>} plan
- * @param {Pick<import('@wildshard/engine/scripts/frame-floor-grid.mjs').FloorGridState,'pitch'|'cells'>} grid */
+ * @param {Pick<import('@wildshard/sdk/headless/scripts/frame-floor-grid.mjs').FloorGridState,'pitch'|'cells'>} grid */
 export function plotGoldenPlacement(plan,grid) {
   const cells=grid.cells.filter(row=>row.slug===plan.slug), pitch=grid.pitch;
   if (cells.length!==1 || pitch===undefined || !Number.isFinite(pitch) || pitch<=500) throw new Error('Golden plot needs one served cell and explicit pitch');
