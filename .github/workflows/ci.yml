@@ -30,7 +30,7 @@ concurrency:
 jobs:
   check:
     runs-on: ubuntu-latest
-    timeout-minutes: ${{ (github.event_name == 'workflow_dispatch' || github.event_name == 'repository_dispatch') && 5 || 15 }}
+    timeout-minutes: 15 # QA-11-23-b row 41: a Ring 3 candidate's cold install ran past 5 (Nine, Driftwood)
     env:
       APP_CLIENT_ID: ${{ secrets.APP_CLIENT_ID }}
     steps:
@@ -143,7 +143,7 @@ jobs:
 
   author-tests:
     runs-on: ubuntu-latest
-    timeout-minutes: ${{ (github.event_name == 'workflow_dispatch' || github.event_name == 'repository_dispatch') && 5 || 15 }}
+    timeout-minutes: 15 # QA-11-23-b row 41: a Ring 3 candidate's cold install ran past 5 (Nine, Driftwood)
     env:
       APP_CLIENT_ID: ${{ secrets.APP_CLIENT_ID }}
     steps:
@@ -203,7 +203,7 @@ jobs:
   # packages the plots, then ring-2-play downloads that same build to play it.
   products:
     runs-on: ubuntu-latest
-    timeout-minutes: ${{ (github.event_name == 'workflow_dispatch' || github.event_name == 'repository_dispatch') && 5 || 15 }}
+    timeout-minutes: 15 # QA-11-23-b row 41: a Ring 3 candidate's cold install ran past 5 (Nine, Driftwood)
     env:
       APP_CLIENT_ID: ${{ secrets.APP_CLIENT_ID }}
     outputs:
