@@ -1050,11 +1050,7 @@
     "shard.config.ts",
     "outputs.json",
     "generators",
-    "data",
-    "../../../public/assets/open-plots",
-    "../../sharddev/bake/mapRaster.ts",
-    "../../sharddev/bake/mapScenes.ts",
-    "../../sharddev/bake/groundMap.ts"
+    "data"
   ],
   "painter": {
     "version": 1,
