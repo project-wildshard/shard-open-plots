@@ -16,7 +16,8 @@ const engine=process.env.COOKED_ENGINE_CANDIDATE;assert.match(engine??'',/^[a-f0
 const {loadCookedFolder,loadHeadlessFolder}=await import('@wildshard/sdk/headless/host/headlessFolder');
 assert.equal(typeof loadCookedFolder,'function','The candidate must publish cooked-product admission before any cook');
 const {openWorld}=await import('@wildshard/sdk/internal/engine/host/openWorld');
-const {outputDescriptor,serverReadsFile}=await import('@wildshard/sdk/headless/game/shardfile/outputDescriptor');
+const { outputDescriptor } = await import('@wildshard/sdk/headless/game/shardfile/outputDescriptor');
+const { serverReadsFile } = await import('@wildshard/format/serverReads');
 const {loadRapier}=await import('@wildshard/sdk/headless/physics/rapier');
 const {cookShard,servedAsIs}=await import('@wildshard/sdk/headless/game/shardCook');
 const {readServerPack,serverPackFile}=await import('@wildshard/sdk/headless/game/shardfile/serverPack');
