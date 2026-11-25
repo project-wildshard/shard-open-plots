@@ -288,7 +288,6 @@ jobs:
       - name: Readmit exact prepared candidate products
         if: github.event_name == 'workflow_dispatch' || github.event_name == 'repository_dispatch'
         run: |
-          node scripts/publish-public.mjs
           pnpm exec wildshard build-shards --reuse
       - name: Check the offline phone memory limits
         run: |
