@@ -80,13 +80,13 @@
     "iron": "#3a3a40"
   },
   "landmark": {
-    "near": "public/assets/open-plots/desert-ruin/landmark.glb",
-    "far": "public/assets/open-plots/desert-ruin/landmark-far.glb",
+    "near": "src/static/assets/open-plots/desert-ruin/landmark.glb",
+    "far": "src/static/assets/open-plots/desert-ruin/landmark-far.glb",
     "height": 52,
     "turn": 0
   },
   "posters": {
-    "image": "public/assets/open-plots/desert-ruin/poster.webp",
+    "image": "src/static/assets/open-plots/desert-ruin/poster.webp",
     "plaza": null,
     "entry": {
       "inset": 247,

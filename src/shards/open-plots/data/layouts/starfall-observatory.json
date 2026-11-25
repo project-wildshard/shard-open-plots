@@ -73,13 +73,13 @@
     "door": "#1a2a78"
   },
   "landmark": {
-    "near": "public/assets/open-plots/starfall-observatory/landmark.glb",
-    "far": "public/assets/open-plots/starfall-observatory/landmark-far.glb",
+    "near": "src/static/assets/open-plots/starfall-observatory/landmark.glb",
+    "far": "src/static/assets/open-plots/starfall-observatory/landmark-far.glb",
     "height": 30,
     "turn": 2
   },
   "posters": {
-    "image": "public/assets/open-plots/starfall-observatory/poster.webp",
+    "image": "src/static/assets/open-plots/starfall-observatory/poster.webp",
     "plaza": null,
     "entry": {
       "inset": 247,

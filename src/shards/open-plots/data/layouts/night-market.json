@@ -45,8 +45,8 @@
     "rope": "#2a1d14"
   },
   "landmark": {
-    "near": "public/assets/open-plots/night-market/landmark.glb",
-    "far": "public/assets/open-plots/night-market/landmark-far.glb",
+    "near": "src/static/assets/open-plots/night-market/landmark.glb",
+    "far": "src/static/assets/open-plots/night-market/landmark-far.glb",
     "height": 45,
     "turn": 0,
     "lanterns": [[-3, 29.6, -2], [0, 29.6, -2], [3, 29.6, -2], [-3, 29.6, 2], [0, 29.6, 2], [3, 29.6, 2],
@@ -55,7 +55,7 @@
     "heroScale": 2.4
   },
   "posters": {
-    "image": "public/assets/open-plots/night-market/poster.webp",
+    "image": "src/static/assets/open-plots/night-market/poster.webp",
     "plaza": {
       "x": 0,
       "z": -40,

@@ -125,7 +125,7 @@ export const defaultShardfile: ReturnType<typeof project> = project(first);
  *  relative to it (`scripts/wildshard.mjs`'s input roots). */
 const PLOT_ASSETS = '/assets/open-plots/';
 function inputName(path: string): string {
-  if (path.startsWith('public/assets/open-plots/')) return PLOT_ASSETS + path.slice('public/assets/open-plots/'.length);
+  if (path.startsWith('src/static/assets/open-plots/')) return PLOT_ASSETS + path.slice('src/static/assets/open-plots/'.length);
   if (path.startsWith('src/shards/open-plots/')) return path.slice('src/shards/open-plots/'.length);
   throw new Error(`open-plots: undeclared bake input ${path}`);
 }
@@ -148,7 +148,7 @@ async function bakeInputs(ctx: Pick<ProjectGenerationContext, 'cached'>, row: Pl
   if (!landmarkValid || !posterValid || !Array.isArray(families) || !families.every((family): family is string => typeof family === 'string')) throw new Error('open-plots: invalid layout inputs');
   const landmarks = mark !== null && typeof mark === 'object' && 'near' in mark && 'far' in mark && typeof mark.near === 'string' && typeof mark.far === 'string' ? [mark.near, mark.far] : [];
   const pictures = posters !== null && typeof posters === 'object' && 'image' in posters && typeof posters.image === 'string' ? [posters.image] : [];
-  return [file, ...families.map(family => `public/assets/open-plots/kit/${family}.glb`), ...landmarks, ...pictures];
+  return [file, ...families.map(family => `src/static/assets/open-plots/kit/${family}.glb`), ...landmarks, ...pictures];
 }
 /** GR9 (G783): one idea's build program: its world GLB baked in the build from declared, cached inputs and its map lattice
  *  painted from that world (its own `data/map.json` output row), in place of the retired `open-plots-world` job. */

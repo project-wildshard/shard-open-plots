@@ -70,13 +70,13 @@
     "gauge": "#fff1c0"
   },
   "landmark": {
-    "near": "public/assets/open-plots/clockwork-canyon/landmark.glb",
-    "far": "public/assets/open-plots/clockwork-canyon/landmark-far.glb",
+    "near": "src/static/assets/open-plots/clockwork-canyon/landmark.glb",
+    "far": "src/static/assets/open-plots/clockwork-canyon/landmark-far.glb",
     "height": 38,
     "turn": 2
   },
   "posters": {
-    "image": "public/assets/open-plots/clockwork-canyon/poster.webp",
+    "image": "src/static/assets/open-plots/clockwork-canyon/poster.webp",
     "plaza": null,
     "entry": {
       "inset": 247,

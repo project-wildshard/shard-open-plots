@@ -154,9 +154,9 @@ async function tiledPlot(read, tools, layoutName, plot, codec, litCoarse = false
   }
   // the tiles; H and G pick their variant from the tile's place
   // RM4: the kit's Blender models (scripts/blender/open-plots/kit.py), retinted by this layout's palette
-  // RM4: the layout's kit families (data/layouts/<layout>.json `kit`, each public/assets/open-plots/kit/<family>.glb);
+  // RM4: the layout's kit families (data/layouts/<layout>.json `kit`, each src/static/assets/open-plots/kit/<family>.glb);
   // Night Market's switched on with RM8.6 once RM8.1's quantized tiles and RM8.2's L0-only detail paid for them
-  const files = new Map((layout.kit ?? []).map(family => [family, read(`public/assets/open-plots/kit/${family}.glb`)]));
+  const files = new Map((layout.kit ?? []).map(family => [family, read(`src/static/assets/open-plots/kit/${family}.glb`)]));
   const lanterns = [], kit = files.size === 0 ? {} : await prepareModelKit(palette, files, tools.normalizeWorldGlb);
   // OP26: the boards are known before the tiles, so every model the tiles and the plot place keeps out of their keep-outs
   const posters = boards(layout.posters), zones = posters.flatMap(keepOuts), leftOut = [];

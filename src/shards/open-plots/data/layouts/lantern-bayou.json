@@ -79,8 +79,8 @@
     "greens": "#4a7a3a"
   },
   "landmark": {
-    "near": "public/assets/open-plots/lantern-bayou/landmark.glb",
-    "far": "public/assets/open-plots/lantern-bayou/landmark-far.glb",
+    "near": "src/static/assets/open-plots/lantern-bayou/landmark.glb",
+    "far": "src/static/assets/open-plots/lantern-bayou/landmark-far.glb",
     "height": 40,
     "turn": 0,
     "lanterns": [
@@ -450,7 +450,7 @@
     "lanternScale": 2.1
   },
   "posters": {
-    "image": "public/assets/open-plots/lantern-bayou/poster.webp",
+    "image": "src/static/assets/open-plots/lantern-bayou/poster.webp",
     "plaza": null,
     "entry": {
       "inset": 247,

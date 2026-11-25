@@ -1,4 +1,4 @@
-// RM4: the kit's Blender models (scripts/blender/open-plots/kit.py writes public/assets/open-plots/kit/<family>.glb).
+// RM4: the kit's Blender models (scripts/blender/open-plots/kit.py writes src/static/assets/open-plots/kit/<family>.glb).
 // A family holds one to three variants; each node `<variant>.<Role>.<slot>` is lit `Kit` or emissive `Glow` geometry in
 // model metres (front +z) with flat normals, metre UVs and a baked occlusion shade (COLOR_0). Placing a model colours
 // each corner palette[slot] x shade (a slot the palette lacks takes the family's default colour), so every idea retints

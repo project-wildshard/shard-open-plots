@@ -7,7 +7,7 @@ on:
     branches: [main]
     paths:
       - src/**
-      - public/**
+      - src/static/**
       - test/ci/cook-play.test.mjs
       - scripts/assert-candidate-engine.mjs
       - scripts/select-candidate.mjs

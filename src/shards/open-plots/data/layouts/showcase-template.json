@@ -65,13 +65,13 @@
     "rope": "#5a5e66"
   },
   "landmark": {
-    "near": "public/assets/open-plots/showcase-template/landmark.glb",
-    "far": "public/assets/open-plots/showcase-template/landmark-far.glb",
+    "near": "src/static/assets/open-plots/showcase-template/landmark.glb",
+    "far": "src/static/assets/open-plots/showcase-template/landmark-far.glb",
     "height": 30,
     "turn": 2
   },
   "posters": {
-    "image": "public/assets/open-plots/showcase-template/poster.webp",
+    "image": "src/static/assets/open-plots/showcase-template/poster.webp",
     "plaza": null,
     "entry": {
       "inset": 247,

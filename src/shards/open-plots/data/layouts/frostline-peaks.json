@@ -64,8 +64,8 @@
     "iron": "#2b2b33"
   },
   "landmark": {
-    "near": "public/assets/open-plots/frostline-peaks/landmark.glb",
-    "far": "public/assets/open-plots/frostline-peaks/landmark-far.glb",
+    "near": "src/static/assets/open-plots/frostline-peaks/landmark.glb",
+    "far": "src/static/assets/open-plots/frostline-peaks/landmark-far.glb",
     "height": 70,
     "turn": 0,
     "glints": [[8, 60, -34], [-5, 64, -32], [2, 70, -26], [14, 54, -30]],
@@ -114,7 +114,7 @@
     [45, 42, 0]
   ],
   "posters": {
-    "image": "public/assets/open-plots/frostline-peaks/poster.webp",
+    "image": "src/static/assets/open-plots/frostline-peaks/poster.webp",
     "plaza": {
       "x": 0,
       "z": -62,

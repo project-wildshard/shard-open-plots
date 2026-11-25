@@ -91,13 +91,13 @@
     "foam": "#eef6f2"
   },
   "landmark": {
-    "near": "public/assets/open-plots/jungle-ziggurat/landmark.glb",
-    "far": "public/assets/open-plots/jungle-ziggurat/landmark-far.glb",
+    "near": "src/static/assets/open-plots/jungle-ziggurat/landmark.glb",
+    "far": "src/static/assets/open-plots/jungle-ziggurat/landmark-far.glb",
     "height": 54,
     "turn": 2
   },
   "posters": {
-    "image": "public/assets/open-plots/jungle-ziggurat/poster.webp",
+    "image": "src/static/assets/open-plots/jungle-ziggurat/poster.webp",
     "plaza": null,
     "entry": {
       "inset": 247,
