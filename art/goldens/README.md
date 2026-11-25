@@ -1,7 +1,7 @@
 # Golden views, 2026-11-03
 
 > Moved here from singleplayer `art/open-plots/golden-2026-11-03/` (`08e4a21f69`) by opus-k9, REPO-KIT K9
-> (J273, 2026-11-11). The capture is now `scripts/goldens/capture.mjs` in this repo, the board engine's
+> (J273, 2026-11-11). The capture is now `src/scripts/goldens/capture.mjs` in this repo, the board engine's
 > `scripts/goldens/board.py`; the skill `goldens` has the commands. The history below keeps its original paths.
 
 Jake (2026-11-03): *"let's go and make 8 golden images for all of the open plots. And then you can score them about,

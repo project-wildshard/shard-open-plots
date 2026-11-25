@@ -19,19 +19,19 @@ import { expect, test } from 'vitest'
 import {
   domeResidencySettled,
   parseDomeCameras,
-} from '../scripts/dome-cameras.mjs'
+} from '../src/scripts/dome-cameras.mjs'
 import {
   admitBoardCapture,
   boardText,
   makeDomeBoards,
-} from '../scripts/open-plots/boards.mjs'
+} from '../src/scripts/open-plots/boards.mjs'
 import {
   readCapturePlans,
   ringJunctionPlan,
   selectCapturePlots,
   selectDomeViews,
-} from '../scripts/open-plots/capture-inputs.mjs'
-import { settledDomeReadExpression } from '../scripts/open-plots/settled-read.mjs'
+} from '../src/scripts/open-plots/capture-inputs.mjs'
+import { settledDomeReadExpression } from '../src/scripts/open-plots/settled-read.mjs'
 
 const registry = [
   {

@@ -83,7 +83,7 @@ function project(row: { readonly slug: string; readonly idea: string; readonly n
   const waterGraph = row.water === 'lava' ? lava : row.water === 'lagoon' ? lagoon : undefined;
   const molten = waterGraph === undefined ? lit : { ...lit, materials: { ...lit.materials, water: { family: 'graph', graph: waterGraph } } };
   // OB2: a row's `kitGround: "planks"` rules its ground as boardwalk boards in place of flagstones (data/kitPlanks.graph.json:
-  // the kit graph with its own ground rule, scripts/open-plots/ruled-graphs.py)
+  // the kit graph with its own ground rule, src/scripts/open-plots/ruled-graphs.py)
   const planked = row.kitGround === 'planks' ? { ...molten, materials: { ...molten.materials, kit: { family: 'graph', graph: kitPlanks } } } : molten;
   // OB2: a row's `pool: "streaks"` draws its pools in the streak pool graph (data/poolStreaks.graph.json: the pool flicker,
   // plus the lanterns' reflections the bake lays on its water, kit.mjs waterStreaks, stretched toward the camera)

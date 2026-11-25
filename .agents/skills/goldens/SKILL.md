@@ -9,8 +9,8 @@ description: Re-shoot an open plot's 8 golden views on a build and compare them 
 > major shard": this shard runs its own goldens.
 
 The frames are this repo's: `art/goldens/<plot>/` (`<n>-<view>.jpg`, `cameras.json`, the scored `board.jpg`) for all
-18 plots in `scripts/open-plots/plots.json`; `art/goldens/README.md` is the source and update log. The capture is this
-repo's `scripts/goldens/capture.mjs` (the dome harness's free camera, real grid entry and settled residency reader). The
+18 plots in `src/scripts/open-plots/plots.json`; `art/goldens/README.md` is the source and update log. The capture is this
+repo's `src/scripts/goldens/capture.mjs` (the dome harness's free camera, real grid entry and settled residency reader). The
 board, preview server and browser lane are engine's, from the sibling checkout `../engine`. The rules (what counts as
 a look change, how a golden is updated) are in engine `docs/goldens.md`.
 
@@ -38,7 +38,7 @@ PORT=${URL##*:}; PORT=${PORT%/}
 
 ```bash
 RUN=tmp/goldens/$(date +%F)-$PLOT                 # must be a new directory under ./tmp
-$ENGINE/scripts/browser-lane.sh --max 20 node scripts/goldens/capture.mjs --plot=$PLOT --base=$URL --out=$RUN
+$ENGINE/scripts/browser-lane.sh --max 20 node src/scripts/goldens/capture.mjs --plot=$PLOT --base=$URL --out=$RUN
 ```
 
 It captures eight views (`$RUN/raw/$PLOT/<n>-<view>.png`), then runs engine's `scripts/goldens/board.py --goldens

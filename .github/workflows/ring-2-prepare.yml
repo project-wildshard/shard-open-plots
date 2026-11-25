@@ -72,7 +72,7 @@ jobs:
         env:
           CANDIDATE_ENGINE: ${{ inputs.engine || github.event.client_payload.engine }}
           CANDIDATE_SHARDDEV: ${{ inputs.sharddev || github.event.client_payload.sharddev }}
-        run: node scripts/select-candidate.mjs
+        run: node src/scripts/select-candidate.mjs
       - name: Install pinned or candidate dependency graph
         env:
           CANDIDATE_ENGINE: ${{ inputs.engine || github.event.client_payload.engine }}
@@ -84,7 +84,7 @@ jobs:
             pnpm install --frozen-lockfile --config.ci=false
           fi
       - name: Prove the installed global store
-        run: node scripts/assert-store-layout.mjs
+        run: node src/scripts/.kit/assert-store-layout.mjs
       # Tests are left out so a test-only push hits the cache; sound while no
       # generator imports a *.test.ts. Keep this key identical in ci.yml and
       # ring-2-prepare.yml.

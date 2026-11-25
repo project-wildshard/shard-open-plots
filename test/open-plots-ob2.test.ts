@@ -1,6 +1,6 @@
 import { expect, test } from 'vitest';
-import { plotAudioRows } from '../scripts/open-plots/ob2.mjs';
-import { plotAudioRequest } from '../scripts/open-plots/audio-template.mjs';
+import { plotAudioRows } from '../src/scripts/open-plots/ob2.mjs';
+import { plotAudioRequest } from '../src/scripts/open-plots/audio-template.mjs';
 import { parseAudioData } from '@wildshard/format/audio';
 
 const audio = () => ({ idea: 'lantern-bayou', spots: Array.from({ length: 4 }, (_, i) => ({ id: `spot-${i + 1}`, at: null })) });
