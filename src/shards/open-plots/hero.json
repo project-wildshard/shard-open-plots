@@ -1,10 +1,10 @@
 {
-  "content": "a9d56836734c148f7b897d78c4e72d0a53483aef31ea1db563132f16fe7d083f",
-  "captured": "2026-11-24T11:47:20.860Z",
-  "base": "stamp-existing: the hero files already in the shard, adopted without a capture",
+  "content": "399de4eb71580b39376cc9af91a2b0e0c8f047d68d0f33e94cf678471d91d1f5",
+  "captured": "2026-11-25T23:30:38.168Z",
+  "base": "auto re-stamp: curated art unchanged, content moved (wildshard build)",
   "card": {
     "thumbs/card.jpg": "81e7d607845da6d71956560feb86b44edebfd32cd861bdc8e334bfd74b028763"
   },
   "curated": true,
-  "look": "fed49e7429358f978ea95b76a5240cd708dd3adc934ed98c122c3e2aa77941a7"
+  "look": "7edf1c93f6f915e7e7f65524af619bba1bec73b6dc26dac772ec92c10bb3755f"
 }
