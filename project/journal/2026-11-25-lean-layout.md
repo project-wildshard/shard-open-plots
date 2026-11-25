@@ -31,3 +31,6 @@ Fixups found by running the tools:
   green here yet.
 - The shard's own `preparation-key.test.mjs` sits in root `test/` with
   its other tests, and `check` still runs it.
+
+Step 3: `agent-sync --from` on the lean layout re-points the kit skills
+at `src/scripts/.kit/`.
