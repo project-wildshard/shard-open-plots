@@ -87,13 +87,13 @@
     "soil": "#6a5038"
   },
   "landmark": {
-    "near": "src/static/assets/open-plots/sky-harbor/landmark.glb",
-    "far": "src/static/assets/open-plots/sky-harbor/landmark-far.glb",
+    "near": "src/shards/open-plots/static/assets/open-plots/sky-harbor/landmark.glb",
+    "far": "src/shards/open-plots/static/assets/open-plots/sky-harbor/landmark-far.glb",
     "height": 31.5,
     "turn": 2
   },
   "posters": {
-    "image": "src/static/assets/open-plots/sky-harbor/poster.webp",
+    "image": "src/shards/open-plots/static/assets/open-plots/sky-harbor/poster.webp",
     "plaza": null,
     "entry": {
       "inset": 247,

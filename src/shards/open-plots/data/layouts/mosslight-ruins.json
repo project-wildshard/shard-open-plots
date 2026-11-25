@@ -66,8 +66,8 @@
     "paper": "#5dff8f"
   },
   "landmark": {
-    "near": "src/static/assets/open-plots/mosslight-ruins/landmark.glb",
-    "far": "src/static/assets/open-plots/mosslight-ruins/landmark-far.glb",
+    "near": "src/shards/open-plots/static/assets/open-plots/mosslight-ruins/landmark.glb",
+    "far": "src/shards/open-plots/static/assets/open-plots/mosslight-ruins/landmark-far.glb",
     "height": 35,
     "turn": 0,
     "motes": [[0.5, 9, -11], [1.5, 15, -11], [3.5, 20, -8.5], [-2.5, 26, -4], [0, 33, -1]],
@@ -2000,7 +2000,7 @@
     ]
   },
   "posters": {
-    "image": "src/static/assets/open-plots/mosslight-ruins/poster.webp",
+    "image": "src/shards/open-plots/static/assets/open-plots/mosslight-ruins/poster.webp",
     "plaza": {
       "x": 0,
       "z": -40,

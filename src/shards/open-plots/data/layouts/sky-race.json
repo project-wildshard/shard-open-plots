@@ -75,13 +75,13 @@
     "canopy": "#2e5ad8"
   },
   "landmark": {
-    "near": "src/static/assets/open-plots/sky-race/landmark.glb",
-    "far": "src/static/assets/open-plots/sky-race/landmark-far.glb",
+    "near": "src/shards/open-plots/static/assets/open-plots/sky-race/landmark.glb",
+    "far": "src/shards/open-plots/static/assets/open-plots/sky-race/landmark-far.glb",
     "height": 42,
     "turn": 2
   },
   "posters": {
-    "image": "src/static/assets/open-plots/sky-race/poster.webp",
+    "image": "src/shards/open-plots/static/assets/open-plots/sky-race/poster.webp",
     "plaza": null,
     "entry": {
       "inset": 247,

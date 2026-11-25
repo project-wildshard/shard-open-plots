@@ -66,8 +66,8 @@
     "leaf": "#2e6a3a"
   },
   "landmark": {
-    "near": "src/static/assets/open-plots/alien-plain/landmark.glb",
-    "far": "src/static/assets/open-plots/alien-plain/landmark-far.glb",
+    "near": "src/shards/open-plots/static/assets/open-plots/alien-plain/landmark.glb",
+    "far": "src/shards/open-plots/static/assets/open-plots/alien-plain/landmark-far.glb",
     "height": 32,
     "turn": 2,
     "motes": [
@@ -104,7 +104,7 @@
     ]
   },
   "posters": {
-    "image": "src/static/assets/open-plots/alien-plain/poster.webp",
+    "image": "src/shards/open-plots/static/assets/open-plots/alien-plain/poster.webp",
     "plaza": null,
     "entry": {
       "inset": 247,

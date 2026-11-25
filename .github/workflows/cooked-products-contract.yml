@@ -7,7 +7,7 @@ on:
     branches: [main]
     paths:
       - src/**
-      - src/static/**
+      - src/shards/open-plots/static/**
       - test/ci/cook-play.test.mjs
       - scripts/assert-candidate-engine.mjs
       - scripts/select-candidate.mjs

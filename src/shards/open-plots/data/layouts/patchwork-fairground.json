@@ -102,13 +102,13 @@
     "mat": "#e8443a"
   },
   "landmark": {
-    "near": "src/static/assets/open-plots/patchwork-fairground/landmark.glb",
-    "far": "src/static/assets/open-plots/patchwork-fairground/landmark-far.glb",
+    "near": "src/shards/open-plots/static/assets/open-plots/patchwork-fairground/landmark.glb",
+    "far": "src/shards/open-plots/static/assets/open-plots/patchwork-fairground/landmark-far.glb",
     "height": 42,
     "turn": 2
   },
   "posters": {
-    "image": "src/static/assets/open-plots/patchwork-fairground/poster.webp",
+    "image": "src/shards/open-plots/static/assets/open-plots/patchwork-fairground/poster.webp",
     "plaza": null,
     "entry": {
       "inset": 247,

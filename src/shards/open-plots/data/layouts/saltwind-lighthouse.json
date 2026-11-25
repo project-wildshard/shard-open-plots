@@ -52,8 +52,8 @@
     "rope": "#2a2620"
   },
   "landmark": {
-    "near": "src/static/assets/open-plots/saltwind-lighthouse/landmark.glb",
-    "far": "src/static/assets/open-plots/saltwind-lighthouse/landmark-far.glb",
+    "near": "src/shards/open-plots/static/assets/open-plots/saltwind-lighthouse/landmark.glb",
+    "far": "src/shards/open-plots/static/assets/open-plots/saltwind-lighthouse/landmark-far.glb",
     "height": 40,
     "turn": 2,
     "lantern": [
@@ -63,7 +63,7 @@
     ]
   },
   "posters": {
-    "image": "src/static/assets/open-plots/saltwind-lighthouse/poster.webp",
+    "image": "src/shards/open-plots/static/assets/open-plots/saltwind-lighthouse/poster.webp",
     "plaza": null,
     "entry": {
       "inset": 247,

@@ -91,7 +91,7 @@ jobs:
       - name: Bind preparation to the untouched source tree
         id: preparation-key
         env:
-          AUTHOR_KEY: author-preparation-v1-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('pnpm-lock.yaml', 'src/shards/**', '!src/shards/**/*.test.ts', 'src/static/**') }}
+          AUTHOR_KEY: author-preparation-v1-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('pnpm-lock.yaml', 'src/shards/**', '!src/shards/**/*.test.ts', 'src/shards/open-plots/static/**') }}
         run: printf 'key=%s\n' "$AUTHOR_KEY" >> "$GITHUB_OUTPUT"
       - name: Cold complete build of all eighteen plots
         run: pnpm build:shards

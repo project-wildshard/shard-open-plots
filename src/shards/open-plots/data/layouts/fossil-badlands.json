@@ -80,13 +80,13 @@
     "sleeper": "#6a4a30"
   },
   "landmark": {
-    "near": "src/static/assets/open-plots/fossil-badlands/landmark.glb",
-    "far": "src/static/assets/open-plots/fossil-badlands/landmark-far.glb",
+    "near": "src/shards/open-plots/static/assets/open-plots/fossil-badlands/landmark.glb",
+    "far": "src/shards/open-plots/static/assets/open-plots/fossil-badlands/landmark-far.glb",
     "height": 31,
     "turn": 2
   },
   "posters": {
-    "image": "src/static/assets/open-plots/fossil-badlands/poster.webp",
+    "image": "src/shards/open-plots/static/assets/open-plots/fossil-badlands/poster.webp",
     "plaza": null,
     "entry": {
       "inset": 247,

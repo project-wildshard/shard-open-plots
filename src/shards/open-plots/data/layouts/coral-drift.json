@@ -91,13 +91,13 @@
     "rockDark": "#a8a498"
   },
   "landmark": {
-    "near": "src/static/assets/open-plots/coral-drift/landmark.glb",
-    "far": "src/static/assets/open-plots/coral-drift/landmark-far.glb",
+    "near": "src/shards/open-plots/static/assets/open-plots/coral-drift/landmark.glb",
+    "far": "src/shards/open-plots/static/assets/open-plots/coral-drift/landmark-far.glb",
     "height": 25,
     "turn": 0
   },
   "posters": {
-    "image": "src/static/assets/open-plots/coral-drift/poster.webp",
+    "image": "src/shards/open-plots/static/assets/open-plots/coral-drift/poster.webp",
     "plaza": null,
     "entry": {
       "inset": 247,
