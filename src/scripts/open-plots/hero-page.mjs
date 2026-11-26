@@ -3,6 +3,7 @@ import { KEYCHAIN_ARGS } from '../.kit/chromium-keychain.mjs';
 import {chromium,devices} from "../browser-playwright.mjs";
 import {existsSync} from 'node:fs';
 import {developerSettings,saveFixture,hideDeveloperOverlays,harnessPins} from '@wildshard/sdk/headless/scripts/debug-settings.mjs';
+import { enterZone } from '@wildshard/sdk/headless/scripts/zone-entry.mjs'; // CHUNK-PARAM-REMOVAL CP20 (J522): no zone in any address
 
 // Four round-62 roles, in plot-local metres; a fixed 72-degree vertical lens.
 export const HERO_VIEWS=[
@@ -26,8 +27,7 @@ export async function withPlotPage({base,pin,slug},run){
     await harnessPins(context,{seed:357,browser:'Chromium / iPhone 16 Pro',lane:'ob2-tools',sha:pin});
     const page=await context.newPage(),errors=[];
     page.on('pageerror',error=>errors.push(error.message));
-    const url=new URL('/',base);for(const [key,value]of Object.entries({chunk:slug,tier:'phone',skipintro:'1',nolock:'1',sw:'0',mute:'1'}))url.searchParams.set(key,value);
-    await page.goto(url.href,{waitUntil:'load'});
+    await enterZone(page,{zone:slug,base,flags:'tier=phone&skipintro=1&nolock=1&sw=0&mute=1',alone:true,waitUntil:'load'});
     await page.waitForFunction(()=>window.__wildshard?.world?.hud?.entered&&!document.querySelector('.ws-load'),undefined,{timeout:240000});
     await page.addStyleTag({content:'#hud,.ws-perf,.ws-perf-panel{visibility:hidden!important}'});
     const result=await run(page);

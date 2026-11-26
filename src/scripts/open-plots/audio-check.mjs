@@ -5,6 +5,7 @@ import { readFileSync, existsSync } from 'node:fs';
 import { parseArgs } from 'node:util';
 import { chromium, devices } from "../browser-playwright.mjs";
 import { developerSettings, saveFixture, harnessPins } from '@wildshard/sdk/headless/scripts/debug-settings.mjs';
+import { enterZone } from '@wildshard/sdk/headless/scripts/zone-entry.mjs'; // CHUNK-PARAM-REMOVAL CP20 (J522): no zone in any address
 import { observeAudioGraph, audioSnapshot } from './audio-observer.mjs';
 
 const { values } = parseArgs({ options: Object.fromEntries(['base', 'pin', 'plot'].map(key => [key, { type: 'string' }])) });
@@ -22,9 +23,7 @@ try {
   await harnessPins(context, { seed: 357, browser: 'Chromium / iPhone 16 Pro', lane: 'ob7-audio', sha: values.pin });
   await context.addInitScript(observeAudioGraph);
   const page = await context.newPage();
-  const url = new URL('/', values.base);
-  for (const [key, value] of Object.entries({ chunk: `open-plot-${values.plot}`, tier: 'phone', skipintro: '1', nolock: '1', sw: '0', mute: '1' })) url.searchParams.set(key, value);
-  await page.goto(url.href, { waitUntil: 'load' });
+  await enterZone(page, { zone: `open-plot-${values.plot}`, base: values.base, flags: 'tier=phone&skipintro=1&nolock=1&sw=0&mute=1', alone: true, waitUntil: 'load' });
   await page.waitForFunction(() => window.__wildshard?.world?.hud?.entered && !document.querySelector('.ws-load'), undefined, { timeout: 240000 });
   await page.click('body');
   await page.evaluate(() => { window.__wildshard.requireWorld().hud.setPaused(true); });
