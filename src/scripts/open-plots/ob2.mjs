@@ -188,7 +188,7 @@ export async function makeComparisonBoard(input){
  * @param {string} value @param {string} [root] */
 export async function plotTilingReport(value,root=process.cwd()){
   const slug=`open-plot-${v.parse(idea,value)}`;
-  const [{readBuiltShardfile},{readTilingReport,tilingMarkdown}]=await Promise.all([import('../build-shardfiles.mjs'),import('@wildshard/sdk/headless/scripts/tile-bake-report.mjs')]);
+  const [{readBuiltShardfile},{readTilingReport,tilingMarkdown}]=await Promise.all([import('@wildshard/sdk/headless/scripts/built-folder.mjs'),import('@wildshard/sdk/headless/scripts/tile-bake-report.mjs')]);
   const report=readTilingReport(root,slug,readBuiltShardfile(root,slug));
   if(report.tiles.length===0)throw new Error('No verified tiled plot rows');
   return {report,markdown:tilingMarkdown(report)};
