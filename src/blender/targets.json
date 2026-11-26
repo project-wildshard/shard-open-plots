@@ -16,7 +16,7 @@
    "sources": [
     "src/blender/open-plots/kitlib.py",
     "src/blender/open-plots/model_source.py",
-    "scripts/blender/lib/glb.py",
+    "node_modules/@wildshard/sdk/scripts/blender/lib/glb.py",
     "src/blender/open-plots/sources/tree-round.glb",
     "src/blender/open-plots/sources/tree-tall.glb"
    ],
@@ -98,7 +98,7 @@
     "src/blender/open-plots/kit.py",
     "src/blender/open-plots/kitlib.py",
     "src/blender/open-plots/model_source.py",
-    "scripts/blender/lib/glb.py"
+    "node_modules/@wildshard/sdk/scripts/blender/lib/glb.py"
    ],
    "inputs": [
     "src/shards/open-plots/data/trim.json"
@@ -260,7 +260,7 @@
     "src/blender/open-plots/kit.py",
     "src/blender/open-plots/kitlib.py",
     "src/blender/open-plots/model_source.py",
-    "scripts/blender/lib/glb.py"
+    "node_modules/@wildshard/sdk/scripts/blender/lib/glb.py"
    ],
    "inputs": [
     "src/shards/open-plots/data/trim.json"
@@ -292,7 +292,7 @@
     "src/blender/open-plots/kit.py",
     "src/blender/open-plots/kitlib.py",
     "src/blender/open-plots/model_source.py",
-    "scripts/blender/lib/glb.py"
+    "node_modules/@wildshard/sdk/scripts/blender/lib/glb.py"
    ],
    "inputs": [
     "src/shards/open-plots/data/trim.json"
@@ -324,7 +324,7 @@
     "src/blender/open-plots/kit.py",
     "src/blender/open-plots/kitlib.py",
     "src/blender/open-plots/model_source.py",
-    "scripts/blender/lib/glb.py"
+    "node_modules/@wildshard/sdk/scripts/blender/lib/glb.py"
    ],
    "inputs": [
     "src/shards/open-plots/data/trim.json"
@@ -424,7 +424,7 @@
     "src/blender/open-plots/kit.py",
     "src/blender/open-plots/kitlib.py",
     "src/blender/open-plots/model_source.py",
-    "scripts/blender/lib/glb.py"
+    "node_modules/@wildshard/sdk/scripts/blender/lib/glb.py"
    ],
    "inputs": [
     "src/shards/open-plots/data/trim.json"
@@ -490,7 +490,7 @@
     "src/blender/open-plots/kit.py",
     "src/blender/open-plots/kitlib.py",
     "src/blender/open-plots/model_source.py",
-    "scripts/blender/lib/glb.py"
+    "node_modules/@wildshard/sdk/scripts/blender/lib/glb.py"
    ],
    "inputs": [
     "src/shards/open-plots/data/trim.json"
@@ -556,7 +556,7 @@
     "src/blender/open-plots/kit.py",
     "src/blender/open-plots/kitlib.py",
     "src/blender/open-plots/model_source.py",
-    "scripts/blender/lib/glb.py"
+    "node_modules/@wildshard/sdk/scripts/blender/lib/glb.py"
    ],
    "inputs": [
     "src/shards/open-plots/data/trim.json"
@@ -622,7 +622,7 @@
     "src/blender/open-plots/kit.py",
     "src/blender/open-plots/kitlib.py",
     "src/blender/open-plots/model_source.py",
-    "scripts/blender/lib/glb.py"
+    "node_modules/@wildshard/sdk/scripts/blender/lib/glb.py"
    ],
    "inputs": [
     "src/shards/open-plots/data/trim.json"
@@ -654,7 +654,7 @@
     "src/blender/open-plots/kit.py",
     "src/blender/open-plots/kitlib.py",
     "src/blender/open-plots/model_source.py",
-    "scripts/blender/lib/glb.py"
+    "node_modules/@wildshard/sdk/scripts/blender/lib/glb.py"
    ],
    "inputs": [
     "src/shards/open-plots/data/trim.json"
@@ -788,7 +788,7 @@
     "src/blender/open-plots/kit.py",
     "src/blender/open-plots/kitlib.py",
     "src/blender/open-plots/model_source.py",
-    "scripts/blender/lib/glb.py"
+    "node_modules/@wildshard/sdk/scripts/blender/lib/glb.py"
    ],
    "inputs": [
     "src/shards/open-plots/data/trim.json"
@@ -889,7 +889,7 @@
     "src/blender/open-plots/kitlib.py",
     "src/blender/open-plots/bayou.py",
     "src/blender/open-plots/model_source.py",
-    "scripts/blender/lib/glb.py"
+    "node_modules/@wildshard/sdk/scripts/blender/lib/glb.py"
    ],
    "inputs": [
     "src/shards/open-plots/data/trim.json"
@@ -933,7 +933,7 @@
     "src/blender/open-plots/kit.py",
     "src/blender/open-plots/kitlib.py",
     "src/blender/open-plots/model_source.py",
-    "scripts/blender/lib/glb.py"
+    "node_modules/@wildshard/sdk/scripts/blender/lib/glb.py"
    ],
    "inputs": [
     "src/shards/open-plots/data/trim.json"
@@ -972,7 +972,7 @@
     "src/blender/open-plots/kitlib.py",
     "src/blender/open-plots/bayou.py",
     "src/blender/open-plots/model_source.py",
-    "scripts/blender/lib/glb.py"
+    "node_modules/@wildshard/sdk/scripts/blender/lib/glb.py"
    ],
    "inputs": [
     "src/shards/open-plots/data/trim.json"
@@ -1016,7 +1016,7 @@
     "src/blender/open-plots/kit.py",
     "src/blender/open-plots/kitlib.py",
     "src/blender/open-plots/model_source.py",
-    "scripts/blender/lib/glb.py"
+    "node_modules/@wildshard/sdk/scripts/blender/lib/glb.py"
    ],
    "inputs": [
     "src/shards/open-plots/data/trim.json"
@@ -1055,7 +1055,7 @@
     "src/blender/open-plots/kitlib.py",
     "src/blender/open-plots/bayou.py",
     "src/blender/open-plots/model_source.py",
-    "scripts/blender/lib/glb.py"
+    "node_modules/@wildshard/sdk/scripts/blender/lib/glb.py"
    ],
    "inputs": [
     "src/shards/open-plots/data/trim.json"

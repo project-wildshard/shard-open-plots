@@ -18,7 +18,8 @@ import bpy
 import numpy as np
 from mathutils.bvhtree import BVHTree
 
-sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'lib'))
+# glb.py, the minimal glTF writer, is the SDK's: build.sh exports $SDK, else the installed package
+sys.path.insert(0, os.path.join(os.environ.get('SDK') or os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', '..', 'node_modules', '@wildshard', 'sdk'), 'scripts', 'blender', 'lib'))
 from glb import write_glb  # noqa: E402
 
 SPACING = 12.0  # metres between variants while baking, so one variant never occludes another
