@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 // G950: one verified report per selected plot, or the registered batch. No generation.
-// node --experimental-transform-types --import ./scripts/bake-loader.mjs src/scripts/open-plots/tiling.mjs --plot=all --out=tmp/plot-tiles
+// node --import ./scripts/bake-loader.mjs src/scripts/open-plots/tiling.mjs --plot=all --out=tmp/plot-tiles
 import {mkdirSync,writeFileSync} from 'node:fs';
 import {join,resolve} from 'node:path';
 import {parseArgs} from 'node:util';
