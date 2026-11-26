@@ -4,7 +4,7 @@ import { KEYCHAIN_ARGS } from '../.kit/chromium-keychain.mjs';
 import { readFileSync, existsSync } from 'node:fs';
 import { parseArgs } from 'node:util';
 import { chromium, devices } from "../browser-playwright.mjs";
-import { developerSettings, saveFixture, harnessPins } from '../debug-settings.mjs';
+import { developerSettings, saveFixture, harnessPins } from '@wildshard/sdk/headless/scripts/debug-settings.mjs';
 import { observeAudioGraph, audioSnapshot } from './audio-observer.mjs';
 
 const { values } = parseArgs({ options: Object.fromEntries(['base', 'pin', 'plot'].map(key => [key, { type: 'string' }])) });

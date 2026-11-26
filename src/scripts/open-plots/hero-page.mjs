@@ -2,7 +2,7 @@ import { KEYCHAIN_ARGS } from '../.kit/chromium-keychain.mjs';
 // Shared live phone capture owner. Invoked only under scripts/browser-lane.sh.
 import {chromium,devices} from "../browser-playwright.mjs";
 import {existsSync} from 'node:fs';
-import {developerSettings,saveFixture,hideDeveloperOverlays,harnessPins} from '../debug-settings.mjs';
+import {developerSettings,saveFixture,hideDeveloperOverlays,harnessPins} from '@wildshard/sdk/headless/scripts/debug-settings.mjs';
 
 // Four round-62 roles, in plot-local metres; a fixed 72-degree vertical lens.
 export const HERO_VIEWS=[
