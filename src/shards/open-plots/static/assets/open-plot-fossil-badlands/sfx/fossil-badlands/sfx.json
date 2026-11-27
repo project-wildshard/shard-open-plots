@@ -4,10 +4,7 @@
   "licence": "MOSS: Apache-2.0; Stable Audio 3 Medium: Stability AI Community License and Gemma terms",
   "beds": {
     "fossil-badlands.ambience": {
-      "file": {
-        "set": "night-market",
-        "file": "ambience-1c3c9230fa9b.m4a"
-      },
+      "file": "ambience-1c3c9230fa9b.m4a",
       "loopStart": 9.5,
       "loopEnd": 25.5,
       "duration": 26.5,
@@ -68,10 +65,7 @@
   "oneshots": {},
   "provenance": [
     {
-      "file": {
-        "set": "night-market",
-        "file": "ambience-1c3c9230fa9b.m4a"
-      },
+      "file": "ambience-1c3c9230fa9b.m4a",
       "winner": "moss",
       "comparison": {
         "moss": {
@@ -105,7 +99,7 @@
         "mps_driver_gb": 19.8
       },
       "reuse": {
-        "catalogue": "public/assets/sfx/night-market/sfx.json",
+        "catalogue": "public/assets/open-plot-night-market/sfx/night-market/sfx.json",
         "catalogueSha256": "18ce4a1b1af88ff3b57b78dc869c485278bf3a7e117c64d6319e23986d8aa77a",
         "bed": "night-market.ambience",
         "recordingSha256": "fc4acd723b85db67f2ee6fc39c66ad56719597489e1567ee3d05a11d633f1da6",

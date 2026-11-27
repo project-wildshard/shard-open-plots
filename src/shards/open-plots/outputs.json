@@ -93,8 +93,8 @@
         "pois": [],
         "assetGlobs": [
           "public/assets/open-plots/**",
-          "public/assets/music/showcase-template/**",
-          "public/assets/sfx/showcase-template/**"
+          "public/assets/open-plot-showcase-template/music/showcase-template/**",
+          "public/assets/open-plot-showcase-template/sfx/showcase-template/**"
         ],
         "card": {
           "thumb": "/src/shards/open-plots/thumbs/showcase-template.jpg",
@@ -222,9 +222,9 @@
         "pois": [],
         "assetGlobs": [
           "public/assets/open-plots/**",
-          "public/assets/music/thin-ice/**",
-          "public/assets/sfx/thin-ice/**",
-          "public/assets/sfx/mosslight-ruins/ambience-9f3d73f4df4b.m4a"
+          "public/assets/open-plot-thin-ice/music/thin-ice/**",
+          "public/assets/open-plot-thin-ice/sfx/thin-ice/**",
+          "public/assets/open-plot-thin-ice/sfx/thin-ice/ambience-9f3d73f4df4b.m4a"
         ],
         "audio": {
           "catalogue": true,
@@ -279,8 +279,8 @@
         },
         "assetGlobs": [
           "public/assets/open-plots/**",
-          "public/assets/music/frostline-peaks/**",
-          "public/assets/sfx/frostline-peaks/**"
+          "public/assets/open-plot-frostline-peaks/music/frostline-peaks/**",
+          "public/assets/open-plot-frostline-peaks/sfx/frostline-peaks/**"
         ]
       },
       "layout": "frostline-peaks",
@@ -455,8 +455,8 @@
         },
         "assetGlobs": [
           "public/assets/open-plots/**",
-          "public/assets/music/ember-forge/**",
-          "public/assets/sfx/ember-forge/**"
+          "public/assets/open-plot-ember-forge/music/ember-forge/**",
+          "public/assets/open-plot-ember-forge/sfx/ember-forge/**"
         ]
       }
     },
@@ -572,8 +572,8 @@
         },
         "assetGlobs": [
           "public/assets/open-plots/**",
-          "public/assets/music/lantern-bayou/**",
-          "public/assets/sfx/lantern-bayou/**"
+          "public/assets/open-plot-lantern-bayou/music/lantern-bayou/**",
+          "public/assets/open-plot-lantern-bayou/sfx/lantern-bayou/**"
         ]
       }
     },
@@ -682,9 +682,9 @@
         "pois": [],
         "assetGlobs": [
           "public/assets/open-plots/**",
-          "public/assets/music/sky-harbor/**",
-          "public/assets/sfx/sky-harbor/**",
-          "public/assets/sfx/coral-drift/ambience-86a1a1de8737.m4a"
+          "public/assets/open-plot-sky-harbor/music/sky-harbor/**",
+          "public/assets/open-plot-sky-harbor/sfx/sky-harbor/**",
+          "public/assets/open-plot-sky-harbor/sfx/sky-harbor/ambience-86a1a1de8737.m4a"
         ],
         "audio": {
           "catalogue": true,
@@ -821,8 +821,8 @@
         },
         "assetGlobs": [
           "public/assets/open-plots/**",
-          "public/assets/music/coral-drift/**",
-          "public/assets/sfx/coral-drift/**"
+          "public/assets/open-plot-coral-drift/music/coral-drift/**",
+          "public/assets/open-plot-coral-drift/sfx/coral-drift/**"
         ]
       }
     },
@@ -946,8 +946,8 @@
         ],
         "assetGlobs": [
           "public/assets/open-plots/**",
-          "public/assets/music/clockwork-canyon/**",
-          "public/assets/sfx/clockwork-canyon/**"
+          "public/assets/open-plot-clockwork-canyon/music/clockwork-canyon/**",
+          "public/assets/open-plot-clockwork-canyon/sfx/clockwork-canyon/**"
         ],
         "audio": {
           "catalogue": true,
@@ -1068,9 +1068,9 @@
         ],
         "assetGlobs": [
           "public/assets/open-plots/**",
-          "public/assets/music/starfall-observatory/**",
-          "public/assets/sfx/starfall-observatory/**",
-          "public/assets/sfx/lantern-bayou/ambience-799970aa04d0.m4a"
+          "public/assets/open-plot-starfall-observatory/music/starfall-observatory/**",
+          "public/assets/open-plot-starfall-observatory/sfx/starfall-observatory/**",
+          "public/assets/open-plot-starfall-observatory/sfx/starfall-observatory/ambience-799970aa04d0.m4a"
         ],
         "audio": {
           "catalogue": true,
@@ -1190,8 +1190,8 @@
         },
         "assetGlobs": [
           "public/assets/open-plots/**",
-          "public/assets/music/mosslight-ruins/**",
-          "public/assets/sfx/mosslight-ruins/**"
+          "public/assets/open-plot-mosslight-ruins/music/mosslight-ruins/**",
+          "public/assets/open-plot-mosslight-ruins/sfx/mosslight-ruins/**"
         ]
       }
     },
@@ -1306,9 +1306,9 @@
         ],
         "assetGlobs": [
           "public/assets/open-plots/**",
-          "public/assets/music/alien-plain/**",
-          "public/assets/sfx/alien-plain/**",
-          "public/assets/sfx/frostline-peaks/ambience-23fc4ad528b0.m4a"
+          "public/assets/open-plot-alien-plain/music/alien-plain/**",
+          "public/assets/open-plot-alien-plain/sfx/alien-plain/**",
+          "public/assets/open-plot-alien-plain/sfx/alien-plain/ambience-23fc4ad528b0.m4a"
         ],
         "audio": {
           "catalogue": true,
@@ -1352,8 +1352,8 @@
         },
         "assetGlobs": [
           "public/assets/open-plots/**",
-          "public/assets/music/desert-ruin/**",
-          "public/assets/sfx/desert-ruin/**"
+          "public/assets/open-plot-desert-ruin/music/desert-ruin/**",
+          "public/assets/open-plot-desert-ruin/sfx/desert-ruin/**"
         ]
       },
       "layout": "desert-ruin",
@@ -1512,8 +1512,8 @@
         },
         "assetGlobs": [
           "public/assets/open-plots/**",
-          "public/assets/music/night-market/**",
-          "public/assets/sfx/night-market/**"
+          "public/assets/open-plot-night-market/music/night-market/**",
+          "public/assets/open-plot-night-market/sfx/night-market/**"
         ]
       },
       "layout": "night-market",
@@ -1660,8 +1660,8 @@
         "pois": [],
         "assetGlobs": [
           "public/assets/open-plots/**",
-          "public/assets/music/sky-race/**",
-          "public/assets/sfx/sky-race/**"
+          "public/assets/open-plot-sky-race/music/sky-race/**",
+          "public/assets/open-plot-sky-race/sfx/sky-race/**"
         ],
         "card": {
           "thumb": "/src/shards/open-plots/thumbs/sky-race.jpg",
@@ -1780,9 +1780,9 @@
         "pois": [],
         "assetGlobs": [
           "public/assets/open-plots/**",
-          "public/assets/music/fossil-badlands/**",
-          "public/assets/sfx/fossil-badlands/**",
-          "public/assets/sfx/night-market/ambience-1c3c9230fa9b.m4a"
+          "public/assets/open-plot-fossil-badlands/music/fossil-badlands/**",
+          "public/assets/open-plot-fossil-badlands/sfx/fossil-badlands/**",
+          "public/assets/open-plot-fossil-badlands/sfx/fossil-badlands/ambience-1c3c9230fa9b.m4a"
         ],
         "audio": {
           "catalogue": true,
@@ -1897,8 +1897,8 @@
         "pois": [],
         "assetGlobs": [
           "public/assets/open-plots/**",
-          "public/assets/music/patchwork-fairground/**",
-          "public/assets/sfx/patchwork-fairground/**"
+          "public/assets/open-plot-patchwork-fairground/music/patchwork-fairground/**",
+          "public/assets/open-plot-patchwork-fairground/sfx/patchwork-fairground/**"
         ],
         "audio": {
           "catalogue": true,
@@ -2013,9 +2013,9 @@
         "pois": [],
         "assetGlobs": [
           "public/assets/open-plots/**",
-          "public/assets/music/saltwind-lighthouse/**",
-          "public/assets/sfx/saltwind-lighthouse/**",
-          "public/assets/sfx/coral-drift/ambience-86a1a1de8737.m4a"
+          "public/assets/open-plot-saltwind-lighthouse/music/saltwind-lighthouse/**",
+          "public/assets/open-plot-saltwind-lighthouse/sfx/saltwind-lighthouse/**",
+          "public/assets/open-plot-saltwind-lighthouse/sfx/saltwind-lighthouse/ambience-86a1a1de8737.m4a"
         ],
         "audio": {
           "catalogue": true,
@@ -2131,8 +2131,8 @@
         "pois": [],
         "assetGlobs": [
           "public/assets/open-plots/**",
-          "public/assets/music/jungle-ziggurat/**",
-          "public/assets/sfx/jungle-ziggurat/**"
+          "public/assets/open-plot-jungle-ziggurat/music/jungle-ziggurat/**",
+          "public/assets/open-plot-jungle-ziggurat/sfx/jungle-ziggurat/**"
         ],
         "audio": {
           "catalogue": true,

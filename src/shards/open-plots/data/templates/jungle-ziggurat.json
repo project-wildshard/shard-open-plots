@@ -21,8 +21,8 @@
       },
       "assetGlobs": [
         "public/assets/open-plots/**",
-        "public/assets/music/jungle-ziggurat/**",
-        "public/assets/sfx/jungle-ziggurat/**"
+        "public/assets/open-plot-jungle-ziggurat/music/jungle-ziggurat/**",
+        "public/assets/open-plot-jungle-ziggurat/sfx/jungle-ziggurat/**"
       ]
     },
     "layout": "jungle-ziggurat",

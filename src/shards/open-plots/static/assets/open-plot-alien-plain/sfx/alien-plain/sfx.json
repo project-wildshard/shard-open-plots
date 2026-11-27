@@ -4,10 +4,7 @@
   "licence": "MOSS: Apache-2.0; Stable Audio 3 Medium: Stability AI Community License and Gemma terms",
   "beds": {
     "alien-plain.ambience": {
-      "file": {
-        "set": "frostline-peaks",
-        "file": "ambience-23fc4ad528b0.m4a"
-      },
+      "file": "ambience-23fc4ad528b0.m4a",
       "loopStart": 2.5,
       "loopEnd": 17.5,
       "duration": 18.5,
@@ -68,10 +65,7 @@
   "oneshots": {},
   "provenance": [
     {
-      "file": {
-        "set": "frostline-peaks",
-        "file": "ambience-23fc4ad528b0.m4a"
-      },
+      "file": "ambience-23fc4ad528b0.m4a",
       "winner": "moss",
       "comparison": {
         "moss": {
@@ -105,7 +99,7 @@
         "mps_driver_gb": 19.8
       },
       "reuse": {
-        "catalogue": "public/assets/sfx/frostline-peaks/sfx.json",
+        "catalogue": "public/assets/open-plot-frostline-peaks/sfx/frostline-peaks/sfx.json",
         "catalogueSha256": "a23061b46d50a9ff443b094a53317e365fa51632638faa6746855f8ec0f78c8e",
         "bed": "frostline-peaks.ambience",
         "recordingSha256": "b9f79739ab4aee0b2a50d1c10033cdc270d04793616f8659642a5885ec088d49",

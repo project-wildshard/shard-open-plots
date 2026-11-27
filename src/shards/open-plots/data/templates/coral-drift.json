@@ -45,8 +45,8 @@
       },
       "assetGlobs": [
         "public/assets/open-plots/**",
-        "public/assets/music/coral-drift/**",
-        "public/assets/sfx/coral-drift/**"
+        "public/assets/open-plot-coral-drift/music/coral-drift/**",
+        "public/assets/open-plot-coral-drift/sfx/coral-drift/**"
       ]
     },
     "layout": "coral-drift",

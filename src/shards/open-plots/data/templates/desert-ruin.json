@@ -34,8 +34,8 @@
       },
       "assetGlobs": [
         "public/assets/open-plots/**",
-        "public/assets/music/desert-ruin/**",
-        "public/assets/sfx/desert-ruin/**"
+        "public/assets/open-plot-desert-ruin/music/desert-ruin/**",
+        "public/assets/open-plot-desert-ruin/sfx/desert-ruin/**"
       ]
     },
     "layout": "desert-ruin",

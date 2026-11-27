@@ -45,8 +45,8 @@
       },
       "assetGlobs": [
         "public/assets/open-plots/**",
-        "public/assets/music/lantern-bayou/**",
-        "public/assets/sfx/lantern-bayou/**"
+        "public/assets/open-plot-lantern-bayou/music/lantern-bayou/**",
+        "public/assets/open-plot-lantern-bayou/sfx/lantern-bayou/**"
       ]
     },
     "layout": "lantern-bayou",
