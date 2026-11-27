@@ -34,9 +34,9 @@
       },
       "assetGlobs": [
         "public/assets/open-plots/**",
-        "public/assets/music/thin-ice/**",
-        "public/assets/sfx/thin-ice/**",
-        "public/assets/sfx/mosslight-ruins/ambience-9f3d73f4df4b.m4a"
+        "public/assets/open-plot-thin-ice/music/thin-ice/**",
+        "public/assets/open-plot-thin-ice/sfx/thin-ice/**",
+        "public/assets/open-plot-thin-ice/sfx/thin-ice/ambience-9f3d73f4df4b.m4a"
       ]
     },
     "layout": "thin-ice",

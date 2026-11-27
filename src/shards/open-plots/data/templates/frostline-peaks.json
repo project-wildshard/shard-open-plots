@@ -45,8 +45,8 @@
       },
       "assetGlobs": [
         "public/assets/open-plots/**",
-        "public/assets/music/frostline-peaks/**",
-        "public/assets/sfx/frostline-peaks/**"
+        "public/assets/open-plot-frostline-peaks/music/frostline-peaks/**",
+        "public/assets/open-plot-frostline-peaks/sfx/frostline-peaks/**"
       ]
     },
     "layout": "frostline-peaks",

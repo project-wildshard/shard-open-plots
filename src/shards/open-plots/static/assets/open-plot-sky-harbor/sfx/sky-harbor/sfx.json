@@ -4,10 +4,7 @@
   "licence": "MOSS: Apache-2.0; Stable Audio 3 Medium: Stability AI Community License and Gemma terms",
   "beds": {
     "sky-harbor.ambience": {
-      "file": {
-        "set": "coral-drift",
-        "file": "ambience-86a1a1de8737.m4a"
-      },
+      "file": "ambience-86a1a1de8737.m4a",
       "loopStart": 7.0,
       "loopEnd": 27.0,
       "duration": 28.0,
@@ -60,10 +57,7 @@
   "oneshots": {},
   "provenance": [
     {
-      "file": {
-        "set": "coral-drift",
-        "file": "ambience-86a1a1de8737.m4a"
-      },
+      "file": "ambience-86a1a1de8737.m4a",
       "winner": "moss",
       "comparison": {
         "moss": {
@@ -97,7 +91,7 @@
         "mps_driver_gb": 19.8
       },
       "reuse": {
-        "catalogue": "public/assets/sfx/coral-drift/sfx.json",
+        "catalogue": "public/assets/open-plot-coral-drift/sfx/coral-drift/sfx.json",
         "catalogueSha256": "a1e5df6a6fdeb1b7a694b5b985b180979b6d3a58dab61ee092965fd39bae1d5e",
         "bed": "coral-drift.ambience",
         "recordingSha256": "6243d144226090604f4084903508bab6c6805606c3cbddf3cbcf60046953748b",

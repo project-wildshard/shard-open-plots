@@ -25,30 +25,30 @@ Their sound effects compare **MOSS-SoundEffect v2** (Apache-2.0) and
 **Powered by Stability AI**.
 
 Both score takes and their recommendation are in
-`public/assets/music/lantern-bayou/music.json`. Per-sound winning engines,
+`public/assets/open-plot-lantern-bayou/music/lantern-bayou/music.json`. Per-sound winning engines,
 paired comparisons and generation records are in
-`public/assets/sfx/lantern-bayou/sfx.json`. Sources are trimmed, looped,
+`public/assets/open-plot-lantern-bayou/sfx/lantern-bayou/sfx.json`. Sources are trimmed, looped,
 loudness-normalized and encoded as AAC; the model outputs are modified.
 
 The shared morning listening list is `public/assets/music/ob7-listening.html`.
 
-Frostline Peaks: `public/assets/music/frostline-peaks/music.json` and
-`public/assets/sfx/frostline-peaks/sfx.json` retain the same paired
+Frostline Peaks: `public/assets/open-plot-frostline-peaks/music/frostline-peaks/music.json` and
+`public/assets/open-plot-frostline-peaks/sfx/frostline-peaks/sfx.json` retain the same paired
 provenance and attributions.
 
-Ember Forge: `public/assets/music/ember-forge/music.json` and
-`public/assets/sfx/ember-forge/sfx.json` retain both score candidates,
+Ember Forge: `public/assets/open-plot-ember-forge/music/ember-forge/music.json` and
+`public/assets/open-plot-ember-forge/sfx/ember-forge/sfx.json` retain both score candidates,
 paired SFX comparisons and the same model credits.
 
-Mosslight Ruins: `public/assets/music/mosslight-ruins/music.json` and
-`public/assets/sfx/mosslight-ruins/sfx.json` retain the same paired
+Mosslight Ruins: `public/assets/open-plot-mosslight-ruins/music/mosslight-ruins/music.json` and
+`public/assets/open-plot-mosslight-ruins/sfx/mosslight-ruins/sfx.json` retain the same paired
 provenance and required attributions.
 
-Coral Drift: `public/assets/music/coral-drift/music.json` and
-`public/assets/sfx/coral-drift/sfx.json` retain both score candidates,
+Coral Drift: `public/assets/open-plot-coral-drift/music/coral-drift/music.json` and
+`public/assets/open-plot-coral-drift/sfx/coral-drift/sfx.json` retain both score candidates,
 paired SFX comparisons and the same model credits.
 
-Night Market: `public/assets/music/night-market/music.json` and
-`public/assets/sfx/night-market/sfx.json` retain both MiniMax score
+Night Market: `public/assets/open-plot-night-market/music/night-market/music.json` and
+`public/assets/open-plot-night-market/sfx/night-market/sfx.json` retain both MiniMax score
 candidates, the ambience and six paired positional sound comparisons,
 generation records and the same required model credits.

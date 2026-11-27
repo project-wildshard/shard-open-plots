@@ -22,7 +22,8 @@ export async function generatePlotAudioProject<T extends Pick<Shardfile, 'identi
 ): Promise<{ shard: T & { audio: AudioData }; output: ProjectOutput }> {
   const audio = plotAudioData(binding.idea, binding.spots, binding.source);
   if (shard.files.length > 0 || shard.library.length > 0 || shard.budgets.library.resident !== 0 || shard.budgets.library.compressed !== 0) throw new Error('Plot audio requires its unbaked world declaration');
-  if (!/^\/assets\/sfx\/[a-z0-9]+(?:-[a-z0-9]+)*\/$/u.test(binding.sfxDir)) throw new Error('Invalid plot SFX directory');
+  // SF4: a plot's sound folder sits under its own slug, `/assets/open-plot-<idea>/sfx/<key>/`, or is the engine-wide one
+  if (!/^\/assets\/(?:[a-z0-9]+(?:-[a-z0-9]+)*\/)?sfx\/[a-z0-9]+(?:-[a-z0-9]+)*\/$/u.test(binding.sfxDir)) throw new Error('Invalid plot SFX directory');
   const ids = ['score', 'ambience', ...binding.spots.map(row => row.id)];
   if (Object.keys(binding.files).length !== ids.length) throw new Error('Plot audio requires exactly its recording filenames');
   const paths = ids.map((id, index) => {
@@ -30,7 +31,7 @@ export async function generatePlotAudioProject<T extends Pick<Shardfile, 'identi
     const shared = typeof recording === 'object' ? recording : undefined;
     const file = typeof recording === 'string' ? recording : shared?.file;
     if (file === undefined || !/^[a-z0-9][a-z0-9-]*\.m4a$/u.test(file)
-      || (shared !== undefined && (index !== 1 || /^\/assets\/sfx\/([a-z0-9]+(?:-[a-z0-9]+)*)\/$/u.exec(shared.dir)?.[1] !== shared.set))) throw new Error('Invalid plot recording filename');
+      || (shared !== undefined && (index !== 1 || /^\/assets\/(?:[a-z0-9]+(?:-[a-z0-9]+)*\/)?sfx\/([a-z0-9]+(?:-[a-z0-9]+)*)\/$/u.exec(shared.dir)?.[1] !== shared.set))) throw new Error('Invalid plot recording filename');
     return `${shared === undefined ? index === 0 ? binding.source.dir : binding.sfxDir : shared.dir}${file}`;
   });
   const inputs = await ctx.cached({ id: `audio-${binding.idea}`, inputs: paths }, files => new Map(paths.map((path, index) => {

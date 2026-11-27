@@ -2,10 +2,10 @@
   "lantern-bayou": {
     "idea": "lantern-bayou",
     "source": {
-      "dir": "/assets/music/lantern-bayou/",
+      "dir": "/assets/open-plot-lantern-bayou/music/lantern-bayou/",
       "manifestKey": "lantern-bayou"
     },
-    "sfxDir": "/assets/sfx/lantern-bayou/",
+    "sfxDir": "/assets/open-plot-lantern-bayou/sfx/lantern-bayou/",
     "files": {
       "score": "take-a-823cce36205b.m4a",
       "ambience": "ambience-799970aa04d0.m4a",
@@ -51,10 +51,10 @@
   "frostline-peaks": {
     "idea": "frostline-peaks",
     "source": {
-      "dir": "/assets/music/frostline-peaks/",
+      "dir": "/assets/open-plot-frostline-peaks/music/frostline-peaks/",
       "manifestKey": "frostline-peaks"
     },
-    "sfxDir": "/assets/sfx/frostline-peaks/",
+    "sfxDir": "/assets/open-plot-frostline-peaks/sfx/frostline-peaks/",
     "files": {
       "score": "take-b-ab47fa6f0820.m4a",
       "ambience": "ambience-23fc4ad528b0.m4a",
@@ -100,10 +100,10 @@
   "ember-forge": {
     "idea": "ember-forge",
     "source": {
-      "dir": "/assets/music/ember-forge/",
+      "dir": "/assets/open-plot-ember-forge/music/ember-forge/",
       "manifestKey": "ember-forge"
     },
-    "sfxDir": "/assets/sfx/ember-forge/",
+    "sfxDir": "/assets/open-plot-ember-forge/sfx/ember-forge/",
     "files": {
       "score": "take-a-5eb521de9407.m4a",
       "ambience": "ambience-d9fbd0b63583.m4a",
@@ -149,10 +149,10 @@
   "mosslight-ruins": {
     "idea": "mosslight-ruins",
     "source": {
-      "dir": "/assets/music/mosslight-ruins/",
+      "dir": "/assets/open-plot-mosslight-ruins/music/mosslight-ruins/",
       "manifestKey": "mosslight-ruins"
     },
-    "sfxDir": "/assets/sfx/mosslight-ruins/",
+    "sfxDir": "/assets/open-plot-mosslight-ruins/sfx/mosslight-ruins/",
     "files": {
       "score": "take-a-f27305fc5237.m4a",
       "ambience": "ambience-9f3d73f4df4b.m4a",
@@ -198,10 +198,10 @@
   "coral-drift": {
     "idea": "coral-drift",
     "source": {
-      "dir": "/assets/music/coral-drift/",
+      "dir": "/assets/open-plot-coral-drift/music/coral-drift/",
       "manifestKey": "coral-drift"
     },
-    "sfxDir": "/assets/sfx/coral-drift/",
+    "sfxDir": "/assets/open-plot-coral-drift/sfx/coral-drift/",
     "files": {
       "score": "take-b-4ea0a09e19a7.m4a",
       "ambience": "ambience-86a1a1de8737.m4a",
@@ -247,10 +247,10 @@
   "night-market": {
     "idea": "night-market",
     "source": {
-      "dir": "/assets/music/night-market/",
+      "dir": "/assets/open-plot-night-market/music/night-market/",
       "manifestKey": "night-market"
     },
-    "sfxDir": "/assets/sfx/night-market/",
+    "sfxDir": "/assets/open-plot-night-market/sfx/night-market/",
     "files": {
       "score": "take-a-cf750c3f44ac.m4a",
       "ambience": "ambience-1c3c9230fa9b.m4a",
@@ -303,10 +303,10 @@
   "patchwork-fairground": {
     "idea": "patchwork-fairground",
     "source": {
-      "dir": "/assets/music/patchwork-fairground/",
+      "dir": "/assets/open-plot-patchwork-fairground/music/patchwork-fairground/",
       "manifestKey": "patchwork-fairground"
     },
-    "sfxDir": "/assets/sfx/patchwork-fairground/",
+    "sfxDir": "/assets/open-plot-patchwork-fairground/sfx/patchwork-fairground/",
     "files": {
       "score": "take-b-0e7f6f396f9d.m4a",
       "ambience": "ambience-63f7454949bb.m4a",
@@ -352,10 +352,10 @@
   "jungle-ziggurat": {
     "idea": "jungle-ziggurat",
     "source": {
-      "dir": "/assets/music/jungle-ziggurat/",
+      "dir": "/assets/open-plot-jungle-ziggurat/music/jungle-ziggurat/",
       "manifestKey": "jungle-ziggurat"
     },
-    "sfxDir": "/assets/sfx/jungle-ziggurat/",
+    "sfxDir": "/assets/open-plot-jungle-ziggurat/sfx/jungle-ziggurat/",
     "files": {
       "score": "take-b-e7702c963b37.m4a",
       "ambience": "ambience-e659c6af2d34.m4a",
@@ -408,16 +408,16 @@
   "saltwind-lighthouse": {
     "idea": "saltwind-lighthouse",
     "source": {
-      "dir": "/assets/music/saltwind-lighthouse/",
+      "dir": "/assets/open-plot-saltwind-lighthouse/music/saltwind-lighthouse/",
       "manifestKey": "saltwind-lighthouse"
     },
-    "sfxDir": "/assets/sfx/saltwind-lighthouse/",
+    "sfxDir": "/assets/open-plot-saltwind-lighthouse/sfx/saltwind-lighthouse/",
     "files": {
       "score": "take-b-6533451204d4.m4a",
       "ambience": {
         "set": "coral-drift",
         "file": "ambience-86a1a1de8737.m4a",
-        "dir": "/assets/sfx/coral-drift/"
+        "dir": "/assets/open-plot-coral-drift/sfx/coral-drift/"
       },
       "lighthouse-foghorn": "lighthouse-foghorn-4ecf868eb543.m4a",
       "se-boat-rigging": "se-boat-rigging-885810360462.m4a",
@@ -461,16 +461,16 @@
   "sky-harbor": {
     "idea": "sky-harbor",
     "source": {
-      "dir": "/assets/music/sky-harbor/",
+      "dir": "/assets/open-plot-sky-harbor/music/sky-harbor/",
       "manifestKey": "sky-harbor"
     },
-    "sfxDir": "/assets/sfx/sky-harbor/",
+    "sfxDir": "/assets/open-plot-sky-harbor/sfx/sky-harbor/",
     "files": {
       "score": "take-a-0f10cfca8bab.m4a",
       "ambience": {
         "set": "coral-drift",
         "file": "ambience-86a1a1de8737.m4a",
-        "dir": "/assets/sfx/coral-drift/"
+        "dir": "/assets/open-plot-coral-drift/sfx/coral-drift/"
       },
       "basin-water": "basin-water-d77cc5a125b9.m4a",
       "dock-crane": "dock-crane-2085fb3c33cb.m4a",
@@ -514,16 +514,16 @@
   "starfall-observatory": {
     "idea": "starfall-observatory",
     "source": {
-      "dir": "/assets/music/starfall-observatory/",
+      "dir": "/assets/open-plot-starfall-observatory/music/starfall-observatory/",
       "manifestKey": "starfall-observatory"
     },
-    "sfxDir": "/assets/sfx/starfall-observatory/",
+    "sfxDir": "/assets/open-plot-starfall-observatory/sfx/starfall-observatory/",
     "files": {
       "score": "take-b-14c36abd5346.m4a",
       "ambience": {
         "set": "lantern-bayou",
         "file": "ambience-799970aa04d0.m4a",
-        "dir": "/assets/sfx/lantern-bayou/"
+        "dir": "/assets/open-plot-lantern-bayou/sfx/lantern-bayou/"
       },
       "dome-motor": "dome-motor-3c7929ed2e27.m4a",
       "canal-lap": "canal-lap-60a192522890.m4a",
@@ -574,16 +574,16 @@
   "thin-ice": {
     "idea": "thin-ice",
     "source": {
-      "dir": "/assets/music/thin-ice/",
+      "dir": "/assets/open-plot-thin-ice/music/thin-ice/",
       "manifestKey": "thin-ice"
     },
-    "sfxDir": "/assets/sfx/thin-ice/",
+    "sfxDir": "/assets/open-plot-thin-ice/sfx/thin-ice/",
     "files": {
       "score": "take-a-23d54ac1a617.m4a",
       "ambience": {
         "set": "mosslight-ruins",
         "file": "ambience-9f3d73f4df4b.m4a",
-        "dir": "/assets/sfx/mosslight-ruins/"
+        "dir": "/assets/open-plot-mosslight-ruins/sfx/mosslight-ruins/"
       },
       "ice-crystal": "ice-crystal-bba587f01736.m4a",
       "open-ice": "open-ice-32936b414cf9.m4a",
@@ -634,16 +634,16 @@
   "fossil-badlands": {
     "idea": "fossil-badlands",
     "source": {
-      "dir": "/assets/music/fossil-badlands/",
+      "dir": "/assets/open-plot-fossil-badlands/music/fossil-badlands/",
       "manifestKey": "fossil-badlands"
     },
-    "sfxDir": "/assets/sfx/fossil-badlands/",
+    "sfxDir": "/assets/open-plot-fossil-badlands/sfx/fossil-badlands/",
     "files": {
       "score": "take-a-2cd52113f593.m4a",
       "ambience": {
         "set": "night-market",
         "file": "ambience-1c3c9230fa9b.m4a",
-        "dir": "/assets/sfx/night-market/"
+        "dir": "/assets/open-plot-night-market/sfx/night-market/"
       },
       "skeleton-rib-wind": "skeleton-rib-wind-da09d7bda8d1.m4a",
       "sump-water-drips": "sump-water-drips-787bf7a09c73.m4a",
@@ -694,16 +694,16 @@
   "alien-plain": {
     "idea": "alien-plain",
     "source": {
-      "dir": "/assets/music/alien-plain/",
+      "dir": "/assets/open-plot-alien-plain/music/alien-plain/",
       "manifestKey": "alien-plain"
     },
-    "sfxDir": "/assets/sfx/alien-plain/",
+    "sfxDir": "/assets/open-plot-alien-plain/sfx/alien-plain/",
     "files": {
       "score": "take-a-5d5f5f1de41f.m4a",
       "ambience": {
         "set": "frostline-peaks",
         "file": "ambience-23fc4ad528b0.m4a",
-        "dir": "/assets/sfx/frostline-peaks/"
+        "dir": "/assets/open-plot-frostline-peaks/sfx/frostline-peaks/"
       },
       "monolith": "monolith-947567243c8e.m4a",
       "dome-habitat": "dome-habitat-505781f9f9c1.m4a",
@@ -754,10 +754,10 @@
   "clockwork-canyon": {
     "idea": "clockwork-canyon",
     "source": {
-      "dir": "/assets/music/clockwork-canyon/",
+      "dir": "/assets/open-plot-clockwork-canyon/music/clockwork-canyon/",
       "manifestKey": "clockwork-canyon"
     },
-    "sfxDir": "/assets/sfx/clockwork-canyon/",
+    "sfxDir": "/assets/open-plot-clockwork-canyon/sfx/clockwork-canyon/",
     "files": {
       "score": "take-b-14d4ec11ef6d.m4a",
       "ambience": "ambience-e6e95c41ab46.m4a",
@@ -810,10 +810,10 @@
   "desert-ruin": {
     "idea": "desert-ruin",
     "source": {
-      "dir": "/assets/music/desert-ruin/",
+      "dir": "/assets/open-plot-desert-ruin/music/desert-ruin/",
       "manifestKey": "desert-ruin"
     },
-    "sfxDir": "/assets/sfx/desert-ruin/",
+    "sfxDir": "/assets/open-plot-desert-ruin/sfx/desert-ruin/",
     "files": {
       "score": "take-a-6eab0c86e126.m4a",
       "ambience": "ambience-7f897a705796.m4a",
@@ -866,10 +866,10 @@
   "sky-race": {
     "idea": "sky-race",
     "source": {
-      "dir": "/assets/music/sky-race/",
+      "dir": "/assets/open-plot-sky-race/music/sky-race/",
       "manifestKey": "sky-race"
     },
-    "sfxDir": "/assets/sfx/sky-race/",
+    "sfxDir": "/assets/open-plot-sky-race/sfx/sky-race/",
     "files": {
       "score": "take-a-f26cd25c3720.m4a",
       "ambience": "ambience-4dd84610b4fb.m4a",
@@ -922,10 +922,10 @@
   "showcase-template": {
     "idea": "showcase-template",
     "source": {
-      "dir": "/assets/music/showcase-template/",
+      "dir": "/assets/open-plot-showcase-template/music/showcase-template/",
       "manifestKey": "showcase-template"
     },
-    "sfxDir": "/assets/sfx/showcase-template/",
+    "sfxDir": "/assets/open-plot-showcase-template/sfx/showcase-template/",
     "files": {
       "score": "take-a-f0c28e903f89.m4a",
       "ambience": "ambience-6fcdd4079170.m4a",

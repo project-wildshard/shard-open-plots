@@ -34,9 +34,9 @@
       },
       "assetGlobs": [
         "public/assets/open-plots/**",
-        "public/assets/music/starfall-observatory/**",
-        "public/assets/sfx/starfall-observatory/**",
-        "public/assets/sfx/lantern-bayou/ambience-799970aa04d0.m4a"
+        "public/assets/open-plot-starfall-observatory/music/starfall-observatory/**",
+        "public/assets/open-plot-starfall-observatory/sfx/starfall-observatory/**",
+        "public/assets/open-plot-starfall-observatory/sfx/starfall-observatory/ambience-799970aa04d0.m4a"
       ]
     },
     "layout": "starfall-observatory",

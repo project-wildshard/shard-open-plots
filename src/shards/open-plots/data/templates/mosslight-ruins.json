@@ -45,8 +45,8 @@
       },
       "assetGlobs": [
         "public/assets/open-plots/**",
-        "public/assets/music/mosslight-ruins/**",
-        "public/assets/sfx/mosslight-ruins/**"
+        "public/assets/open-plot-mosslight-ruins/music/mosslight-ruins/**",
+        "public/assets/open-plot-mosslight-ruins/sfx/mosslight-ruins/**"
       ]
     },
     "layout": "mosslight-ruins",

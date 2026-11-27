@@ -4,10 +4,7 @@
   "licence": "MOSS: Apache-2.0; Stable Audio 3 Medium: Stability AI Community License and Gemma terms",
   "beds": {
     "starfall-observatory.ambience": {
-      "file": {
-        "set": "lantern-bayou",
-        "file": "ambience-799970aa04d0.m4a"
-      },
+      "file": "ambience-799970aa04d0.m4a",
       "loopStart": 8.25,
       "loopEnd": 26.25,
       "duration": 27.25,
@@ -68,10 +65,7 @@
   "oneshots": {},
   "provenance": [
     {
-      "file": {
-        "set": "lantern-bayou",
-        "file": "ambience-799970aa04d0.m4a"
-      },
+      "file": "ambience-799970aa04d0.m4a",
       "winner": "moss",
       "comparison": {
         "moss": {
@@ -105,7 +99,7 @@
         "mps_driver_gb": 19.8
       },
       "reuse": {
-        "catalogue": "public/assets/sfx/lantern-bayou/sfx.json",
+        "catalogue": "public/assets/open-plot-lantern-bayou/sfx/lantern-bayou/sfx.json",
         "catalogueSha256": "52430a130c2ad5660db47a9e8556df74634a8892a335967e914315c63903375f",
         "bed": "lantern-bayou.ambience",
         "recordingSha256": "99496e6be1b814aad4ffbae58ba4b26ec203f69fe9d4efb054c82029d111bbc2",

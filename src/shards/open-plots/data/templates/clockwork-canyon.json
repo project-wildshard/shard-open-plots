@@ -34,8 +34,8 @@
       },
       "assetGlobs": [
         "public/assets/open-plots/**",
-        "public/assets/music/clockwork-canyon/**",
-        "public/assets/sfx/clockwork-canyon/**"
+        "public/assets/open-plot-clockwork-canyon/music/clockwork-canyon/**",
+        "public/assets/open-plot-clockwork-canyon/sfx/clockwork-canyon/**"
       ]
     },
     "layout": "clockwork-canyon",

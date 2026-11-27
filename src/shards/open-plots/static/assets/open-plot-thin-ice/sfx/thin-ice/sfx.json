@@ -4,10 +4,7 @@
   "licence": "MOSS: Apache-2.0; Stable Audio 3 Medium: Stability AI Community License and Gemma terms",
   "beds": {
     "thin-ice.ambience": {
-      "file": {
-        "set": "mosslight-ruins",
-        "file": "ambience-9f3d73f4df4b.m4a"
-      },
+      "file": "ambience-9f3d73f4df4b.m4a",
       "loopStart": 3.5,
       "loopEnd": 22.5,
       "duration": 23.5,
@@ -68,10 +65,7 @@
   "oneshots": {},
   "provenance": [
     {
-      "file": {
-        "set": "mosslight-ruins",
-        "file": "ambience-9f3d73f4df4b.m4a"
-      },
+      "file": "ambience-9f3d73f4df4b.m4a",
       "winner": "medium",
       "comparison": {
         "moss": {
@@ -105,7 +99,7 @@
         "mps_driver_gb": 11.44
       },
       "reuse": {
-        "catalogue": "public/assets/sfx/mosslight-ruins/sfx.json",
+        "catalogue": "public/assets/open-plot-mosslight-ruins/sfx/mosslight-ruins/sfx.json",
         "catalogueSha256": "fa0436162d38a59ba887e0d9ed1821a1cd2a786606b010e16cbce090db0a8cbe",
         "bed": "mosslight-ruins.ambience",
         "recordingSha256": "f54e832bc4cfae3a006f5cdabbc51cb6799d9b4b384d3fb54fc86b8b089886fd",

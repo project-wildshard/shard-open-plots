@@ -62,7 +62,7 @@ export async function plotAudioRows(input,root=process.cwd()){
   if(data.spots.some(row=>row.id==='score'||row.id==='ambience'))throw new Error('Spot ids must not shadow score or ambience');
   const {parseAudioData}=await import('@wildshard/format/audio');
   const template=emptyShardfile({slug:'audio-template',name:'Audio template',author:'Wildshard',revision:1,seed:1}).audio;
-  const music=`src/shards/open-plots/static/assets/music/${data.idea}/`,sfx=`src/shards/open-plots/static/assets/sfx/${data.idea}/`;
+  const music=`src/shards/open-plots/static/assets/open-plot-${data.idea}/music/${data.idea}/`,sfx=`src/shards/open-plots/static/assets/open-plot-${data.idea}/sfx/${data.idea}/`;
   const assets=[{id:'score',file:`${music}score.m4a`,kind:'score',generator:'MiniMax Music 3'},
     {id:'ambience',file:`${sfx}ambience.m4a`,kind:'bed',generator:'MOSS-SoundEffect v2 + Stable Audio 3 Medium: select better take'},
     ...data.spots.map(row=>({id:row.id,file:`${sfx}${row.id}.m4a`,kind:'spot',at:row.at,generator:'MOSS-SoundEffect v2 + Stable Audio 3 Medium: select better take'}))];

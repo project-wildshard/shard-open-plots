@@ -34,8 +34,8 @@
       },
       "assetGlobs": [
         "public/assets/open-plots/**",
-        "public/assets/music/sky-race/**",
-        "public/assets/sfx/sky-race/**"
+        "public/assets/open-plot-sky-race/music/sky-race/**",
+        "public/assets/open-plot-sky-race/sfx/sky-race/**"
       ]
     },
     "layout": "sky-race",
