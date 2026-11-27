@@ -149,7 +149,9 @@ jobs:
       - name: Install candidate runtime
         run: pnpm install --no-frozen-lockfile --config.ci=false
       - name: Prove actual runtime provenance
-        run: node src/scripts/assert-candidate-engine.mjs
+        run: |
+          node src/scripts/assert-candidate-engine.mjs
+          node --test test/ci21-candidate-source.test.mjs
       - name: Check the explicit candidate proof source
         run: node --check test/ci/cook-play.test.mjs
       - name: Cold cook and play this measured partition

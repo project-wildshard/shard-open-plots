@@ -2,10 +2,11 @@
 // Node’s actual engine package path before accepting candidate receipts.
 import assert from 'node:assert/strict';
 import {spawnSync} from 'node:child_process';
-import {mkdirSync,realpathSync,writeFileSync} from 'node:fs';
+import {mkdirSync,readFileSync,realpathSync,writeFileSync} from 'node:fs';
 import {dirname,join} from 'node:path';
 import {fileURLToPath} from 'node:url';
 import { enginePackageUrl, enginePin, engineRoot } from '@wildshard/sdk/headless';
+import { lockedEngineSource } from './candidate-engine-source.mjs';
 const engine=process.env.COOKED_ENGINE_CANDIDATE;
 assert.match(engine??'',/^[a-f0-9]{40}$/u,'An exact candidate engine is required');
 const producer=process.argv.includes('--producer');
@@ -20,9 +21,10 @@ if(producer){
  const listed=spawnSync('pnpm',['list','@wildshard/engine','--depth','0','--json'],{encoding:'utf8'});
  assert.equal(listed.status,0,listed.stderr);
  installed=JSON.parse(listed.stdout)[0]?.dependencies?.['@wildshard/engine'];assert.ok(installed);
- assert.equal(installed.resolved,`https://codeload.github.com/project-wildshard/engine/tar.gz/${engine}`);
 }
+const resolved=producer?installed.resolved:installed.resolved??lockedEngineSource(readFileSync('pnpm-lock.yaml','utf8'));
+if(!producer)assert.equal(resolved,`https://codeload.github.com/project-wildshard/engine/tar.gz/${engine}`);
 assert.equal(realpathSync(installed.path),realpathSync(dirname(fileURLToPath(enginePackageUrl))));
-const result={complete:true,engine:producer?installed.version:engine,resolved:installed.resolved,version:installed.version};
+const result={complete:true,engine:producer?installed.version:engine,resolved,version:installed.version};
 const directory=process.env.COOKED_REPORT_DIR??'tmp/cooked-products';mkdirSync(directory,{recursive:true});
 writeFileSync(join(directory,producer?'producer.json':'runtime.json'),JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify(result));
