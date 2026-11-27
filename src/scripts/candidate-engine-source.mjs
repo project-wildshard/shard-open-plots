@@ -27,3 +27,15 @@ export function lockedEngineSource(lockText) {
   if (sources.length !== 1) throw new Error(`pnpm-lock.yaml resolves ${sources.length} @wildshard/engine sources: ${sources.join(', ') || 'none'}`);
   return sources[0];
 }
+
+/** The full engine commit behind the producer's pin, checked against the pin (meta QA68). `lookup` gives npm next's
+ *  `gitHead` for a prerelease or the `vX.Y.Z` tag's commit for a release. The cook-play candidate defaults to it, so a
+ *  hand-typed candidate can't sit on an old engine whose exports the pinned SDK no longer finds. */
+export async function pinnedEngineCommit(pin, lookup) {
+  if (!PRODUCER_PIN.test(pin ?? '')) throw new Error(`engine pin ${pin} is not X.Y.Z or X.Y.Z-next.<sha>`);
+  const short = /-next\.([0-9a-f]+)$/u.exec(pin)?.[1];
+  const commit = await lookup(short === undefined ? { tag: `v${pin}` } : { version: pin });
+  if (!/^[a-f0-9]{40}$/u.test(commit ?? '')) throw new Error(`engine ${pin}: no full commit found (${commit})`);
+  if (short !== undefined && !commit.startsWith(short)) throw new Error(`engine ${pin}: gitHead ${commit} is another commit`);
+  return commit;
+}

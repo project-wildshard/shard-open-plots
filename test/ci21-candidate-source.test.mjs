@@ -5,6 +5,7 @@ import test from 'node:test'
 import {
   lockedEngineSource,
   lockedEngineSources,
+  pinnedEngineCommit,
   PRODUCER_PIN,
 } from '../src/scripts/candidate-engine-source.mjs'
 
@@ -47,4 +48,21 @@ test('a registry copy beside the candidate, another repo, or no engine is refuse
 test('the producer pin admits a release and npm next’s exact prerelease, nothing looser', () => {
   for (const pin of ['0.1.100', '0.1.100-next.922b9d45']) assert.match(pin, PRODUCER_PIN)
   for (const pin of ['0.1', '0.1.100-beta.1', '0.1.100-next.xyz', '^0.1.100', 'latest']) assert.doesNotMatch(pin, PRODUCER_PIN)
+})
+
+// Meta QA68: the workflow's hand-typed candidate sat on an 11-16 engine whose exports lack host/headlessFolder, so
+// cook-play went red in every partition (hidden by continue-on-error). The candidate now defaults to the pin's commit.
+test('the default candidate is the commit behind the producer pin', async () => {
+  const asked = []
+  const lookup = async query => (asked.push(query), sha)
+  assert.equal(await pinnedEngineCommit('0.1.100-next.922b9d45', lookup), sha)
+  assert.equal(await pinnedEngineCommit('0.1.100', lookup), sha)
+  assert.deepEqual(asked, [{ version: '0.1.100-next.922b9d45' }, { tag: 'v0.1.100' }])
+})
+
+test('a pin with no commit, a short commit or another commit is refused', async () => {
+  await assert.rejects(pinnedEngineCommit('0.1.100-next.9c487655', async () => sha), /another commit/u)
+  await assert.rejects(pinnedEngineCommit('0.1.100', async () => undefined), /no full commit/u)
+  await assert.rejects(pinnedEngineCommit('0.1.100', async () => '922b9d45'), /no full commit/u)
+  await assert.rejects(pinnedEngineCommit('^0.1.100', async () => sha), /not X\.Y\.Z/u)
 })
