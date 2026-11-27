@@ -5,6 +5,7 @@ import test from 'node:test'
 import {
   lockedEngineSource,
   lockedEngineSources,
+  PRODUCER_PIN,
 } from '../src/scripts/candidate-engine-source.mjs'
 
 const sha = '922b9d451ef5c86cfbfc91154bb95c58c9af6614'
@@ -39,4 +40,11 @@ test('a registry copy beside the candidate, another repo, or no engine is refuse
     () => lockedEngineSource('packages:\n'),
     /0 @wildshard\/engine sources: none/u,
   )
+})
+
+// Meta QA65: cook-play matched the producer's version as X.Y.Z only, so every run since the pin moved to npm next's
+// 0.1.100-next.922b9d45 went red in all three partitions (hidden by continue-on-error). Both read one rule now.
+test('the producer pin admits a release and npm next’s exact prerelease, nothing looser', () => {
+  for (const pin of ['0.1.100', '0.1.100-next.922b9d45']) assert.match(pin, PRODUCER_PIN)
+  for (const pin of ['0.1', '0.1.100-beta.1', '0.1.100-next.xyz', '^0.1.100', 'latest']) assert.doesNotMatch(pin, PRODUCER_PIN)
 })

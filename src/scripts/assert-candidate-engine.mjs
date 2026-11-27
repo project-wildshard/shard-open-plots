@@ -6,7 +6,7 @@ import {mkdirSync,readFileSync,realpathSync,writeFileSync} from 'node:fs';
 import {dirname,join} from 'node:path';
 import {fileURLToPath} from 'node:url';
 import { enginePackageUrl, enginePin, engineRoot } from '@wildshard/sdk/headless';
-import { lockedEngineSource } from './candidate-engine-source.mjs';
+import { PRODUCER_PIN, lockedEngineSource } from './candidate-engine-source.mjs';
 const engine=process.env.COOKED_ENGINE_CANDIDATE;
 assert.match(engine??'',/^[a-f0-9]{40}$/u,'An exact candidate engine is required');
 const producer=process.argv.includes('--producer');
@@ -14,7 +14,7 @@ let installed;
 if(producer){
  // SHARD-COMPAT SI8c: the shard no longer depends on the engine; the producer runs the engine the sdk pins.
  // J475/FS28: npm next carries an exact prerelease, 0.1.54-next.<sha>, before the tag.
- assert.match(enginePin,/^\d+\.\d+\.\d+(?:-next\.[0-9a-f]{7,40})?$/u,'Producer uses its exact released pin');
+ assert.match(enginePin,PRODUCER_PIN,'Producer uses its exact released pin');
  installed={version:enginePin,path:engineRoot,resolved:`npm:${enginePin}`};
 }else{
  // select-candidate.mjs names the candidate as a direct dependency for this run only.

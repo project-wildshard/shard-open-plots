@@ -3,6 +3,10 @@
 // lockfile's own resolution is the record: a codeload tarball, or a git commit of project-wildshard/engine.
 const CODELOAD = 'https://codeload.github.com/project-wildshard/engine/tar.gz/';
 
+/** The producer's exact released engine pin: X.Y.Z, or npm next's exact prerelease X.Y.Z-next.<sha> (J475, FS28).
+ *  The producer check and cook-play both read it, so a prerelease pin can't pass one and fail the other (meta QA65). */
+export const PRODUCER_PIN = /^\d+\.\d+\.\d+(?:-next\.[0-9a-f]{7,40})?$/u;
+
 /** Every `@wildshard/engine` package the lockfile resolves, as a codeload URL, `git:<repo>#<commit>` or `registry`. */
 export function lockedEngineSources(lockText) {
   const sources = new Set();
